@@ -1,9 +1,11 @@
 set nocompatible
 set bs=2
 filetype plugin on
+let $PAGER=''
 
 syntax on
 set number
+set hidden
 set hlsearch
 set mouse=a
 set cindent
