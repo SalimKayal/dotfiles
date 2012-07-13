@@ -1,9 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/remote/filer.gx/user.active/skayal/Torch5spro/bob'
-let g:netrw_dirhist_2='/remote/filer.gx/user.active/skayal/Torch5spro/bob/python'
-let g:netrw_dirhist_3='/remote/filer.gx/user.active/skayal/Torch5spro/bob/python/daq'
-let g:netrw_dirhist_4='/remote/filer.gx/user.active/skayal/Torch5spro/bob/python/daq/src'
-let g:netrw_dirhist_5='/local/scratch/skayal/Humavips/vfoatest/trunk/image_processing'
-let g:netrw_dirhist_6='/local/scratch/skayal/Humavips/vfoatest/trunk/examples/facetrack/standalone'
-let g:netrw_dirhist_7='/local/scratch/skayal/Humavips/vfoatest/trunk/examples/facetrack/icewing_plugin'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/remote/filer.gx/user.active/skayal/torch7/torch7-demos/face-detector'
+let g:netrw_dirhist_2='/remote/filer.gx/user.active/skayal/Clear/code/faceclassifier/tests'
