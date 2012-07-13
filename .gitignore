@@ -1,0 +1,4 @@
+pyclewn-1.9.py2
+pyclewn-1.9.py2.tar.gz
+.vim/bundle/*
+!.vim/bundle/vundle

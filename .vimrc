@@ -1,13 +1,12 @@
 set nocompatible
 set bs=2
-filetype plugin on
 let $PAGER=''
 
 syntax on
 set number
 set hidden
 set hlsearch
-set mouse=a
+"set mouse=a
 set smartindent
 set autoindent
 set expandtab
@@ -23,6 +22,33 @@ set guioptions-=LRB
 set guioptions-=T
 set guioptions-=m
 
+"______________vundle options______________"
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/pyclewn
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'xolox/vim-lua-ftplugin'
+Bundle 'Rip-Rip/clang_complete'
+Bundle 'msanders/snipmate.vim'
+Bundle 'ervandew/supertab'
+Bundle 'vim-scripts/TaskList.vim'
+Bundle 'mjbrownie/pythoncomplete.vim'
+Bundle 'vim-scripts/luarefvim'
+
+" repos on vim.org
+Bundle 'matchit.zip'
+
+filetype plugin indent on     " required!
 "_____________c,c++,java,objc______________"
 
 autocmd Filetype c,cpp,cs,java,objc set cindent
@@ -58,8 +84,8 @@ autocmd FileType lua map <F5> :!torch %<CR>
 
 map à :buffers<CR>:b 
 map ô :wall <CR>
-map <leader>t :e [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
-map <leader>v :vs [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
+map tb :e [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
+map vtb :vs [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
 
 colorscheme murphy
 hi Folded guibg=#151515
