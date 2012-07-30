@@ -7,20 +7,25 @@ set number
 set hidden
 set hlsearch
 "set mouse=a
+set scrolloff=5
 set smartindent
 set autoindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
-set textwidth=80
-set formatoptions=cqt
-set wrapmargin=6
+set linebreak
+set showcmd
 set guioptions+=lrb
 set guioptions-=lrb
 set guioptions+=LRB
 set guioptions-=LRB
 set guioptions-=T
 set guioptions-=m
+"               buffer   file                      position     rel   HEX   ASCII
+set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %a%=\ %8l,%c%V/%L\ (%P)\ [%08O:%02B]
+
+"autosource vimrc on leave
+au BufWrite $MYVIMRC :source $MYVIMRC
 
 "______________vundle options______________"
 filetype off                   " required!
@@ -38,6 +43,7 @@ Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'tpope/vim-fugitive'
 Bundle 'xolox/vim-lua-ftplugin'
+Bundle 'xolox/vim-lua-inspect.git'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'msanders/snipmate.vim'
 Bundle 'ervandew/supertab'
@@ -80,10 +86,23 @@ autocmd FileType lua let g:lua_complete_globals = 1
 autocmd FileType lua let g:lua_complete_library = 1
 autocmd FileType lua set tags=lua.tags
 autocmd FileType lua map <F5> :!torch %<CR>
+"___________toggle auto-escape_____________"
+let s:on = 0
+
+function ToggleAutoEsc()
+   let &updatetime = 5000
+   let s:on = !s:on
+   exec "au".((s:on)?"":"!") "CursorHoldI *" ((s:on)?"stopinsert":"")
+endfunction
+
+nmap <leader>e :call ToggleAutoEsc()<cr>
+call ToggleAutoEsc()
 "__________________________________________"
 
 map à :buffers<CR>:b 
-map ô :wall <CR>
+map ô :buffers<CR>:vertical sb 
+map <C-h> :bp<CR>
+map <C-l> :bn<CR>
 map tb :e [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
 map vtb :vs [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
 
