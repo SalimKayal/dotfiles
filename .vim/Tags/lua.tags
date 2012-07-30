@@ -1,0 +1,1272 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+) getFontForLabel	qtide/prefs.lua	/^              function() getFontForLabel(d.labelFontConsole) end, true)$/;"	f
+) getFontForLabel	qtide/prefs.lua	/^              function() getFontForLabel(d.labelFontEditor) end, true)$/;"	f
+) pcall	qtwidget/init.lua	/^                 function() pcall(f, self.width, self.height) end )$/;"	f
+) qt.disconnect	qtwidget/init.lua	/^   pcall(function() qt.disconnect(self.timer, 'timeout()') end)$/;"	f
+) return torch.uniform	nn/SpatialConvolutionMap.lua	/^	 self.weight:select(1,k):apply(function() return torch.uniform(-stdv,stdv) end)$/;"	f
+) self.port:close	qtwidget/init.lua	/^   pcall(function() self.port:close() end)$/;"	f
+) self.timer:deleteLater	qtwidget/init.lua	/^   pcall(function() self.timer:deleteLater() end)$/;"	f
+) self.widget:deleteLater	qtwidget/init.lua	/^   pcall(function() self.widget:deleteLater() end)$/;"	f
+) self:close	qtwidget/init.lua	/^                 pcall(function() self:close() end)$/;"	f
+.. '> trainer.hookTestEpoch 	nnx/OnlineTrainer.lua	/^         .. '> trainer.hookTestEpoch = function(trainer) ... end \\n'$/;"	f
+.. '> trainer.hookTestSample 	nnx/OnlineTrainer.lua	/^         .. '> trainer.hookTestSample = function(trainer, sample) ... end \\n'$/;"	f
+.. '> trainer.hookTrainEpoch 	nnx/OnlineTrainer.lua	/^         .. '> trainer.hookTrainEpoch = function(trainer) ... end \\n'$/;"	f
+.. '> trainer.hookTrainSample 	nnx/OnlineTrainer.lua	/^         .. '> trainer.hookTrainSample = function(trainer, sample) ... end \\n'$/;"	f
+ABS:__init	nnx/ABSOptimization.lua	/^function ABS:__init(...)$/;"	f
+ABS:reduce_hook	nnx/ABSOptimization.lua	/^function ABS:reduce_hook()$/;"	f
+ASGD:__init	nnx/ASGDOptimization.lua	/^function ASGD:__init(...)$/;"	f
+ASGD:optimize	nnx/ASGDOptimization.lua	/^function ASGD:optimize() $/;"	f
+ASGD:test	nnx/ASGDOptimization.lua	/^function ASGD:test(_inputs, _targets) -- function test$/;"	f
+Abs:__init	nn/Abs.lua	/^function Abs:__init()$/;"	f
+Abs:updateGradInput	nn/Abs.lua	/^function Abs:updateGradInput(input, gradOutput)$/;"	f
+Abs:updateOutput	nn/Abs.lua	/^function Abs:updateOutput(input)$/;"	f
+AbsCriterion:__init	nn/AbsCriterion.lua	/^function AbsCriterion:__init()$/;"	f
+AbsCriterion:updateGradInput	nn/AbsCriterion.lua	/^function AbsCriterion:updateGradInput(input, target)$/;"	f
+AbsCriterion:updateOutput	nn/AbsCriterion.lua	/^function AbsCriterion:updateOutput(input, target)$/;"	f
+Add:__init	nn/Add.lua	/^function Add:__init(inputSize,scalar)$/;"	f
+Add:accGradParameters	nn/Add.lua	/^function Add:accGradParameters(input, gradOutput, scale)$/;"	f
+Add:reset	nn/Add.lua	/^function Add:reset(stdv)$/;"	f
+Add:updateGradInput	nn/Add.lua	/^function Add:updateGradInput(input, gradOutput)$/;"	f
+Add:updateOutput	nn/Add.lua	/^function Add:updateOutput(input)$/;"	f
+Batch:__init	nnx/BatchOptimization.lua	/^function Batch:__init(...)$/;"	f
+Batch:forward	nnx/BatchOptimization.lua	/^function Batch:forward(inputs, targets, options)$/;"	f
+Batch:forward_mapreduce	nnx/BatchOptimization.lua	/^function Batch:forward_mapreduce(inputs, targets, options)$/;"	f
+Batch:forward_sequential	nnx/BatchOptimization.lua	/^function Batch:forward_sequential(inputs, targets, options)$/;"	f
+Batch:setup_mapreduce 	nnx/BatchOptimization.lua	/^function Batch:setup_mapreduce ()$/;"	f
+BatchTrainer:__init	nnx/BatchTrainer.lua	/^function BatchTrainer:__init(...)$/;"	f
+BatchTrainer:next	nnx/BatchTrainer.lua	/^function BatchTrainer:next()$/;"	f
+BatchTrainer:nextBatch	nnx/BatchTrainer.lua	/^function BatchTrainer:nextBatch()$/;"	f
+BatchTrainer:testBatch	nnx/BatchTrainer.lua	/^function BatchTrainer:testBatch()$/;"	f
+CAddTable:__init	nn/CAddTable.lua	/^function CAddTable:__init()$/;"	f
+CAddTable:updateGradInput	nn/CAddTable.lua	/^function CAddTable:updateGradInput(input, gradOutput)$/;"	f
+CAddTable:updateOutput	nn/CAddTable.lua	/^function CAddTable:updateOutput(input)$/;"	f
+CDivTable:__init	nn/CDivTable.lua	/^function CDivTable:__init()$/;"	f
+CDivTable:updateGradInput	nn/CDivTable.lua	/^function CDivTable:updateGradInput(input, gradOutput)$/;"	f
+CDivTable:updateOutput	nn/CDivTable.lua	/^function CDivTable:updateOutput(input)$/;"	f
+CG:__init	nnx/CGOptimization.lua	/^function CG:__init(...)$/;"	f
+CG:__init	nnx/newCGOptimization.lua	/^function CG:__init(...)$/;"	f
+CG:optimize	nnx/CGOptimization.lua	/^function CG:optimize()$/;"	f
+CG:optimize	nnx/newCGOptimization.lua	/^function CG:optimize()$/;"	f
+CInterface.new	wrap/init.lua	/^function CInterface.new()$/;"	f
+CInterface:__writecall	wrap/init.lua	/^function CInterface:__writecall(txt, args, cfuncname, cargs, argcreturned)$/;"	f
+CInterface:__writechecks	wrap/init.lua	/^function CInterface:__writechecks(txt, args, argset)$/;"	f
+CInterface:__writeheaders	wrap/init.lua	/^function CInterface:__writeheaders(txt, args, argoffset)$/;"	f
+CInterface:clearhistory	wrap/init.lua	/^function CInterface:clearhistory()$/;"	f
+CInterface:luaname2wrapname	wrap/init.lua	/^function CInterface:luaname2wrapname(name)$/;"	f
+CInterface:print	wrap/init.lua	/^function CInterface:print(str)$/;"	f
+CInterface:register	wrap/init.lua	/^function CInterface:register(name)$/;"	f
+CInterface:tofile	wrap/init.lua	/^function CInterface:tofile(filename)$/;"	f
+CInterface:tostring	wrap/init.lua	/^function CInterface:tostring()$/;"	f
+CInterface:wrap	wrap/init.lua	/^function CInterface:wrap(luaname, ...)$/;"	f
+CMul:__init	nn/CMul.lua	/^function CMul:__init(inputSize)$/;"	f
+CMul:accGradParameters	nn/CMul.lua	/^function CMul:accGradParameters(input, gradOutput, scale)$/;"	f
+CMul:reset	nn/CMul.lua	/^function CMul:reset()$/;"	f
+CMul:updateGradInput	nn/CMul.lua	/^function CMul:updateGradInput(input, gradOutput)$/;"	f
+CMul:updateOutput	nn/CMul.lua	/^function CMul:updateOutput(input)$/;"	f
+CMulTable:__init	nn/CMulTable.lua	/^function CMulTable:__init()$/;"	f
+CMulTable:updateGradInput	nn/CMulTable.lua	/^function CMulTable:updateGradInput(input, gradOutput)$/;"	f
+CMulTable:updateOutput	nn/CMulTable.lua	/^function CMulTable:updateOutput(input)$/;"	f
+CSubTable:__init	nn/CSubTable.lua	/^function CSubTable:__init()$/;"	f
+CSubTable:updateGradInput	nn/CSubTable.lua	/^function CSubTable:updateGradInput(input, gradOutput)$/;"	f
+CSubTable:updateOutput	nn/CSubTable.lua	/^function CSubTable:updateOutput(input)$/;"	f
+Camera:__init	camopencv/init.lua	/^function Camera:__init(...)$/;"	f
+Camera:__init	v4l/init.lua	/^function Camera:__init(...)$/;"	f
+Camera:adjustManualFocus	v4l/init.lua	/^function Camera:adjustManualFocus(f)$/;"	f
+Camera:forward	camopencv/init.lua	/^function Camera:forward()$/;"	f
+Camera:forward	v4l/init.lua	/^function Camera:forward(tensor)$/;"	f
+Camera:setAutoFocus	v4l/init.lua	/^function Camera:setAutoFocus()$/;"	f
+Camera:setContinuousFocus	v4l/init.lua	/^function Camera:setContinuousFocus()$/;"	f
+Camera:setMacroFocus	v4l/init.lua	/^function Camera:setMacroFocus()$/;"	f
+Camera:setManualFocus	v4l/init.lua	/^function Camera:setManualFocus()$/;"	f
+Camera:stop	camopencv/init.lua	/^function Camera:stop()$/;"	f
+Camera:stop	v4l/init.lua	/^function Camera:stop()$/;"	f
+ClassNLLCriterion:__init	nn/ClassNLLCriterion.lua	/^function ClassNLLCriterion:__init()$/;"	f
+ClassNLLCriterion:updateGradInput	nn/ClassNLLCriterion.lua	/^function ClassNLLCriterion:updateGradInput(input, target)$/;"	f
+ClassNLLCriterion:updateOutput	nn/ClassNLLCriterion.lua	/^function ClassNLLCriterion:updateOutput(input, target)$/;"	f
+Classifier:__init	nnx/SpatialClassifier.lua	/^function Classifier:__init(classifier)$/;"	f
+Classifier:accGradParameters	nnx/SpatialClassifier.lua	/^function Classifier:accGradParameters(input, gradOutput, scale)$/;"	f
+Classifier:add	nnx/SpatialClassifier.lua	/^function Classifier:add(module)$/;"	f
+Classifier:updateGradInput	nnx/SpatialClassifier.lua	/^function Classifier:updateGradInput(input, gradOutput)$/;"	f
+Classifier:updateOutput	nnx/SpatialClassifier.lua	/^function Classifier:updateOutput(input)$/;"	f
+Classifier:updateParameters	nnx/SpatialClassifier.lua	/^function Classifier:updateParameters(learningRate)$/;"	f
+Classifier:zeroGradParameters	nnx/SpatialClassifier.lua	/^function Classifier:zeroGradParameters()$/;"	f
+CmdLine:__init	torch/CmdLine.lua	/^function CmdLine:__init(argseparator_,keyseparator_)$/;"	f
+CmdLine:__readArgument__	torch/CmdLine.lua	/^function CmdLine:__readArgument__(params, arg, i, nArgument)$/;"	f
+CmdLine:__readOption__	torch/CmdLine.lua	/^function CmdLine:__readOption__(params, arg, i)$/;"	f
+CmdLine:addTime	torch/CmdLine.lua	/^function CmdLine:addTime(name, format)$/;"	f
+CmdLine:argument	torch/CmdLine.lua	/^function CmdLine:argument(key, help, _type_)$/;"	f
+CmdLine:default	torch/CmdLine.lua	/^function CmdLine:default()$/;"	f
+CmdLine:error	torch/CmdLine.lua	/^function CmdLine:error(msg)$/;"	f
+CmdLine:help	torch/CmdLine.lua	/^function CmdLine:help(arg)$/;"	f
+CmdLine:log	torch/CmdLine.lua	/^function CmdLine:log(file, params)   $/;"	f
+CmdLine:option	torch/CmdLine.lua	/^function CmdLine:option(key, default, help, _type_)$/;"	f
+CmdLine:parse	torch/CmdLine.lua	/^function CmdLine:parse(arg)$/;"	f
+CmdLine:silent	torch/CmdLine.lua	/^function CmdLine:silent()$/;"	f
+CmdLine:string	torch/CmdLine.lua	/^function CmdLine:string(prefix, params, ignore)$/;"	f
+CmdLine:text	torch/CmdLine.lua	/^function CmdLine:text(txt)$/;"	f
+Concat:__init	nn/Concat.lua	/^function Concat:__init(dimension)$/;"	f
+Concat:__tostring__	nn/Concat.lua	/^function Concat:__tostring__()$/;"	f
+Concat:accGradParameters	nn/Concat.lua	/^function Concat:accGradParameters(input, gradOutput, scale)$/;"	f
+Concat:accUpdateGradParameters	nn/Concat.lua	/^function Concat:accUpdateGradParameters(input, gradOutput, lr)$/;"	f
+Concat:add	nn/Concat.lua	/^function Concat:add(module)$/;"	f
+Concat:get	nn/Concat.lua	/^function Concat:get(index)$/;"	f
+Concat:parameters	nn/Concat.lua	/^function Concat:parameters()$/;"	f
+Concat:share	nn/Concat.lua	/^function Concat:share(mlp,...)$/;"	f
+Concat:updateGradInput	nn/Concat.lua	/^function Concat:updateGradInput(input, gradOutput)$/;"	f
+Concat:updateOutput	nn/Concat.lua	/^function Concat:updateOutput(input)$/;"	f
+Concat:updateParameters	nn/Concat.lua	/^function Concat:updateParameters(learningRate)$/;"	f
+Concat:zeroGradParameters	nn/Concat.lua	/^function Concat:zeroGradParameters()$/;"	f
+ConcatTable:__init	nn/ConcatTable.lua	/^function ConcatTable:__init()$/;"	f
+ConcatTable:__tostring__	nn/ConcatTable.lua	/^function ConcatTable:__tostring__()$/;"	f
+ConcatTable:accGradParameters	nn/ConcatTable.lua	/^function ConcatTable:accGradParameters(input, gradOutput, scale)$/;"	f
+ConcatTable:accUpdateGradParameters	nn/ConcatTable.lua	/^function ConcatTable:accUpdateGradParameters(input, gradOutput, lr)$/;"	f
+ConcatTable:add	nn/ConcatTable.lua	/^function ConcatTable:add(module)$/;"	f
+ConcatTable:get	nn/ConcatTable.lua	/^function ConcatTable:get(index)$/;"	f
+ConcatTable:parameters	nn/ConcatTable.lua	/^function ConcatTable:parameters()$/;"	f
+ConcatTable:share	nn/ConcatTable.lua	/^function ConcatTable:share(mlp,...)$/;"	f
+ConcatTable:size	nn/ConcatTable.lua	/^function ConcatTable:size()$/;"	f
+ConcatTable:updateGradInput	nn/ConcatTable.lua	/^function ConcatTable:updateGradInput(input, gradOutput)$/;"	f
+ConcatTable:updateOutput	nn/ConcatTable.lua	/^function ConcatTable:updateOutput(input)$/;"	f
+ConcatTable:updateParameters	nn/ConcatTable.lua	/^function ConcatTable:updateParameters(learningRate)$/;"	f
+ConcatTable:zeroGradParameters	nn/ConcatTable.lua	/^function ConcatTable:zeroGradParameters()$/;"	f
+ConfusionMatrix:__init	nnx/ConfusionMatrix.lua	/^function ConfusionMatrix:__init(nclasses, classes)$/;"	f
+ConfusionMatrix:__init	optim/ConfusionMatrix.lua	/^function ConfusionMatrix:__init(nclasses, classes)$/;"	f
+ConfusionMatrix:__tostring__	nnx/ConfusionMatrix.lua	/^function ConfusionMatrix:__tostring__()$/;"	f
+ConfusionMatrix:__tostring__	optim/ConfusionMatrix.lua	/^function ConfusionMatrix:__tostring__()$/;"	f
+ConfusionMatrix:add	nnx/ConfusionMatrix.lua	/^function ConfusionMatrix:add(prediction, target)$/;"	f
+ConfusionMatrix:add	optim/ConfusionMatrix.lua	/^function ConfusionMatrix:add(prediction, target)$/;"	f
+ConfusionMatrix:updateValids	nnx/ConfusionMatrix.lua	/^function ConfusionMatrix:updateValids()$/;"	f
+ConfusionMatrix:updateValids	optim/ConfusionMatrix.lua	/^function ConfusionMatrix:updateValids()$/;"	f
+ConfusionMatrix:zero	nnx/ConfusionMatrix.lua	/^function ConfusionMatrix:zero()$/;"	f
+ConfusionMatrix:zero	optim/ConfusionMatrix.lua	/^function ConfusionMatrix:zero()$/;"	f
+Copy:__init	nn/Copy.lua	/^function Copy:__init(intype, outtype)$/;"	f
+Copy:updateGradInput	nn/Copy.lua	/^function Copy:updateGradInput(input, gradOutput)$/;"	f
+Copy:updateOutput	nn/Copy.lua	/^function Copy:updateOutput(input)$/;"	f
+CosineDistance:__init	nn/CosineDistance.lua	/^function CosineDistance:__init()$/;"	f
+CosineDistance:updateGradInput	nn/CosineDistance.lua	/^function CosineDistance:updateGradInput(input, gradOutput)$/;"	f
+CosineDistance:updateOutput	nn/CosineDistance.lua	/^function CosineDistance:updateOutput(input)$/;"	f
+CosineEmbeddingCriterion:__init	nn/CosineEmbeddingCriterion.lua	/^function CosineEmbeddingCriterion:__init(margin)$/;"	f
+CosineEmbeddingCriterion:updateGradInput	nn/CosineEmbeddingCriterion.lua	/^function CosineEmbeddingCriterion:updateGradInput(input, y)$/;"	f
+CosineEmbeddingCriterion:updateOutput	nn/CosineEmbeddingCriterion.lua	/^function CosineEmbeddingCriterion:updateOutput(input,y)$/;"	f
+Criterion:__call__	nn/Criterion.lua	/^function Criterion:__call__(input, target)$/;"	f
+Criterion:__init	nn/Criterion.lua	/^function Criterion:__init()$/;"	f
+Criterion:backward	nn/Criterion.lua	/^function Criterion:backward(input, target)$/;"	f
+Criterion:clone	nn/Criterion.lua	/^function Criterion:clone()$/;"	f
+Criterion:cuda	nn/Criterion.lua	/^function Criterion:cuda()$/;"	f
+Criterion:double	nn/Criterion.lua	/^function Criterion:double()$/;"	f
+Criterion:float	nn/Criterion.lua	/^function Criterion:float()$/;"	f
+Criterion:forward	nn/Criterion.lua	/^function Criterion:forward(input, target)$/;"	f
+Criterion:type	nn/Criterion.lua	/^function Criterion:type(type)$/;"	f
+Criterion:updateGradInput	nn/Criterion.lua	/^function Criterion:updateGradInput(input, target)$/;"	f
+Criterion:updateOutput	nn/Criterion.lua	/^function Criterion:updateOutput(input, target)$/;"	f
+CriterionTable:__init	nn/CriterionTable.lua	/^function CriterionTable:__init(criterion)$/;"	f
+CriterionTable:updateGradInput	nn/CriterionTable.lua	/^function CriterionTable:updateGradInput(input, gradOutput)$/;"	f
+CriterionTable:updateOutput	nn/CriterionTable.lua	/^function CriterionTable:updateOutput(input) $/;"	f
+Cuda:__init	nnx/Type.lua	/^function Cuda:__init()$/;"	f
+DataList:__index__	nnx/DataList.lua	/^function DataList:__index__(key)$/;"	f
+DataList:__init	nnx/DataList.lua	/^function DataList:__init()$/;"	f
+DataList:__tostring__	nnx/DataList.lua	/^function DataList:__tostring__()$/;"	f
+DataList:appendDataSet	nnx/DataList.lua	/^function DataList:appendDataSet(dataSet,className)$/;"	f
+DataSetLabelMe:__index__	nnx/DataSetLabelMe.lua	/^function DataSetLabelMe:__index__(key)$/;"	f
+DataSetLabelMe:__init	nnx/DataSetLabelMe.lua	/^function DataSetLabelMe:__init(...)$/;"	f
+DataSetLabelMe:__tostring__	nnx/DataSetLabelMe.lua	/^function DataSetLabelMe:__tostring__()$/;"	f
+DataSetLabelMe:display	nnx/DataSetLabelMe.lua	/^function DataSetLabelMe:display(...)$/;"	f
+DataSetLabelMe:getsizes	nnx/DataSetLabelMe.lua	/^function DataSetLabelMe:getsizes(folder,file)$/;"	f
+DataSetLabelMe:loadSample	nnx/DataSetLabelMe.lua	/^function DataSetLabelMe:loadSample(index)$/;"	f
+DataSetLabelMe:parseAllMasks	nnx/DataSetLabelMe.lua	/^function DataSetLabelMe:parseAllMasks(saveFile)$/;"	f
+DataSetLabelMe:parseMask	nnx/DataSetLabelMe.lua	/^function DataSetLabelMe:parseMask(existing_tags)$/;"	f
+DataSetLabelMe:preload	nnx/DataSetLabelMe.lua	/^function DataSetLabelMe:preload(saveFile)$/;"	f
+DataSetLabelMe:size	nnx/DataSetLabelMe.lua	/^function DataSetLabelMe:size()$/;"	f
+DistKLDivCriterion:__init	nn/DistKLDivCriterion.lua	/^function DistKLDivCriterion:__init()$/;"	f
+DistKLDivCriterion:updateGradInput	nn/DistKLDivCriterion.lua	/^function DistKLDivCriterion:updateGradInput(input, target)$/;"	f
+DistKLDivCriterion:updateOutput	nn/DistKLDivCriterion.lua	/^function DistKLDivCriterion:updateOutput(input, target)$/;"	f
+DistMarginCriterion:__init	nnx/DistMarginCriterion.lua	/^function DistMarginCriterion:__init()$/;"	f
+DistMarginCriterion:updateGradInput	nnx/DistMarginCriterion.lua	/^function DistMarginCriterion:updateGradInput(input, target)$/;"	f
+DistMarginCriterion:updateOutput	nnx/DistMarginCriterion.lua	/^function DistMarginCriterion:updateOutput(input, target)$/;"	f
+DistNLLCriterion:__init	nnx/DistNLLCriterion.lua	/^function DistNLLCriterion:__init(opts)$/;"	f
+DistNLLCriterion:denormalize	nnx/DistNLLCriterion.lua	/^function DistNLLCriterion:denormalize()$/;"	f
+DistNLLCriterion:normalize	nnx/DistNLLCriterion.lua	/^function DistNLLCriterion:normalize(input, target)$/;"	f
+DistNLLCriterion:updateGradInput	nnx/DistNLLCriterion.lua	/^function DistNLLCriterion:updateGradInput(input, target)$/;"	f
+DistNLLCriterion:updateOutput	nnx/DistNLLCriterion.lua	/^function DistNLLCriterion:updateOutput(input, target)$/;"	f
+DotProduct:__init	nn/DotProduct.lua	/^function DotProduct:__init()$/;"	f
+DotProduct:updateGradInput	nn/DotProduct.lua	/^function DotProduct:updateGradInput(input, gradOutput)$/;"	f
+DotProduct:updateOutput	nn/DotProduct.lua	/^function DotProduct:updateOutput(input,y)$/;"	f
+Double:__init	nnx/Type.lua	/^function Double:__init()$/;"	f
+Euclidean:__init	nn/Euclidean.lua	/^function Euclidean:__init(inputSize,outputSize)$/;"	f
+Euclidean:accGradParameters	nn/Euclidean.lua	/^function Euclidean:accGradParameters(input, gradOutput, scale)$/;"	f
+Euclidean:reset	nn/Euclidean.lua	/^function Euclidean:reset(stdv)$/;"	f
+Euclidean:updateGradInput	nn/Euclidean.lua	/^function Euclidean:updateGradInput(input, gradOutput)$/;"	f
+Euclidean:updateOutput	nn/Euclidean.lua	/^function Euclidean:updateOutput(input)$/;"	f
+Exp:updateGradInput	nn/Exp.lua	/^function Exp:updateGradInput(input, gradOutput)$/;"	f
+Exp:updateOutput	nn/Exp.lua	/^function Exp:updateOutput(input)$/;"	f
+File:isWritableObject	torch/File.lua	/^function File:isWritableObject(object)$/;"	f
+File:readBool	torch/File.lua	/^function File:readBool()$/;"	f
+File:readObject	torch/File.lua	/^function File:readObject()$/;"	f
+File:writeBool	torch/File.lua	/^function File:writeBool(value)$/;"	f
+File:writeObject	torch/File.lua	/^function File:writeObject(object)$/;"	f
+Float:__init	nnx/Type.lua	/^function Float:__init()$/;"	f
+FunctionWrapper:__init	nnx/FunctionWrapper.lua	/^function FunctionWrapper:__init(init, updateOutput, updateGradInput)$/;"	f
+FunctionWrapper:updateGradInput	nnx/FunctionWrapper.lua	/^function FunctionWrapper:updateGradInput(input, gradOutput)$/;"	f
+FunctionWrapper:updateOutput	nnx/FunctionWrapper.lua	/^function FunctionWrapper:updateOutput(input)$/;"	f
+GenSGD:__init	nnx/GeneticSGDOptimization.lua	/^function GenSGD:__init(...)$/;"	f
+GenSGD:map_hook	nnx/GeneticSGDOptimization.lua	/^function GenSGD:map_hook()$/;"	f
+GenSGD:optimize	nnx/GeneticSGDOptimization.lua	/^function GenSGD:optimize()$/;"	f
+GenSGD:reduce_hook	nnx/GeneticSGDOptimization.lua	/^function GenSGD:reduce_hook()$/;"	f
+GenSGD:setup_mapreduce 	nnx/GeneticSGDOptimization.lua	/^function GenSGD:setup_mapreduce ()$/;"	f
+HardShrink:__init	nn/HardShrink.lua	/^function HardShrink:__init(lam)$/;"	f
+HardShrink:updateGradInput	nn/HardShrink.lua	/^function HardShrink:updateGradInput(input, gradOutput)$/;"	f
+HardShrink:updateOutput	nn/HardShrink.lua	/^function HardShrink:updateOutput(input)$/;"	f
+HardTanh:updateGradInput	nn/HardTanh.lua	/^function HardTanh:updateGradInput(input, gradOutput)$/;"	f
+HardTanh:updateOutput	nn/HardTanh.lua	/^function HardTanh:updateOutput(input)$/;"	f
+HingeEmbeddingCriterion:__init	nn/HingeEmbeddingCriterion.lua	/^function HingeEmbeddingCriterion:__init(margin)$/;"	f
+HingeEmbeddingCriterion:updateGradInput	nn/HingeEmbeddingCriterion.lua	/^function HingeEmbeddingCriterion:updateGradInput(input, y)$/;"	f
+HingeEmbeddingCriterion:updateOutput	nn/HingeEmbeddingCriterion.lua	/^function HingeEmbeddingCriterion:updateOutput(input,y)$/;"	f
+Identity:updateGradInput	nn/Identity.lua	/^function Identity:updateGradInput(input, gradOutput)$/;"	f
+Identity:updateOutput	nn/Identity.lua	/^function Identity:updateOutput(input)$/;"	f
+JoinTable:__init	nn/JoinTable.lua	/^function JoinTable:__init(dimension)$/;"	f
+JoinTable:updateGradInput	nn/JoinTable.lua	/^function JoinTable:updateGradInput(input, gradOutput)$/;"	f
+JoinTable:updateOutput	nn/JoinTable.lua	/^function JoinTable:updateOutput(input) $/;"	f
+KLDivCriterion:__init	nnx/KLDivCriterion.lua	/^function KLDivCriterion:__init(opts)$/;"	f
+KLDivCriterion:denormalize	nnx/KLDivCriterion.lua	/^function KLDivCriterion:denormalize(input)$/;"	f
+KLDivCriterion:normalize	nnx/KLDivCriterion.lua	/^function KLDivCriterion:normalize(input, target)$/;"	f
+KLDivCriterion:updateGradInput	nnx/KLDivCriterion.lua	/^function KLDivCriterion:updateGradInput(input, target)$/;"	f
+KLDivCriterion:updateOutput	nnx/KLDivCriterion.lua	/^function KLDivCriterion:updateOutput(input, target)$/;"	f
+L1HingeEmbeddingCriterion:__init	nn/L1HingeEmbeddingCriterion.lua	/^function L1HingeEmbeddingCriterion:__init(margin)$/;"	f
+L1HingeEmbeddingCriterion:updateGradInput	nn/L1HingeEmbeddingCriterion.lua	/^function L1HingeEmbeddingCriterion:updateGradInput(input, y)$/;"	f
+L1HingeEmbeddingCriterion:updateOutput	nn/L1HingeEmbeddingCriterion.lua	/^function L1HingeEmbeddingCriterion:updateOutput(input,y)$/;"	f
+LBFGS:__init	nnx/LBFGSOptimization.lua	/^function LBFGS:__init(...)$/;"	f
+LBFGS:optimize	nnx/LBFGSOptimization.lua	/^function LBFGS:optimize()$/;"	f
+Linear:__init	nn/Linear.lua	/^function Linear:__init(inputSize, outputSize)$/;"	f
+Linear:accGradParameters	nn/Linear.lua	/^function Linear:accGradParameters(input, gradOutput, scale)$/;"	f
+Linear:reset	nn/Linear.lua	/^function Linear:reset(stdv)$/;"	f
+Linear:updateGradInput	nn/Linear.lua	/^function Linear:updateGradInput(input, gradOutput)$/;"	f
+Linear:updateOutput	nn/Linear.lua	/^function Linear:updateOutput(input)$/;"	f
+Log:__init	nn/Log.lua	/^function Log:__init(inputSize)$/;"	f
+Log:updateGradInput	nn/Log.lua	/^function Log:updateGradInput(input, gradOutput) $/;"	f
+Log:updateOutput	nn/Log.lua	/^function Log:updateOutput(input)$/;"	f
+LogSigmoid:__init	nn/LogSigmoid.lua	/^function LogSigmoid:__init()$/;"	f
+LogSigmoid:updateGradInput	nn/LogSigmoid.lua	/^function LogSigmoid:updateGradInput(input, gradOutput)$/;"	f
+LogSigmoid:updateOutput	nn/LogSigmoid.lua	/^function LogSigmoid:updateOutput(input)$/;"	f
+LogSoftMax:updateGradInput	nn/LogSoftMax.lua	/^function LogSoftMax:updateGradInput(input, gradOutput)$/;"	f
+LogSoftMax:updateOutput	nn/LogSoftMax.lua	/^function LogSoftMax:updateOutput(input)$/;"	f
+Logger:__init	nnx/Logger.lua	/^function Logger:__init(filename, timestamp)$/;"	f
+Logger:__init	optim/Logger.lua	/^function Logger:__init(filename, timestamp)$/;"	f
+Logger:add	nnx/Logger.lua	/^function Logger:add(symbols)$/;"	f
+Logger:add	optim/Logger.lua	/^function Logger:add(symbols)$/;"	f
+Logger:plot	nnx/Logger.lua	/^function Logger:plot(...)$/;"	f
+Logger:plot	optim/Logger.lua	/^function Logger:plot(...)$/;"	f
+Logger:style	nnx/Logger.lua	/^function Logger:style(symbols)$/;"	f
+Logger:style	optim/Logger.lua	/^function Logger:style(symbols)$/;"	f
+LookupTable:__init	nn/LookupTable.lua	/^function LookupTable:__init(nIndex, ...)$/;"	f
+LookupTable:accGradParameters	nn/LookupTable.lua	/^function LookupTable:accGradParameters(input, gradOutput, scale)$/;"	f
+LookupTable:accUpdateGradParameters	nn/LookupTable.lua	/^function LookupTable:accUpdateGradParameters(input, gradOutput, lr)$/;"	f
+LookupTable:reset	nn/LookupTable.lua	/^function LookupTable:reset(stdv)$/;"	f
+LookupTable:updateOutput	nn/LookupTable.lua	/^function LookupTable:updateOutput(input)$/;"	f
+LookupTable:updateParameters	nn/LookupTable.lua	/^function LookupTable:updateParameters(learningRate)$/;"	f
+LookupTable:zeroGradParameters	nn/LookupTable.lua	/^function LookupTable:zeroGradParameters()$/;"	f
+MSECriterion:__init	nn/MSECriterion.lua	/^function MSECriterion:__init()$/;"	f
+MSECriterion:updateGradInput	nn/MSECriterion.lua	/^function MSECriterion:updateGradInput(input, target)$/;"	f
+MSECriterion:updateOutput	nn/MSECriterion.lua	/^function MSECriterion:updateOutput(input, target)$/;"	f
+MarginCriterion:__init	nn/MarginCriterion.lua	/^function MarginCriterion:__init(margin)$/;"	f
+MarginCriterion:updateGradInput	nn/MarginCriterion.lua	/^function MarginCriterion:updateGradInput(input, y)$/;"	f
+MarginCriterion:updateOutput	nn/MarginCriterion.lua	/^function MarginCriterion:updateOutput(input,y)$/;"	f
+MarginRankingCriterion:__init	nn/MarginRankingCriterion.lua	/^function MarginRankingCriterion:__init(margin)$/;"	f
+MarginRankingCriterion:updateGradInput	nn/MarginRankingCriterion.lua	/^function MarginRankingCriterion:updateGradInput(input, y)$/;"	f
+MarginRankingCriterion:updateOutput	nn/MarginRankingCriterion.lua	/^function MarginRankingCriterion:updateOutput(input,y)$/;"	f
+Max:__init	nn/Max.lua	/^function Max:__init(dimension)$/;"	f
+Max:updateGradInput	nn/Max.lua	/^function Max:updateGradInput(input, gradOutput)$/;"	f
+Max:updateOutput	nn/Max.lua	/^function Max:updateOutput(input)$/;"	f
+Mean:__init	nn/Mean.lua	/^function Mean:__init(dimension)$/;"	f
+Mean:updateGradInput	nn/Mean.lua	/^function Mean:updateGradInput(input, gradOutput)$/;"	f
+Mean:updateOutput	nn/Mean.lua	/^function Mean:updateOutput(input)$/;"	f
+Min:__init	nn/Min.lua	/^function Min:__init(dimension)$/;"	f
+Min:updateGradInput	nn/Min.lua	/^function Min:updateGradInput(input, gradOutput)$/;"	f
+Min:updateOutput	nn/Min.lua	/^function Min:updateOutput(input)$/;"	f
+Minus:updateGradInput	nnx/Minus.lua	/^function Minus:updateGradInput(input, gradOutput)$/;"	f
+Minus:updateOutput	nnx/Minus.lua	/^function Minus:updateOutput(input)$/;"	f
+Module:__call__	nn/Module.lua	/^function Module:__call__(input, gradOutput)$/;"	f
+Module:__init	nn/Module.lua	/^function Module:__init()$/;"	f
+Module:accGradParameters	nn/Module.lua	/^function Module:accGradParameters(input, gradOutput, scale)$/;"	f
+Module:accUpdateGradParameters	nn/Module.lua	/^function Module:accUpdateGradParameters(input, gradOutput, lr)$/;"	f
+Module:backward	nn/Module.lua	/^function Module:backward(input, gradOutput)$/;"	f
+Module:backwardUpdate	nn/Module.lua	/^function Module:backwardUpdate(input, gradOutput, lr)$/;"	f
+Module:clone	nn/Module.lua	/^function Module:clone(...)$/;"	f
+Module:cuda	nn/Module.lua	/^function Module:cuda()$/;"	f
+Module:double	nn/Module.lua	/^function Module:double()$/;"	f
+Module:float	nn/Module.lua	/^function Module:float()$/;"	f
+Module:forward	nn/Module.lua	/^function Module:forward(input)$/;"	f
+Module:getParameters	nn/Module.lua	/^function Module:getParameters()$/;"	f
+Module:parameters	nn/Module.lua	/^function Module:parameters()$/;"	f
+Module:reset	nn/Module.lua	/^function Module:reset()$/;"	f
+Module:share	nn/Module.lua	/^function Module:share(mlp, ...)$/;"	f
+Module:sharedAccUpdateGradParameters	nn/Module.lua	/^function Module:sharedAccUpdateGradParameters(input, gradOutput, lr)$/;"	f
+Module:type	nn/Module.lua	/^function Module:type(type)$/;"	f
+Module:updateGradInput	nn/Module.lua	/^function Module:updateGradInput(input, gradOutput)$/;"	f
+Module:updateOutput	nn/Module.lua	/^function Module:updateOutput(input)$/;"	f
+Module:updateParameters	nn/Module.lua	/^function Module:updateParameters(learningRate)$/;"	f
+Module:zeroGradParameters	nn/Module.lua	/^function Module:zeroGradParameters()$/;"	f
+Mul:__init	nn/Mul.lua	/^function Mul:__init(inputSize)$/;"	f
+Mul:accGradParameters	nn/Mul.lua	/^function Mul:accGradParameters(input, gradOutput, scale) $/;"	f
+Mul:reset	nn/Mul.lua	/^function Mul:reset(stdv)$/;"	f
+Mul:updateGradInput	nn/Mul.lua	/^function Mul:updateGradInput(input, gradOutput) $/;"	f
+Mul:updateOutput	nn/Mul.lua	/^function Mul:updateOutput(input)$/;"	f
+MultiCriterion:__init	nn/MultiCriterion.lua	/^function MultiCriterion:__init()$/;"	f
+MultiCriterion:add	nn/MultiCriterion.lua	/^function MultiCriterion:add(criterion, weight)$/;"	f
+MultiCriterion:updateGradInput	nn/MultiCriterion.lua	/^function MultiCriterion:updateGradInput(input, target)$/;"	f
+MultiCriterion:updateOutput	nn/MultiCriterion.lua	/^function MultiCriterion:updateOutput(input, target)$/;"	f
+MultiLabelMarginCriterion:__init	nn/MultiLabelMarginCriterion.lua	/^function MultiLabelMarginCriterion:__init()$/;"	f
+MultiLabelMarginCriterion:updateGradInput	nn/MultiLabelMarginCriterion.lua	/^function MultiLabelMarginCriterion:updateGradInput(input, target)$/;"	f
+MultiLabelMarginCriterion:updateOutput	nn/MultiLabelMarginCriterion.lua	/^function MultiLabelMarginCriterion:updateOutput(input, target)$/;"	f
+MultiMarginCriterion:__init	nn/MultiMarginCriterion.lua	/^function MultiMarginCriterion:__init()$/;"	f
+MultiMarginCriterion:updateGradInput	nn/MultiMarginCriterion.lua	/^function MultiMarginCriterion:updateGradInput(input, target)$/;"	f
+MultiMarginCriterion:updateOutput	nn/MultiMarginCriterion.lua	/^function MultiMarginCriterion:updateOutput(input, target)$/;"	f
+Narrow:__init	nn/Narrow.lua	/^function Narrow:__init(dimension,offset,length)$/;"	f
+Narrow:updateGradInput	nn/Narrow.lua	/^function Narrow:updateGradInput(input, gradOutput)$/;"	f
+Narrow:updateOutput	nn/Narrow.lua	/^function Narrow:updateOutput(input)$/;"	f
+OmpModule:__init	nnx/OmpModule.lua	/^function OmpModule:__init()$/;"	f
+OmpModule:read	nnx/OmpModule.lua	/^function OmpModule:read(file)$/;"	f
+OnlineTrainer:__init	nnx/OnlineTrainer.lua	/^function OnlineTrainer:__init(...)$/;"	f
+OnlineTrainer:log	nnx/OnlineTrainer.lua	/^function OnlineTrainer:log()$/;"	f
+OnlineTrainer:test	nnx/OnlineTrainer.lua	/^function OnlineTrainer:test(dataset)$/;"	f
+OnlineTrainer:train	nnx/OnlineTrainer.lua	/^function OnlineTrainer:train(dataset)$/;"	f
+Optimization:__init	nnx/Optimization.lua	/^function Optimization:__init()$/;"	f
+Optimization:forward	nnx/Optimization.lua	/^function Optimization:forward(inputs, targets)$/;"	f
+OptionParser:fail	xlua/OptionParser.lua	/^function OptionParser:fail(s) -- extension$/;"	f
+OptionParser:flags	xlua/OptionParser.lua	/^function OptionParser:flags(optdesc)$/;"	f
+OptionParser:help	xlua/OptionParser.lua	/^function OptionParser:help()$/;"	f
+OptionParser:option	xlua/OptionParser.lua	/^function OptionParser:option(optdesc)$/;"	f
+OptionParser:parse	xlua/OptionParser.lua	/^function OptionParser:parse(options)$/;"	f
+OptionParser:summarize	xlua/OptionParser.lua	/^function OptionParser:summarize(compact)$/;"	f
+OptionParser:tostring	xlua/OptionParser.lua	/^function OptionParser:tostring(generatefilename, params)$/;"	f
+PairwiseDistance:__init	nn/PairwiseDistance.lua	/^function PairwiseDistance:__init(p)$/;"	f
+PairwiseDistance:updateGradInput	nn/PairwiseDistance.lua	/^function PairwiseDistance:updateGradInput(input, gradOutput)$/;"	f
+PairwiseDistance:updateOutput	nn/PairwiseDistance.lua	/^function PairwiseDistance:updateOutput(input)$/;"	f
+Parallel:__init	nn/Parallel.lua	/^function Parallel:__init(inputDimension,outputDimension)$/;"	f
+Parallel:__tostring__	nn/Parallel.lua	/^function Parallel:__tostring__()$/;"	f
+Parallel:accGradParameters	nn/Parallel.lua	/^function Parallel:accGradParameters(input, gradOutput, scale)$/;"	f
+Parallel:accUpdateGradParameters	nn/Parallel.lua	/^function Parallel:accUpdateGradParameters(input, gradOutput, lr)$/;"	f
+Parallel:add	nn/Parallel.lua	/^function Parallel:add(module)$/;"	f
+Parallel:get	nn/Parallel.lua	/^function Parallel:get(index)$/;"	f
+Parallel:parameters	nn/Parallel.lua	/^function Parallel:parameters()$/;"	f
+Parallel:share	nn/Parallel.lua	/^function Parallel:share(mlp,...)$/;"	f
+Parallel:updateGradInput	nn/Parallel.lua	/^function Parallel:updateGradInput(input, gradOutput)$/;"	f
+Parallel:updateOutput	nn/Parallel.lua	/^function Parallel:updateOutput(input)$/;"	f
+Parallel:updateParameters	nn/Parallel.lua	/^function Parallel:updateParameters(learningRate)$/;"	f
+Parallel:zeroGradParameters	nn/Parallel.lua	/^function Parallel:zeroGradParameters()$/;"	f
+ParallelTable:__init	nn/ParallelTable.lua	/^function ParallelTable:__init()$/;"	f
+ParallelTable:__tostring__	nn/ParallelTable.lua	/^function ParallelTable:__tostring__()$/;"	f
+ParallelTable:accGradParameters	nn/ParallelTable.lua	/^function ParallelTable:accGradParameters(input, gradOutput, scale)$/;"	f
+ParallelTable:accUpdateGradParameters	nn/ParallelTable.lua	/^function ParallelTable:accUpdateGradParameters(input, gradOutput, lr)$/;"	f
+ParallelTable:add	nn/ParallelTable.lua	/^function ParallelTable:add(module)$/;"	f
+ParallelTable:get	nn/ParallelTable.lua	/^function ParallelTable:get(index)$/;"	f
+ParallelTable:parameters	nn/ParallelTable.lua	/^function ParallelTable:parameters()$/;"	f
+ParallelTable:share	nn/ParallelTable.lua	/^function ParallelTable:share(mlp,...)$/;"	f
+ParallelTable:size	nn/ParallelTable.lua	/^function ParallelTable:size()$/;"	f
+ParallelTable:updateGradInput	nn/ParallelTable.lua	/^function ParallelTable:updateGradInput(input, gradOutput)$/;"	f
+ParallelTable:updateOutput	nn/ParallelTable.lua	/^function ParallelTable:updateOutput(input)$/;"	f
+ParallelTable:updateParameters	nn/ParallelTable.lua	/^function ParallelTable:updateParameters(learningRate)$/;"	f
+ParallelTable:zeroGradParameters	nn/ParallelTable.lua	/^function ParallelTable:zeroGradParameters()$/;"	f
+Power:__init	nn/Power.lua	/^function Power:__init(p)$/;"	f
+Power:updateGradInput	nn/Power.lua	/^function Power:updateGradInput(input, gradOutput)$/;"	f
+Power:updateOutput	nn/Power.lua	/^function Power:updateOutput(input)$/;"	f
+Probe:__init	nnx/Probe.lua	/^function Probe:__init(...)$/;"	f
+Probe:updateGradInput	nnx/Probe.lua	/^function Probe:updateGradInput(input, gradOutput)$/;"	f
+Probe:updateOutput	nnx/Probe.lua	/^function Probe:updateOutput(input)$/;"	f
+Profiler:cpu	xlua/Profiler.lua	/^function Profiler:cpu(name,divider)$/;"	f
+Profiler:displayAll	xlua/Profiler.lua	/^function Profiler:displayAll(args)$/;"	f
+Profiler:format	xlua/Profiler.lua	/^function Profiler:format(name)$/;"	f
+Profiler:formatAll	xlua/Profiler.lua	/^function Profiler:formatAll()$/;"	f
+Profiler:lap	xlua/Profiler.lua	/^function Profiler:lap(name,divider)$/;"	f
+Profiler:print	xlua/Profiler.lua	/^function Profiler:print(name)$/;"	f
+Profiler:printAll	xlua/Profiler.lua	/^function Profiler:printAll()$/;"	f
+Profiler:real	xlua/Profiler.lua	/^function Profiler:real(name,divider)$/;"	f
+Profiler:setColor	xlua/Profiler.lua	/^function Profiler:setColor(name, color)$/;"	f
+Profiler:start	xlua/Profiler.lua	/^function Profiler:start(name, fps)$/;"	f
+Replicate:__init	nn/Replicate.lua	/^function Replicate:__init(nf)$/;"	f
+Replicate:updateGradInput	nn/Replicate.lua	/^function Replicate:updateGradInput(input, gradOutput)$/;"	f
+Replicate:updateOutput	nn/Replicate.lua	/^function Replicate:updateOutput(input)$/;"	f
+Reshape:__init	nn/Reshape.lua	/^function Reshape:__init(...)$/;"	f
+Reshape:updateGradInput	nn/Reshape.lua	/^function Reshape:updateGradInput(input, gradOutput)$/;"	f
+Reshape:updateOutput	nn/Reshape.lua	/^function Reshape:updateOutput(input)$/;"	f
+SGD:QN	nnx/SGDOptimization.lua	/^function SGD:QN(inputs, targets)$/;"	f
+SGD:__init	nnx/SGDOptimization.lua	/^function SGD:__init(...)$/;"	f
+SGD:condition 	nnx/SGDOptimization.lua	/^function SGD:condition (inputs, targets, ctype)$/;"	f
+SGD:diagHessian	nnx/SGDOptimization.lua	/^function SGD:diagHessian(inputs, targets)$/;"	f
+SGD:optimalLearningRate	nnx/SGDOptimization.lua	/^function SGD:optimalLearningRate(inputs, targets)$/;"	f
+SGD:optimize	nnx/SGDOptimization.lua	/^function SGD:optimize()$/;"	f
+SNES:__init	nnx/SNESOptimization.lua	/^function SNES:__init(...)$/;"	f
+SNES:f	nnx/SNESOptimization.lua	/^function SNES:f(th, X, inputs, targets)$/;"	f
+SNES:optimize	nnx/SNESOptimization.lua	/^function SNES:optimize(inputs, targets)$/;"	f
+SNES:utilities	nnx/SNESOptimization.lua	/^function SNES:utilities()$/;"	f
+Select:__init	nn/Select.lua	/^function Select:__init(dimension,index)$/;"	f
+Select:updateGradInput	nn/Select.lua	/^function Select:updateGradInput(input, gradOutput)$/;"	f
+Select:updateOutput	nn/Select.lua	/^function Select:updateOutput(input)$/;"	f
+Sequential:__init	nn/Sequential.lua	/^function Sequential:__init()$/;"	f
+Sequential:__tostring__	nn/Sequential.lua	/^function Sequential:__tostring__()$/;"	f
+Sequential:accGradParameters	nn/Sequential.lua	/^function Sequential:accGradParameters(input, gradOutput, scale)$/;"	f
+Sequential:accUpdateGradParameters	nn/Sequential.lua	/^function Sequential:accUpdateGradParameters(input, gradOutput, lr)$/;"	f
+Sequential:add	nn/Sequential.lua	/^function Sequential:add(module)$/;"	f
+Sequential:get	nn/Sequential.lua	/^function Sequential:get(index)$/;"	f
+Sequential:parameters	nn/Sequential.lua	/^function Sequential:parameters()$/;"	f
+Sequential:reset	nn/Sequential.lua	/^function Sequential:reset(stdv)$/;"	f
+Sequential:share	nn/Sequential.lua	/^function Sequential:share(mlp,...)$/;"	f
+Sequential:size	nn/Sequential.lua	/^function Sequential:size()$/;"	f
+Sequential:updateGradInput	nn/Sequential.lua	/^function Sequential:updateGradInput(input, gradOutput)$/;"	f
+Sequential:updateOutput	nn/Sequential.lua	/^function Sequential:updateOutput(input)$/;"	f
+Sequential:updateParameters	nn/Sequential.lua	/^function Sequential:updateParameters(learningRate)$/;"	f
+Sequential:zeroGradParameters	nn/Sequential.lua	/^function Sequential:zeroGradParameters()$/;"	f
+Sigmoid:updateGradInput	nn/Sigmoid.lua	/^function Sigmoid:updateGradInput(input, gradOutput)$/;"	f
+Sigmoid:updateOutput	nn/Sigmoid.lua	/^function Sigmoid:updateOutput(input)$/;"	f
+SoftMax:updateGradInput	nn/SoftMax.lua	/^function SoftMax:updateGradInput(input, gradOutput)$/;"	f
+SoftMax:updateOutput	nn/SoftMax.lua	/^function SoftMax:updateOutput(input)$/;"	f
+SoftMin:updateGradInput	nn/SoftMin.lua	/^function SoftMin:updateGradInput(input, gradOutput)$/;"	f
+SoftMin:updateOutput	nn/SoftMin.lua	/^function SoftMin:updateOutput(input)$/;"	f
+SoftPlus:updateGradInput	nn/SoftPlus.lua	/^function SoftPlus:updateGradInput(input, gradOutput)$/;"	f
+SoftPlus:updateOutput	nn/SoftPlus.lua	/^function SoftPlus:updateOutput(input)$/;"	f
+SoftShrink:__init	nn/SoftShrink.lua	/^function SoftShrink:__init(lam)$/;"	f
+SoftShrink:updateGradInput	nn/SoftShrink.lua	/^function SoftShrink:updateGradInput(input, gradOutput)$/;"	f
+SoftShrink:updateOutput	nn/SoftShrink.lua	/^function SoftShrink:updateOutput(input)$/;"	f
+SoftSign:updateGradInput	nn/SoftSign.lua	/^function SoftSign:updateGradInput(input, gradOutput)$/;"	f
+SoftSign:updateOutput	nn/SoftSign.lua	/^function SoftSign:updateOutput(input)$/;"	f
+SparseCriterion:__init	nnx/SparseCriterion.lua	/^function SparseCriterion:__init()$/;"	f
+SparseCriterion:updateGradInput	nnx/SparseCriterion.lua	/^function SparseCriterion:updateGradInput(input)$/;"	f
+SparseCriterion:updateOutput	nnx/SparseCriterion.lua	/^function SparseCriterion:updateOutput(input)$/;"	f
+SparseLinear:__init	nn/SparseLinear.lua	/^function SparseLinear:__init(inputSize, outputSize)$/;"	f
+SparseLinear:accGradParameters	nn/SparseLinear.lua	/^function SparseLinear:accGradParameters(input, gradOutput, scale)$/;"	f
+SparseLinear:reset	nn/SparseLinear.lua	/^function SparseLinear:reset(stdv)$/;"	f
+SparseLinear:updateOutput	nn/SparseLinear.lua	/^function SparseLinear:updateOutput(input)$/;"	f
+SpatialClassNLLCriterion:__init	nnx/SpatialClassNLLCriterion.lua	/^function SpatialClassNLLCriterion:__init(...)$/;"	f
+SpatialClassNLLCriterion:adjustTarget	nnx/SpatialClassNLLCriterion.lua	/^function SpatialClassNLLCriterion:adjustTarget(input, target)$/;"	f
+SpatialClassNLLCriterion:updateGradInput	nnx/SpatialClassNLLCriterion.lua	/^function SpatialClassNLLCriterion:updateGradInput(input,target)$/;"	f
+SpatialClassNLLCriterion:updateOutput	nnx/SpatialClassNLLCriterion.lua	/^function SpatialClassNLLCriterion:updateOutput(input,target)$/;"	f
+SpatialColorTransform:__init	nnx/SpatialColorTransform.lua	/^function SpatialColorTransform:__init(type)$/;"	f
+SpatialColorTransform:type	nnx/SpatialColorTransform.lua	/^function SpatialColorTransform:type(type)$/;"	f
+SpatialColorTransform:updateGradInput	nnx/SpatialColorTransform.lua	/^function SpatialColorTransform:updateGradInput(input, gradOutput)$/;"	f
+SpatialColorTransform:updateOutput	nnx/SpatialColorTransform.lua	/^function SpatialColorTransform:updateOutput(input)$/;"	f
+SpatialContrastiveNormalization:__init	nn/SpatialContrastiveNormalization.lua	/^function SpatialContrastiveNormalization:__init(nInputPlane, kernel, threshold, thresval)$/;"	f
+SpatialContrastiveNormalization:type	nn/SpatialContrastiveNormalization.lua	/^function SpatialContrastiveNormalization:type(type)$/;"	f
+SpatialContrastiveNormalization:updateGradInput	nn/SpatialContrastiveNormalization.lua	/^function SpatialContrastiveNormalization:updateGradInput(input, gradOutput)$/;"	f
+SpatialContrastiveNormalization:updateOutput	nn/SpatialContrastiveNormalization.lua	/^function SpatialContrastiveNormalization:updateOutput(input)$/;"	f
+SpatialConvolution:__init	nn/SpatialConvolution.lua	/^function SpatialConvolution:__init(nInputPlane, nOutputPlane, kW, kH, dW, dH)$/;"	f
+SpatialConvolution:accGradParameters	nn/SpatialConvolution.lua	/^function SpatialConvolution:accGradParameters(input, gradOutput, scale)$/;"	f
+SpatialConvolution:reset	nn/SpatialConvolution.lua	/^function SpatialConvolution:reset(stdv)$/;"	f
+SpatialConvolution:updateGradInput	nn/SpatialConvolution.lua	/^function SpatialConvolution:updateGradInput(input, gradOutput)$/;"	f
+SpatialConvolution:updateOutput	nn/SpatialConvolution.lua	/^function SpatialConvolution:updateOutput(input)$/;"	f
+SpatialConvolutionMap:__init	nn/SpatialConvolutionMap.lua	/^function SpatialConvolutionMap:__init(conMatrix, kW, kH, dW, dH)$/;"	f
+SpatialConvolutionMap:accGradParameters	nn/SpatialConvolutionMap.lua	/^function SpatialConvolutionMap:accGradParameters(input, gradOutput, scale)$/;"	f
+SpatialConvolutionMap:decayParameters	nn/SpatialConvolutionMap.lua	/^function SpatialConvolutionMap:decayParameters(decay)$/;"	f
+SpatialConvolutionMap:reset	nn/SpatialConvolutionMap.lua	/^function SpatialConvolutionMap:reset(stdv)$/;"	f
+SpatialConvolutionMap:updateGradInput	nn/SpatialConvolutionMap.lua	/^function SpatialConvolutionMap:updateGradInput(input, gradOutput)$/;"	f
+SpatialConvolutionMap:updateOutput	nn/SpatialConvolutionMap.lua	/^function SpatialConvolutionMap:updateOutput(input)$/;"	f
+SpatialConvolutionSparse:__init	nnx/SpatialConvolutionSparse.lua	/^function SpatialConvolutionSparse:__init(...)$/;"	f
+SpatialDivisiveNormalization:__init	nn/SpatialDivisiveNormalization.lua	/^function SpatialDivisiveNormalization:__init(nInputPlane, kernel, threshold, thresval)$/;"	f
+SpatialDivisiveNormalization:type	nn/SpatialDivisiveNormalization.lua	/^function SpatialDivisiveNormalization:type(type)$/;"	f
+SpatialDivisiveNormalization:updateGradInput	nn/SpatialDivisiveNormalization.lua	/^function SpatialDivisiveNormalization:updateGradInput(input, gradOutput)$/;"	f
+SpatialDivisiveNormalization:updateOutput	nn/SpatialDivisiveNormalization.lua	/^function SpatialDivisiveNormalization:updateOutput(input)$/;"	f
+SpatialDownSampling:__init	nnx/SpatialDownSampling.lua	/^function SpatialDownSampling:__init(...)$/;"	f
+SpatialDownSampling:updateGradInput	nnx/SpatialDownSampling.lua	/^function SpatialDownSampling:updateGradInput(input, gradOutput)$/;"	f
+SpatialDownSampling:updateOutput	nnx/SpatialDownSampling.lua	/^function SpatialDownSampling:updateOutput(input)$/;"	f
+SpatialFovea:__init	nnx/SpatialFovea.lua	/^function SpatialFovea:__init(...)$/;"	f
+SpatialFovea:__tostring__	nnx/SpatialFovea.lua	/^function SpatialFovea:__tostring__()$/;"	f
+SpatialFovea:accGradParameters	nnx/SpatialFovea.lua	/^function SpatialFovea:accGradParameters(input, gradOutput, scale)$/;"	f
+SpatialFovea:configure	nnx/SpatialFovea.lua	/^function SpatialFovea:configure(width,height)$/;"	f
+SpatialFovea:focus	nnx/SpatialFovea.lua	/^function SpatialFovea:focus(x,y,fov)$/;"	f
+SpatialFovea:parameters	nnx/SpatialFovea.lua	/^function SpatialFovea:parameters()$/;"	f
+SpatialFovea:reset	nnx/SpatialFovea.lua	/^function SpatialFovea:reset(stdv)$/;"	f
+SpatialFovea:type	nnx/SpatialFovea.lua	/^function SpatialFovea:type(type)$/;"	f
+SpatialFovea:updateGradInput	nnx/SpatialFovea.lua	/^function SpatialFovea:updateGradInput(input, gradOutput)$/;"	f
+SpatialFovea:updateOutput	nnx/SpatialFovea.lua	/^function SpatialFovea:updateOutput(input)$/;"	f
+SpatialFovea:updateParameters	nnx/SpatialFovea.lua	/^function SpatialFovea:updateParameters(learningRate)$/;"	f
+SpatialFovea:zeroGradParameters	nnx/SpatialFovea.lua	/^function SpatialFovea:zeroGradParameters()$/;"	f
+SpatialGraph:__init	nnx/SpatialGraph.lua	/^function SpatialGraph:__init(...)$/;"	f
+SpatialGraph:updateGradInput	nnx/SpatialGraph.lua	/^function SpatialGraph:updateGradInput(input, gradOutput)$/;"	f
+SpatialGraph:updateOutput	nnx/SpatialGraph.lua	/^function SpatialGraph:updateOutput(input)$/;"	f
+SpatialLPPooling:__init	nn/SpatialLPPooling.lua	/^function SpatialLPPooling:__init(nInputPlane, pnorm, kW, kH, dW, dH)$/;"	f
+SpatialLPPooling:accGradParameters	nn/SpatialLPPooling.lua	/^function SpatialLPPooling:accGradParameters()$/;"	f
+SpatialLPPooling:accUpdateGradParameters	nn/SpatialLPPooling.lua	/^function SpatialLPPooling:accUpdateGradParameters()$/;"	f
+SpatialLPPooling:reset	nn/SpatialLPPooling.lua	/^function SpatialLPPooling:reset()$/;"	f
+SpatialLPPooling:updateParameters	nn/SpatialLPPooling.lua	/^function SpatialLPPooling:updateParameters()$/;"	f
+SpatialLPPooling:zeroGradParameters	nn/SpatialLPPooling.lua	/^function SpatialLPPooling:zeroGradParameters()$/;"	f
+SpatialLinear:__init	nnx/SpatialLinear.lua	/^function SpatialLinear:__init(fanin, fanout)$/;"	f
+SpatialLinear:decayParameters	nnx/SpatialLinear.lua	/^function SpatialLinear:decayParameters(decay)$/;"	f
+SpatialLinear:reset	nnx/SpatialLinear.lua	/^function SpatialLinear:reset(stdv)$/;"	f
+SpatialLinear:updateGradInput	nnx/SpatialLinear.lua	/^function SpatialLinear:updateGradInput(input, gradOutput)$/;"	f
+SpatialLinear:updateOutput	nnx/SpatialLinear.lua	/^function SpatialLinear:updateOutput(input)$/;"	f
+SpatialLinear:updateParameters	nnx/SpatialLinear.lua	/^function SpatialLinear:updateParameters(learningRate)$/;"	f
+SpatialLinear:zeroGradParameters	nnx/SpatialLinear.lua	/^function SpatialLinear:zeroGradParameters(momentum)$/;"	f
+SpatialMSECriterion:__init	nnx/SpatialMSECriterion.lua	/^function SpatialMSECriterion:__init(...)$/;"	f
+SpatialMSECriterion:adjustTarget	nnx/SpatialMSECriterion.lua	/^function SpatialMSECriterion:adjustTarget(input, target)$/;"	f
+SpatialMSECriterion:updateGradInput	nnx/SpatialMSECriterion.lua	/^function SpatialMSECriterion:updateGradInput(input,target)$/;"	f
+SpatialMSECriterion:updateOutput	nnx/SpatialMSECriterion.lua	/^function SpatialMSECriterion:updateOutput(input,target)$/;"	f
+SpatialMatching:__init	nnx/SpatialMatching.lua	/^function SpatialMatching:__init(maxh, maxw, full_output)$/;"	f
+SpatialMatching:updateGradInput	nnx/SpatialMatching.lua	/^function SpatialMatching:updateGradInput(input, gradOutput)$/;"	f
+SpatialMatching:updateOutput	nnx/SpatialMatching.lua	/^function SpatialMatching:updateOutput(input)$/;"	f
+SpatialMaxPooling:__init	nn/SpatialMaxPooling.lua	/^function SpatialMaxPooling:__init(kW, kH, dW, dH)$/;"	f
+SpatialMaxPooling:empty	nn/SpatialMaxPooling.lua	/^function SpatialMaxPooling:empty()$/;"	f
+SpatialMaxPooling:updateGradInput	nn/SpatialMaxPooling.lua	/^function SpatialMaxPooling:updateGradInput(input, gradOutput)$/;"	f
+SpatialMaxPooling:updateOutput	nn/SpatialMaxPooling.lua	/^function SpatialMaxPooling:updateOutput(input)$/;"	f
+SpatialMaxSampling:__init	nnx/SpatialMaxSampling.lua	/^function SpatialMaxSampling:__init(...)$/;"	f
+SpatialMaxSampling:updateGradInput	nnx/SpatialMaxSampling.lua	/^function SpatialMaxSampling:updateGradInput(input, gradOutput)$/;"	f
+SpatialMaxSampling:updateOutput	nnx/SpatialMaxSampling.lua	/^function SpatialMaxSampling:updateOutput(input)$/;"	f
+SpatialNormalization:__init	nnx/SpatialNormalization.lua	/^function SpatialNormalization:__init(...) -- kernel for weighted mean | nb of features$/;"	f
+SpatialNormalization:type	nnx/SpatialNormalization.lua	/^function SpatialNormalization:type(type)$/;"	f
+SpatialNormalization:updateGradInput	nnx/SpatialNormalization.lua	/^function SpatialNormalization:updateGradInput(input, gradOutput)$/;"	f
+SpatialNormalization:updateOutput	nnx/SpatialNormalization.lua	/^function SpatialNormalization:updateOutput(input)$/;"	f
+SpatialPadding:__init	nnx/SpatialPadding.lua	/^function SpatialPadding:__init(pad_l, pad_r, pad_t, pad_b, y_dim, x_dim)$/;"	f
+SpatialPadding:updateGradInput	nnx/SpatialPadding.lua	/^function SpatialPadding:updateGradInput(input, gradOutput)$/;"	f
+SpatialPadding:updateOutput	nnx/SpatialPadding.lua	/^function SpatialPadding:updateOutput(input)$/;"	f
+SpatialPyramid:__init	nnx/SpatialPyramid.lua	/^function SpatialPyramid:__init(ratios, processors, kW, kH, dW, dH, xDimIn, yDimIn,$/;"	f
+SpatialPyramid:__tostring__	nnx/SpatialPyramid.lua	/^function SpatialPyramid:__tostring__()$/;"	f
+SpatialPyramid:accGradParameters	nnx/SpatialPyramid.lua	/^function SpatialPyramid:accGradParameters(input, gradOutput, scale)$/;"	f
+SpatialPyramid:checkSize	nnx/SpatialPyramid.lua	/^function SpatialPyramid:checkSize(input)$/;"	f
+SpatialPyramid:configureFocus	nnx/SpatialPyramid.lua	/^function SpatialPyramid:configureFocus(wImg, hImg)$/;"	f
+SpatialPyramid:focus	nnx/SpatialPyramid.lua	/^function SpatialPyramid:focus(x, y, w, h)$/;"	f
+SpatialPyramid:parameters	nnx/SpatialPyramid.lua	/^function SpatialPyramid:parameters()$/;"	f
+SpatialPyramid:type	nnx/SpatialPyramid.lua	/^function SpatialPyramid:type(type)$/;"	f
+SpatialPyramid:updateGradInput	nnx/SpatialPyramid.lua	/^function SpatialPyramid:updateGradInput(input, gradOutput)$/;"	f
+SpatialPyramid:updateOutput	nnx/SpatialPyramid.lua	/^function SpatialPyramid:updateOutput(input)$/;"	f
+SpatialPyramid:updateParameters	nnx/SpatialPyramid.lua	/^function SpatialPyramid:updateParameters(learningRate)$/;"	f
+SpatialPyramid:zeroGradParameters	nnx/SpatialPyramid.lua	/^function SpatialPyramid:zeroGradParameters()$/;"	f
+SpatialRadialMatching:__init	nnx/SpatialRadialMatching.lua	/^function SpatialRadialMatching:__init(maxh)$/;"	f
+SpatialRadialMatching:updateGradInput	nnx/SpatialRadialMatching.lua	/^function SpatialRadialMatching:updateGradInput(input, gradOutput)$/;"	f
+SpatialRadialMatching:updateOutput	nnx/SpatialRadialMatching.lua	/^function SpatialRadialMatching:updateOutput(input)$/;"	f
+SpatialReSampling:__init	nnx/SpatialReSampling.lua	/^function SpatialReSampling:__init(...)$/;"	f
+SpatialReSampling:updateGradInput	nnx/SpatialReSampling.lua	/^function SpatialReSampling:updateGradInput(input, gradOutput)$/;"	f
+SpatialReSampling:updateOutput	nnx/SpatialReSampling.lua	/^function SpatialReSampling:updateOutput(input)$/;"	f
+SpatialReSamplingEx:__init	nnx/SpatialReSamplingEx.lua	/^function SpatialReSamplingEx:__init(...)$/;"	f
+SpatialReSamplingEx:updateGradInput	nnx/SpatialReSamplingEx.lua	/^function SpatialReSamplingEx:updateGradInput(input, gradOutput)$/;"	f
+SpatialReSamplingEx:updateOutput	nnx/SpatialReSamplingEx.lua	/^function SpatialReSamplingEx:updateOutput(input)$/;"	f
+SpatialRecursiveFovea:__init	nnx/SpatialRecursiveFovea.lua	/^function SpatialRecursiveFovea:__init(...)$/;"	f
+SpatialRecursiveFovea:__tostring__	nnx/SpatialRecursiveFovea.lua	/^function SpatialRecursiveFovea:__tostring__()$/;"	f
+SpatialRecursiveFovea:configure	nnx/SpatialRecursiveFovea.lua	/^function SpatialRecursiveFovea:configure(fov, sub, input_w, input_h)$/;"	f
+SpatialRecursiveFovea:decayParameters	nnx/SpatialRecursiveFovea.lua	/^function SpatialRecursiveFovea:decayParameters(decay)$/;"	f
+SpatialRecursiveFovea:focus	nnx/SpatialRecursiveFovea.lua	/^function SpatialRecursiveFovea:focus(x,y)$/;"	f
+SpatialRecursiveFovea:reset	nnx/SpatialRecursiveFovea.lua	/^function SpatialRecursiveFovea:reset(stdv)$/;"	f
+SpatialRecursiveFovea:updateGradInput	nnx/SpatialRecursiveFovea.lua	/^function SpatialRecursiveFovea:updateGradInput(input)$/;"	f
+SpatialRecursiveFovea:updateOutput	nnx/SpatialRecursiveFovea.lua	/^function SpatialRecursiveFovea:updateOutput(input,target,x,y)$/;"	f
+SpatialRecursiveFovea:updateParameters	nnx/SpatialRecursiveFovea.lua	/^function SpatialRecursiveFovea:updateParameters(learningRate)$/;"	f
+SpatialRecursiveFovea:zeroGradParameters	nnx/SpatialRecursiveFovea.lua	/^function SpatialRecursiveFovea:zeroGradParameters(momentum)$/;"	f
+SpatialSparseCriterion:__init	nnx/SpatialSparseCriterion.lua	/^function SpatialSparseCriterion:__init(...)$/;"	f
+SpatialSparseCriterion:updateGradInput	nnx/SpatialSparseCriterion.lua	/^function SpatialSparseCriterion:updateGradInput(input,target)$/;"	f
+SpatialSparseCriterion:updateOutput	nnx/SpatialSparseCriterion.lua	/^function SpatialSparseCriterion:updateOutput(input)$/;"	f
+SpatialSubSampling:__init	nn/SpatialSubSampling.lua	/^function SpatialSubSampling:__init(nInputPlane, kW, kH, dW, dH)$/;"	f
+SpatialSubSampling:accGradParameters	nn/SpatialSubSampling.lua	/^function SpatialSubSampling:accGradParameters(input, gradOutput, scale)$/;"	f
+SpatialSubSampling:reset	nn/SpatialSubSampling.lua	/^function SpatialSubSampling:reset(stdv)$/;"	f
+SpatialSubSampling:updateGradInput	nn/SpatialSubSampling.lua	/^function SpatialSubSampling:updateGradInput(input, gradOutput)$/;"	f
+SpatialSubSampling:updateOutput	nn/SpatialSubSampling.lua	/^function SpatialSubSampling:updateOutput(input)$/;"	f
+SpatialSubtractiveNormalization:__init	nn/SpatialSubtractiveNormalization.lua	/^function SpatialSubtractiveNormalization:__init(nInputPlane, kernel)$/;"	f
+SpatialSubtractiveNormalization:type	nn/SpatialSubtractiveNormalization.lua	/^function SpatialSubtractiveNormalization:type(type)$/;"	f
+SpatialSubtractiveNormalization:updateGradInput	nn/SpatialSubtractiveNormalization.lua	/^function SpatialSubtractiveNormalization:updateGradInput(input, gradOutput)$/;"	f
+SpatialSubtractiveNormalization:updateOutput	nn/SpatialSubtractiveNormalization.lua	/^function SpatialSubtractiveNormalization:updateOutput(input)$/;"	f
+SpatialUpSampling:__init	nnx/SpatialUpSampling.lua	/^function SpatialUpSampling:__init(...)$/;"	f
+SpatialUpSampling:updateGradInput	nnx/SpatialUpSampling.lua	/^function SpatialUpSampling:updateGradInput(input, gradOutput)$/;"	f
+SpatialUpSampling:updateOutput	nnx/SpatialUpSampling.lua	/^function SpatialUpSampling:updateOutput(input)$/;"	f
+SpatialZeroPadding:__init	nn/SpatialZeroPadding.lua	/^function SpatialZeroPadding:__init(pad_l, pad_r, pad_t, pad_b)$/;"	f
+SpatialZeroPadding:updateGradInput	nn/SpatialZeroPadding.lua	/^function SpatialZeroPadding:updateGradInput(input, gradOutput)$/;"	f
+SpatialZeroPadding:updateOutput	nn/SpatialZeroPadding.lua	/^function SpatialZeroPadding:updateOutput(input)$/;"	f
+SplitTable:__init	nn/SplitTable.lua	/^function SplitTable:__init(dimension)$/;"	f
+SplitTable:updateGradInput	nn/SplitTable.lua	/^function SplitTable:updateGradInput(input, gradOutput)$/;"	f
+SplitTable:updateOutput	nn/SplitTable.lua	/^function SplitTable:updateOutput(input)$/;"	f
+Sqrt:__init	nn/Sqrt.lua	/^function Sqrt:__init(b)$/;"	f
+Sqrt:updateGradInput	nn/Sqrt.lua	/^function Sqrt:updateGradInput(input, gradOutput)$/;"	f
+Sqrt:updateOutput	nn/Sqrt.lua	/^function Sqrt:updateOutput(input)$/;"	f
+Square:__init	nn/Square.lua	/^function Square:__init(args)$/;"	f
+Square:updateGradInput	nn/Square.lua	/^function Square:updateGradInput(input, gradOutput)$/;"	f
+Square:updateOutput	nn/Square.lua	/^function Square:updateOutput(input)$/;"	f
+StochasticGradient:__init	nn/StochasticGradient.lua	/^function StochasticGradient:__init(module, criterion)$/;"	f
+StochasticGradient:train	nn/StochasticGradient.lua	/^function StochasticGradient:train(dataset)$/;"	f
+Storage.__tostring__	torch/Tensor.lua	/^function Storage.__tostring__(self)$/;"	f
+Storage__printformat	torch/Tensor.lua	/^local function Storage__printformat(self)$/;"	f
+Sum:__init	nn/Sum.lua	/^function Sum:__init(dimension)$/;"	f
+Sum:updateGradInput	nn/Sum.lua	/^function Sum:updateGradInput(input, gradOutput)$/;"	f
+Sum:updateOutput	nn/Sum.lua	/^function Sum:updateOutput(input)$/;"	f
+SuperCriterion:__init	nnx/SuperCriterion.lua	/^function SuperCriterion:__init()$/;"	f
+SuperCriterion:add	nnx/SuperCriterion.lua	/^function SuperCriterion:add(criterion, weight)$/;"	f
+SuperCriterion:updateGradInput	nnx/SuperCriterion.lua	/^function SuperCriterion:updateGradInput(input, target)$/;"	f
+SuperCriterion:updateOutput	nnx/SuperCriterion.lua	/^function SuperCriterion:updateOutput(input, target)$/;"	f
+TH_GENERIC_FILE	torch/generic/Storage.c	2;"	d	file:
+TH_GENERIC_FILE	torch/generic/Tensor.c	2;"	d	file:
+Tanh:updateGradInput	nn/Tanh.lua	/^function Tanh:updateGradInput(input, gradOutput)$/;"	f
+Tanh:updateOutput	nn/Tanh.lua	/^function Tanh:updateOutput(input)$/;"	f
+TemporalConvolution:__init	nn/TemporalConvolution.lua	/^function TemporalConvolution:__init(inputFrameSize, outputFrameSize, kW, dW)$/;"	f
+TemporalConvolution:accGradParameters	nn/TemporalConvolution.lua	/^function TemporalConvolution:accGradParameters(input, gradOutput, scale)$/;"	f
+TemporalConvolution:reset	nn/TemporalConvolution.lua	/^function TemporalConvolution:reset(stdv)$/;"	f
+TemporalConvolution:updateGradInput	nn/TemporalConvolution.lua	/^function TemporalConvolution:updateGradInput(input, gradOutput)$/;"	f
+TemporalConvolution:updateOutput	nn/TemporalConvolution.lua	/^function TemporalConvolution:updateOutput(input)$/;"	f
+TemporalSubSampling:__init	nn/TemporalSubSampling.lua	/^function TemporalSubSampling:__init(inputFrameSize, kW, dW)$/;"	f
+TemporalSubSampling:accGradParameters	nn/TemporalSubSampling.lua	/^function TemporalSubSampling:accGradParameters(input, gradOutput, scale)$/;"	f
+TemporalSubSampling:reset	nn/TemporalSubSampling.lua	/^function TemporalSubSampling:reset(stdv)$/;"	f
+TemporalSubSampling:updateGradInput	nn/TemporalSubSampling.lua	/^function TemporalSubSampling:updateGradInput(input, gradOutput)$/;"	f
+TemporalSubSampling:updateOutput	nn/TemporalSubSampling.lua	/^function TemporalSubSampling:updateOutput(input)$/;"	f
+Tensor.__tostring__	torch/Tensor.lua	/^function Tensor.__tostring__(self)$/;"	f
+Tensor.byte	torch/Tensor.lua	/^function Tensor.byte(self)$/;"	f
+Tensor.char	torch/Tensor.lua	/^function Tensor.char(self)$/;"	f
+Tensor.double	torch/Tensor.lua	/^function Tensor.double(self)$/;"	f
+Tensor.float	torch/Tensor.lua	/^function Tensor.float(self)$/;"	f
+Tensor.int	torch/Tensor.lua	/^function Tensor.int(self)$/;"	f
+Tensor.long	torch/Tensor.lua	/^function Tensor.long(self)$/;"	f
+Tensor.real	torch/Tensor.lua	/^function Tensor.real(self)$/;"	f
+Tensor.short	torch/Tensor.lua	/^function Tensor.short(self)$/;"	f
+Tensor.type	torch/Tensor.lua	/^function Tensor.type(self,type)$/;"	f
+Tensor.typeAs	torch/Tensor.lua	/^function Tensor.typeAs(self,tensor)$/;"	f
+Tensor__printMatrix	torch/Tensor.lua	/^local function Tensor__printMatrix(self, indent)$/;"	f
+Tensor__printTensor	torch/Tensor.lua	/^local function Tensor__printTensor(self)$/;"	f
+Tester:__init	torch/Tester.lua	/^function Tester:__init()$/;"	f
+Tester:add	torch/Tester.lua	/^function Tester:add(f,name)$/;"	f
+Tester:assert 	torch/Tester.lua	/^function Tester:assert (condition, message)$/;"	f
+Tester:assertTensorEq	torch/Tester.lua	/^function Tester:assertTensorEq(ta, tb, condition, message)$/;"	f
+Tester:assert_sub 	torch/Tester.lua	/^function Tester:assert_sub (condition, message)$/;"	f
+Tester:asserteq 	torch/Tester.lua	/^function Tester:asserteq (val, condition, message)$/;"	f
+Tester:assertge 	torch/Tester.lua	/^function Tester:assertge (val, condition, message)$/;"	f
+Tester:assertgt 	torch/Tester.lua	/^function Tester:assertgt (val, condition, message)$/;"	f
+Tester:assertle 	torch/Tester.lua	/^function Tester:assertle (val, condition, message)$/;"	f
+Tester:assertlt 	torch/Tester.lua	/^function Tester:assertlt (val, condition, message)$/;"	f
+Tester:assertne 	torch/Tester.lua	/^function Tester:assertne (val, condition, message)$/;"	f
+Tester:pcall	torch/Tester.lua	/^function Tester:pcall(f)$/;"	f
+Tester:report	torch/Tester.lua	/^function Tester:report()$/;"	f
+Tester:run	torch/Tester.lua	/^function Tester:run()$/;"	f
+Threshold:__init	nn/Threshold.lua	/^function Threshold:__init(th,v)$/;"	f
+Threshold:updateGradInput	nn/Threshold.lua	/^function Threshold:updateGradInput(input, gradOutput)$/;"	f
+Threshold:updateOutput	nn/Threshold.lua	/^function Threshold:updateOutput(input)$/;"	f
+Tic:__init	nnx/Tic.lua	/^function Tic:__init(name)$/;"	f
+Tic:updateGradInput	nnx/Tic.lua	/^function Tic:updateGradInput(input, gradOutput) $/;"	f
+Tic:updateOutput	nnx/Tic.lua	/^function Tic:updateOutput(input)$/;"	f
+Toc:__init	nnx/Toc.lua	/^function Toc:__init(name, comment)$/;"	f
+Toc:updateGradInput	nnx/Toc.lua	/^function Toc:updateGradInput(input, gradOutput) $/;"	f
+Toc:updateOutput	nnx/Toc.lua	/^function Toc:updateOutput(input)$/;"	f
+Trainer:__init	nnx/Trainer.lua	/^function Trainer:__init()$/;"	f
+Trainer:clone	nnx/Trainer.lua	/^function Trainer:clone(...)$/;"	f
+Trainer:share	nnx/Trainer.lua	/^function Trainer:share(mlp, ...)$/;"	f
+Trainer:train	nnx/Trainer.lua	/^function Trainer:train(dataset)$/;"	f
+Type:__init	nnx/Type.lua	/^function Type:__init(type)$/;"	f
+Type:accGradParameters	nnx/Type.lua	/^function Type:accGradParameters(input, gradOutput)$/;"	f
+Type:add	nnx/Type.lua	/^function Type:add(module)$/;"	f
+Type:updateGradInput	nnx/Type.lua	/^function Type:updateGradInput(input, gradOutput)$/;"	f
+Type:updateOutput	nnx/Type.lua	/^function Type:updateOutput(input)$/;"	f
+VolumetricConvolution:__init	nn/VolumetricConvolution.lua	/^function VolumetricConvolution:__init(nInputPlane, nOutputPlane, kT, kW, kH, dT, dW, dH)$/;"	f
+VolumetricConvolution:accGradParameters	nn/VolumetricConvolution.lua	/^function VolumetricConvolution:accGradParameters(input, gradOutput, scale)$/;"	f
+VolumetricConvolution:reset	nn/VolumetricConvolution.lua	/^function VolumetricConvolution:reset(stdv)$/;"	f
+VolumetricConvolution:updateGradInput	nn/VolumetricConvolution.lua	/^function VolumetricConvolution:updateGradInput(input, gradOutput)$/;"	f
+VolumetricConvolution:updateOutput	nn/VolumetricConvolution.lua	/^function VolumetricConvolution:updateOutput(input)$/;"	f
+WeightedEuclidean:__init	nn/WeightedEuclidean.lua	/^function WeightedEuclidean:__init(inputSize,outputSize)$/;"	f
+WeightedEuclidean:accGradParameters	nn/WeightedEuclidean.lua	/^function WeightedEuclidean:accGradParameters(input, gradOutput, scale)$/;"	f
+WeightedEuclidean:reset	nn/WeightedEuclidean.lua	/^function WeightedEuclidean:reset(stdv)$/;"	f
+WeightedEuclidean:updateGradInput	nn/WeightedEuclidean.lua	/^function WeightedEuclidean:updateGradInput(input, gradOutput)$/;"	f
+WeightedEuclidean:updateOutput	nn/WeightedEuclidean.lua	/^function WeightedEuclidean:updateOutput(input)$/;"	f
+_G.coroutine.create 	debugger/debugger.lua	/^_G.coroutine.create = function(f)$/;"	f
+_G.coroutine.wrap 	debugger/debugger.lua	/^_G.coroutine.wrap = function(f)$/;"	f
+_M[f] 	qtuiloader/init.lua	/^   _M[f] = function(...) $/;"	f
+_TRACEBACK 	debugger/debugger.lua	/^_TRACEBACK = debug.traceback             --Lua 5.0 function$/;"	f
+__index__	torch/generic/Storage.c	/^static int torch_Storage_(__index__)(lua_State *L)$/;"	f	file:
+__index__	torch/generic/Tensor.c	/^static int torch_Tensor_(__index__)(lua_State *L)$/;"	f	file:
+__len__	torch/generic/Storage.c	/^static int torch_Storage_(__len__)(lua_State *L)$/;"	f	file:
+__newindex__	torch/generic/Storage.c	/^static int torch_Storage_(__newindex__)(lua_State *L)$/;"	f	file:
+__newindex__	torch/generic/Tensor.c	/^static int torch_Tensor_(__newindex__)(lua_State *L)$/;"	f	file:
+adddok	dok/inline.lua	/^local function adddok(...)$/;"	f
+apply	torch/generic/Tensor.c	/^static int torch_Tensor_(apply)(lua_State *L)$/;"	f	file:
+assert(#varargs > 0 and #varargs % 2 	wrap/init.lua	/^   assert(#varargs > 0 and #varargs % 2 == 0, 'must provide both the C function name and the corresponding arguments')$/;"	f
+assert(type(default) 	wrap/types.lua	/^      assert(type(default) == 'string', 'a default function must return a string')$/;"	f
+backward	nnx/test-omp.lua	/^   local function backward(name)$/;"	f
+batchcompare	nn/test.lua	/^function batchcompare(smod, sin, plist)$/;"	f
+beautify	wrap/init.lua	/^local function beautify(txt)$/;"	f
+bit	wrap/init.lua	/^local function bit(p)$/;"	f
+browser	qtide/init.lua	/^function browser(url)$/;"	f
+c_readSizeStride	torch/generic/Tensor.c	/^static void torch_Tensor_(c_readSizeStride)(lua_State *L, int index, int allowStride, THLongStorage **size_, THLongStorage **stride_)$/;"	f	file:
+c_readTensorStorageSizeStride	torch/generic/Tensor.c	/^static void torch_Tensor_(c_readTensorStorageSizeStride)(lua_State *L, int index, int allowNone, int allowTensor, int allowStorage, int allowStride,$/;"	f	file:
+camera.testme 	camera/init.lua	/^camera.testme = function()$/;"	f
+capture_vars	debugger/debugger.lua	/^local function capture_vars(ref,level,line)$/;"	f
+carg 	wrap/types.lua	/^      carg = function(arg)$/;"	f
+carg 	wrap/types.lua	/^   carg = function(arg)$/;"	f
+check	nnx/BatchOptimization.lua	/^         function check(tocheck)$/;"	f
+check	nnx/GeneticSGDOptimization.lua	/^         function check(tocheck)$/;"	f
+check 	wrap/types.lua	/^      check = function(arg, idx)$/;"	f
+check 	wrap/types.lua	/^   check = function(arg, idx)$/;"	f
+class[f] 	qtwidget/init.lua	/^      class[f] = function(self,...) return self.port[f](self.port,...) end$/;"	f
+clear 	xlua/init.lua	/^clear = function(var)$/;"	f
+clearall 	xlua/init.lua	/^clearall = function()$/;"	f
+clone	torch/generic/Tensor.c	/^static int torch_Tensor_(clone)(lua_State *L)$/;"	f	file:
+constructor	torch/init.lua	/^   local function constructor(...)$/;"	f
+contiguous	torch/generic/Tensor.c	/^static int torch_Tensor_(contiguous)(lua_State *L)$/;"	f	file:
+convolve	image/init.lua	/^local function convolve(...)$/;"	f
+copy	torch/generic/Storage.c	/^static int torch_Storage_(copy)(lua_State *L)$/;"	f	file:
+copy	torch/generic/Tensor.c	/^static int torch_Tensor_(copy)(lua_State *L)$/;"	f	file:
+createPreferencesDialog	qtide/prefs.lua	/^function createPreferencesDialog()$/;"	f
+creturn 	wrap/types.lua	/^      creturn = function(arg)$/;"	f
+creturn 	wrap/types.lua	/^   creturn = function(arg)$/;"	f
+crop	image/init.lua	/^local function crop(...)$/;"	f
+debug 'event' selected. c	debugger/debugger.lua	/^debug 'event' selected. c=function calls, r=function returns, l=lines.$/;"	f
+debug.traceback 	debugger/debugger.lua	/^debug.traceback = function(x)$/;"	f
+debug_hook	debugger/debugger.lua	/^local function debug_hook(event, line, level, thread)$/;"	f
+debugger_loop	debugger/debugger.lua	/^local function debugger_loop(ev, vars, file, line, idx_watch)$/;"	f
+declare 	wrap/types.lua	/^      declare = function(arg)$/;"	f
+declare 	wrap/types.lua	/^   declare = function(arg)$/;"	f
+declareRelayFunctions	qtwidget/init.lua	/^local function declareRelayFunctions(class)$/;"	f
+default_all 	inline/init.lua	/^function default_all ()$/;"	f
+default_flags	inline/init.lua	/^function default_flags()$/;"	f
+default_headers	inline/init.lua	/^function default_headers()$/;"	f
+default_headers_local	inline/init.lua	/^function default_headers_local()$/;"	f
+default_includepaths 	inline/init.lua	/^function default_includepaths ()$/;"	f
+default_libpaths 	inline/init.lua	/^function default_libpaths ()$/;"	f
+default_libs	inline/init.lua	/^function default_libs()$/;"	f
+default_preamble 	inline/init.lua	/^function default_preamble ()$/;"	f
+demo	qtuiloader/test.lua	/^function demo()$/;"	f
+display	image/init.lua	/^local function display(...)$/;"	f
+doeditor	qtide/init.lua	/^function doeditor(e)$/;"	f
+dofile	paths/init.lua	/^function dofile(f, depth)$/;"	f
+dok.browse	dok/inline.lua	/^function dok.browse()$/;"	f
+dok.cleanText	dok/init.lua	/^function dok.cleanText(txt)$/;"	f
+dok.dirapply	dok/init.lua	/^function dok.dirapply(dir, func)$/;"	f
+dok.dok2html	dok/init.lua	/^function dok.dok2html(txt)$/;"	f
+dok.dontusecolors	dok/inline.lua	/^function dok.dontusecolors()$/;"	f
+dok.error	dok/inline.lua	/^function dok.error(message, domain)$/;"	f
+dok.help	dok/inline.lua	/^function dok.help(symbol, asstring)$/;"	f
+dok.html2funcs	dok/inline.lua	/^function dok.html2funcs(html, package)$/;"	f
+dok.installsearch	dok/search.lua	/^function dok.installsearch()$/;"	f
+dok.link2wikilink	dok/init.lua	/^function dok.link2wikilink(txt)$/;"	f
+dok.linkText	dok/init.lua	/^function dok.linkText(lnk)$/;"	f
+dok.linkURL	dok/init.lua	/^function dok.linkURL(txt)$/;"	f
+dok.parseSection	dok/init.lua	/^function dok.parseSection(txt)$/;"	f
+dok.pictAlt	dok/init.lua	/^function dok.pictAlt(txt)$/;"	f
+dok.pictClass	dok/init.lua	/^function dok.pictClass(txt)$/;"	f
+dok.pictHeight	dok/init.lua	/^function dok.pictHeight(txt)$/;"	f
+dok.pictURL	dok/init.lua	/^function dok.pictURL(txt)$/;"	f
+dok.pictWidth	dok/init.lua	/^function dok.pictWidth(txt)$/;"	f
+dok.refresh	dok/inline.lua	/^function dok.refresh()$/;"	f
+dok.sectionapply	dok/init.lua	/^function dok.sectionapply(section, func, isroot)$/;"	f
+dok.stylize	dok/inline.lua	/^function dok.stylize(html, package)$/;"	f
+dok.unpack	dok/inline.lua	/^function dok.unpack(args, funcname, description, ...)$/;"	f
+dok.usage	dok/inline.lua	/^function dok.usage(funcname, description, example, ...)$/;"	f
+dok.usecolors	dok/inline.lua	/^function dok.usecolors()$/;"	f
+draw	qtuiloader/test.lua	/^   local function draw(w)$/;"	f
+dump	debugger/debugger.lua	/^function dump(v,depth)$/;"	f
+dumpval	debugger/debugger.lua	/^local function dumpval( level, name, value, limit )$/;"	f
+dumpvar	debugger/debugger.lua	/^local function dumpvar( value, limit, name )$/;"	f
+editor	qtide/init.lua	/^function editor(s)$/;"	f
+elseif type(default) 	wrap/types.lua	/^   elseif type(default) == 'function' then$/;"	f
+elseif type(f) 	torch/Tester.lua	/^   elseif type(f) == "function" then$/;"	f
+elseif typename 	torch/File.lua	/^   elseif typename == 'function' and pcall(string.dump, object) then$/;"	f
+err 	debugger/debugger.lua	/^err = pcall(function()$/;"	f
+error	xlua/init.lua	/^function error(message, domain, usage) $/;"	f
+exec 	inline/init.lua	/^function exec (code, ...)$/;"	f
+execute 	sys/init.lua	/^execute = function(cmd)$/;"	f
+exit	torch-env.lua	/^function exit()$/;"	f
+factory	torch/generic/Storage.c	/^static int torch_Storage_(factory)(lua_State *L)$/;"	f	file:
+factory	torch/generic/Tensor.c	/^static int torch_Tensor_(factory)(lua_State *L)$/;"	f	file:
+factory	torch/init.lua	/^   local function factory()$/;"	f
+fenv [depth]        -- list context function env to depth, omitted	debugger/debugger.lua	/^fenv [depth]        -- list context function env to depth, omitted=1|$/;"	f
+filefigure	gnuplot/gnuplot.lua	/^local function filefigure(fname,term,n)$/;"	f
+files	paths/init.lua	/^function files(s)$/;"	f
+files	sys/init.lua	/^function files(path)$/;"	f
+fill	torch/generic/Storage.c	/^static int torch_Storage_(fill)(lua_State *L)$/;"	f	file:
+findgnuplot	gnuplot/gnuplot.lua	/^local function findgnuplot()$/;"	f
+findgnuplotexe	gnuplot/gnuplot.lua	/^local function findgnuplotexe()$/;"	f
+findgnuplotversion	gnuplot/gnuplot.lua	/^local function findgnuplotversion(exe)$/;"	f
+findos	gnuplot/gnuplot.lua	/^local function findos()$/;"	f
+flags 	inline/init.lua	/^function flags (...)$/;"	f
+flatten	nn/Module.lua	/^   local function flatten(parameters)$/;"	f
+flush 	inline/init.lua	/^function flush ()$/;"	f
+forward	nnx/test-omp.lua	/^   local function forward(name)$/;"	f
+fpath	sys/init.lua	/^function fpath()$/;"	f
+free	torch/generic/Storage.c	/^static int torch_Storage_(free)(lua_State *L)$/;"	f	file:
+free	torch/generic/Tensor.c	/^static int torch_Tensor_(free)(lua_State *L)$/;"	f	file:
+get	nnx/init.lua	/^local function get(module, holder, params)$/;"	f
+getCurrentPlot	gnuplot/gnuplot.lua	/^local function getCurrentPlot()$/;"	f
+getFontForLabel	qtide/prefs.lua	/^local function getFontForLabel(label)$/;"	f
+get_env 	inline/init.lua	/^get_env = function(exec)$/;"	f
+getargs	debugger/debugger.lua	/^  local function getargs(spec)$/;"	f
+getexec	gnuplot/gnuplot.lua	/^local function getexec()$/;"	f
+getfigure	gnuplot/gnuplot.lua	/^local function getfigure(n)$/;"	f
+getgnuplotdefaultterm	gnuplot/gnuplot.lua	/^local function getgnuplotdefaultterm(os)$/;"	f
+getimagescvars	gnuplot/gnuplot.lua	/^local function getimagescvars(t)$/;"	f
+getinfo	debugger/debugger.lua	/^local function getinfo(level,field)$/;"	f
+getmaxlen	torch-env.lua	/^local function getmaxlen(vars)$/;"	f
+getsplotvars	gnuplot/gnuplot.lua	/^local function getsplotvars(t)$/;"	f
+getvars	gnuplot/gnuplot.lua	/^local function getvars(t)$/;"	f
+gformat	gnuplot/gnuplot.lua	/^   local function gformat(f,i)$/;"	f
+gi	debugger/debugger.lua	/^local function gi( i )$/;"	f
+gl	debugger/debugger.lua	/^local function gl( level, j )$/;"	f
+glob.io.write 	xlua/init.lua	/^         glob.io.write = function(...)$/;"	f
+gnu_imagesc_string	gnuplot/gnuplot.lua	/^local function gnu_imagesc_string(x,palette)$/;"	f
+gnu_splot_string	gnuplot/gnuplot.lua	/^local function gnu_splot_string(legend,x,y,z)$/;"	f
+gnuimagesc	gnuplot/gnuplot.lua	/^local function gnuimagesc(x,palette)$/;"	f
+gnulplot	gnuplot/gnuplot.lua	/^local function gnulplot(legend,x,y,format)$/;"	f
+gnuplot.axis	gnuplot/gnuplot.lua	/^function gnuplot.axis(axis)$/;"	f
+gnuplot.bar	gnuplot/gnuplot.lua	/^function gnuplot.bar(...)$/;"	f
+gnuplot.close	gnuplot/gnuplot.lua	/^function gnuplot.close(n)$/;"	f
+gnuplot.closeall	gnuplot/gnuplot.lua	/^function gnuplot.closeall()$/;"	f
+gnuplot.epsfigure	gnuplot/gnuplot.lua	/^function gnuplot.epsfigure(fname,n)$/;"	f
+gnuplot.figprint	gnuplot/gnuplot.lua	/^function gnuplot.figprint(fname)$/;"	f
+gnuplot.figure	gnuplot/gnuplot.lua	/^function gnuplot.figure(n)$/;"	f
+gnuplot.grid	gnuplot/gnuplot.lua	/^function gnuplot.grid(toggle)$/;"	f
+gnuplot.hist	gnuplot/gnuplot.lua	/^function gnuplot.hist(tensor,bins,min,max)$/;"	f
+gnuplot.histc	gnuplot/hist.lua	/^function gnuplot.histc(...)$/;"	f
+gnuplot.imagesc	gnuplot/gnuplot.lua	/^function gnuplot.imagesc(...)$/;"	f
+gnuplot.movelegend	gnuplot/gnuplot.lua	/^function gnuplot.movelegend(hloc,vloc)$/;"	f
+gnuplot.plot	gnuplot/gnuplot.lua	/^function gnuplot.plot(...)$/;"	f
+gnuplot.plotflush	gnuplot/gnuplot.lua	/^function gnuplot.plotflush(n)$/;"	f
+gnuplot.pngfigure	gnuplot/gnuplot.lua	/^function gnuplot.pngfigure(fname,n)$/;"	f
+gnuplot.raw	gnuplot/gnuplot.lua	/^function gnuplot.raw(str)$/;"	f
+gnuplot.setgnuplotexe	gnuplot/gnuplot.lua	/^function gnuplot.setgnuplotexe(exe)$/;"	f
+gnuplot.setterm	gnuplot/gnuplot.lua	/^function gnuplot.setterm(term)$/;"	f
+gnuplot.splot	gnuplot/gnuplot.lua	/^function gnuplot.splot(...)$/;"	f
+gnuplot.title	gnuplot/gnuplot.lua	/^function gnuplot.title(label)$/;"	f
+gnuplot.xlabel	gnuplot/gnuplot.lua	/^function gnuplot.xlabel(label)$/;"	f
+gnuplot.ylabel	gnuplot/gnuplot.lua	/^function gnuplot.ylabel(label)$/;"	f
+gnuplot.zlabel	gnuplot/gnuplot.lua	/^function gnuplot.zlabel(label)$/;"	f
+gnuplot_string	gnuplot/gnuplot.lua	/^local function gnuplot_string(legend,x,y,format)$/;"	f
+gnuplothasterm	gnuplot/gnuplot.lua	/^local function gnuplothasterm(term)$/;"	f
+gnusplot	gnuplot/gnuplot.lua	/^local function gnusplot(legend,x,y,z)$/;"	f
+gu	debugger/debugger.lua	/^local function gu( func, k )$/;"	f
+has_breakpoint	debugger/debugger.lua	/^local function has_breakpoint(file, line)$/;"	f
+hasbit	wrap/init.lua	/^local function hasbit(x, p)$/;"	f
+headers 	inline/init.lua	/^function headers (...)$/;"	f
+help	nnx/CGOptimization.lua	/^                      help='maximum nb of function evaluations per pass (0 = no max)', default=0},$/;"	f
+help	nnx/LBFGSOptimization.lua	/^                      help='maximum nb of function evaluations per pass (0 = no max)', default=0},$/;"	f
+help	qtide/init.lua	/^function help()$/;"	f
+helpname 	wrap/types.lua	/^      helpname = function(arg)$/;"	f
+helpname 	wrap/types.lua	/^   helpname = function(arg)$/;"	f
+hflip	image/init.lua	/^local function hflip(...)$/;"	f
+histc__tostring	gnuplot/hist.lua	/^local function histc__tostring(h, barHeight)$/;"	f
+hook_mouse 	image/init.lua	/^            hook_mouse = function(x,y,button)$/;"	f
+hook_resize 	image/init.lua	/^            hook_resize = function(wi,he)$/;"	f
+html2entries	dok/search.lua	/^local function html2entries(html, package, file)$/;"	f
+if (type(f) 	qtwidget/init.lua	/^   if (type(f) == 'function') then$/;"	f
+if lineSearch and type(lineSearch) 	optim/lbfgs.lua	/^      if lineSearch and type(lineSearch) == 'function' then$/;"	f
+if type(posthook) ~	nnx/BatchOptimization.lua	/^         if type(posthook) ~= 'function' then posthook = nil end$/;"	f
+if type(posthook) ~	nnx/GeneticSGDOptimization.lua	/^         if type(posthook) ~= 'function' then posthook = nil end$/;"	f
+if type(precode) 	nnx/BatchOptimization.lua	/^         if type(precode) == 'function' then precode() end$/;"	f
+if type(precode) 	nnx/GeneticSGDOptimization.lua	/^         if type(precode) == 'function' then precode() end$/;"	f
+if type(prehook) ~	nnx/BatchOptimization.lua	/^         if type(prehook) ~= 'function' then prehook = nil end$/;"	f
+if type(prehook) ~	nnx/GeneticSGDOptimization.lua	/^         if type(prehook) ~= 'function' then prehook = nil end$/;"	f
+if type(symbol) 	dok/inline.lua	/^         if type(symbol) == 'function' or type(symbol) == 'table' then$/;"	f
+if type(v) 	debugger/debugger.lua	/^        if type(v) == 'function' then$/;"	f
+imag	optim/polyinterp.lua	/^local function imag(x)$/;"	f
+image.colormap	image/init.lua	/^function image.colormap(nbColor)$/;"	f
+image.gaussian	image/init.lua	/^function image.gaussian(...)$/;"	f
+image.gaussian1D	image/init.lua	/^function image.gaussian1D(...)$/;"	f
+image.gaussianpyramid	image/init.lua	/^function image.gaussianpyramid(...)$/;"	f
+image.getJPGsize	image/init.lua	/^function image.getJPGsize(filename)$/;"	f
+image.getPNGsize	image/init.lua	/^function image.getPNGsize(filename)$/;"	f
+image.hsl2rgb	image/init.lua	/^function image.hsl2rgb(input, ...)$/;"	f
+image.hsv2rgb	image/init.lua	/^function image.hsv2rgb(input, ...)$/;"	f
+image.laplacian	image/init.lua	/^function image.laplacian(...)$/;"	f
+image.rgb2hsl	image/init.lua	/^function image.rgb2hsl(input, ...)   $/;"	f
+image.rgb2hsv	image/init.lua	/^function image.rgb2hsv(input, ...)$/;"	f
+image.rgb2lab	image/init.lua	/^function image.rgb2lab(input, ...)   $/;"	f
+image.rgb2nrgb	image/init.lua	/^function image.rgb2nrgb(input, ...)$/;"	f
+image.rgb2y	image/init.lua	/^function image.rgb2y(input, ...)$/;"	f
+image.rgb2yuv	image/init.lua	/^function image.rgb2yuv(input, ...)   $/;"	f
+image.yuv2rgb	image/init.lua	/^function image.yuv2rgb(input, ...)      $/;"	f
+imageClass:valid	qtwidget/init.lua	/^function imageClass:valid()$/;"	f
+import	torch-env.lua	/^function import(package, forced)$/;"	f
+includepaths 	inline/init.lua	/^function includepaths (...)$/;"	f
+indented	debugger/debugger.lua	/^local function indented( level, ... )$/;"	f
+info	debugger/debugger.lua	/^local function info() dumpvar( traceinfo, 0, 'traceinfo' ) end$/;"	f
+init	torch/generic/Storage.c	/^void torch_Storage_(init)(lua_State *L)$/;"	f
+init	torch/generic/Tensor.c	/^void torch_Tensor_(init)(lua_State *L)$/;"	f
+init 	wrap/types.lua	/^      init = function(arg)$/;"	f
+init 	wrap/types.lua	/^   init = function(arg)$/;"	f
+inspector	qtide/init.lua	/^function inspector(...)$/;"	f
+install	dok/search.lua	/^local function install(entries, dir)$/;"	f
+install	torch-env.lua	/^function install(path)$/;"	f
+installed	xlua/init.lua	/^function installed(package) $/;"	f
+interpretdefaultvalue	wrap/types.lua	/^local function interpretdefaultvalue(arg)$/;"	f
+isContiguous	torch/generic/Tensor.c	/^static int torch_Tensor_(isContiguous)(lua_State *L)$/;"	f	file:
+isNaN	sys/init.lua	/^function isNaN(number)$/;"	f
+isnan	optim/polyinterp.lua	/^local function isnan(x)$/;"	f
+isreal	optim/polyinterp.lua	/^local function isreal(x)$/;"	f
+isstring	gnuplot/gnuplot.lua	/^   local function isstring(v)$/;"	f
+istensor	gnuplot/gnuplot.lua	/^   local function istensor(v)$/;"	f
+lDataSet:__init	nnx/DataSet.lua	/^function lDataSet:__init(...)$/;"	f
+lDataSet:__tostring__	nnx/DataSet.lua	/^function lDataSet:__tostring__()$/;"	f
+lDataSet:add	nnx/DataSet.lua	/^function lDataSet:add(args)$/;"	f
+lDataSet:append	nnx/DataSet.lua	/^function lDataSet:append(...)$/;"	f
+lDataSet:appendDataSet	nnx/DataSet.lua	/^function lDataSet:appendDataSet(dataset)$/;"	f
+lDataSet:apply	nnx/DataSet.lua	/^function lDataSet:apply(toapply)$/;"	f
+lDataSet:cropAndResize	nnx/DataSet.lua	/^function lDataSet:cropAndResize(side)$/;"	f
+lDataSet:display	nnx/DataSet.lua	/^function lDataSet:display(nSamples,legend)$/;"	f
+lDataSet:emptySet	nnx/DataSet.lua	/^function lDataSet:emptySet(dataSetFolder)$/;"	f
+lDataSet:load	nnx/DataSet.lua	/^function lDataSet:load(...)$/;"	f
+lDataSet:popSubset	nnx/DataSet.lua	/^function lDataSet:popSubset(args)$/;"	f
+lDataSet:read	nnx/DataSet.lua	/^function lDataSet:read(file)$/;"	f
+lDataSet:resize	nnx/DataSet.lua	/^function lDataSet:resize(w,h)$/;"	f
+lDataSet:shuffle	nnx/DataSet.lua	/^function lDataSet:shuffle()$/;"	f
+lDataSet:size	nnx/DataSet.lua	/^function lDataSet:size()$/;"	f
+lDataSet:useCacheFile	nnx/DataSet.lua	/^function lDataSet:useCacheFile(fileName)$/;"	f
+lDataSet:write	nnx/DataSet.lua	/^function lDataSet:write(file)$/;"	f
+la 	sys/init.lua	/^la = function() return execute 'ls -a' end$/;"	f
+lbfgs.evaluate 	nnx/LBFGSOptimization.lua	/^   lbfgs.evaluate = function()$/;"	f
+lena	image/init.lua	/^local function lena(full)$/;"	f
+libpaths 	inline/init.lua	/^function libpaths (...)$/;"	f
+libs 	inline/init.lua	/^function libs (...)$/;"	f
+ll 	sys/init.lua	/^ll = function() return execute 'ls -l' end$/;"	f
+lla 	sys/init.lua	/^lla = function() return execute 'ls -la' end$/;"	f
+load	image/init.lua	/^local function load(filename, depth)$/;"	f
+load 	inline/init.lua	/^function load (code,exec)$/;"	f
+loadJPG	image/init.lua	/^local function loadJPG(filename, depth)$/;"	f
+loadPNG	image/init.lua	/^local function loadPNG(filename, depth)$/;"	f
+loadPPM	image/init.lua	/^local function loadPPM(filename, depth)$/;"	f
+loaddefaultlibs	torch-env.lua	/^function loaddefaultlibs(loadwithimport)$/;"	f
+loader	qtuiloader/init.lua	/^function loader()$/;"	f
+loadsvg	qtsvg/init.lua	/^function loadsvg(filename)$/;"	f
+local _traceback 	debugger/debugger.lua	/^local _traceback = debug.traceback       --note original function$/;"	f
+local assertmsg 	debugger/debugger.lua	/^  local assertmsg = _traceback(x)        --do original function$/;"	f
+local fusage 	dok/inline.lua	/^   local fusage = function() $/;"	f
+local fusage 	xlua/init.lua	/^   local fusage = function() $/;"	f
+local load 	xlua/init.lua	/^   local load = function() loaded = glob.require(package) end$/;"	f
+local ok,msg 	inline/init.lua	/^   local ok,msg = pcall(function()$/;"	f
+local setup 	nnx/BatchOptimization.lua	/^   local setup = function()$/;"	f
+local setup 	nnx/GeneticSGDOptimization.lua	/^   local setup = function()$/;"	f
+local thres 	image/init.lua	/^   local thres = function(x) $/;"	f
+localheaders 	inline/init.lua	/^function localheaders (...)$/;"	f
+locate_help_files	qtide/init.lua	/^local function locate_help_files()$/;"	f
+log 	xlua/init.lua	/^log = function(file)$/;"	f
+lognormal	nnx/GeneticSGDOptimization.lua	/^function lognormal(n,mean,sigma)$/;"	f
+loguniform 	nnx/GeneticSGDOptimization.lua	/^function loguniform (n,rate,octaves)$/;"	f
+ls 	sys/init.lua	/^ls = function() return execute 'ls' end$/;"	f
+map	torch/generic/Tensor.c	/^static int torch_Tensor_(map)(lua_State *L)$/;"	f	file:
+map2	torch/generic/Tensor.c	/^static int torch_Tensor_(map2)(lua_State *L)$/;"	f	file:
+mathsign	nn/CosineEmbeddingCriterion.lua	/^local function mathsign(t)$/;"	f
+mathsign	nn/L1HingeEmbeddingCriterion.lua	/^local function mathsign(t)$/;"	f
+mathsign	nn/PairwiseDistance.lua	/^local function mathsign(x) $/;"	f
+maxcols	dok/inline.lua	/^local function maxcols(str, cols)$/;"	f
+maxdiff	torch/test.lua	/^local function maxdiff(x,y)$/;"	f
+min	qtuiloader/test.lua	/^   local function min(a,b)$/;"	f
+minmax	image/init.lua	/^local function minmax(args)$/;"	f
+mt.__tostring 	xlua/init.lua	/^   mt.__tostring = function() return str end$/;"	f
+nDimension	torch/generic/Tensor.c	/^static int torch_Tensor_(nDimension)(lua_State *L)$/;"	f	file:
+nElement	torch/generic/Tensor.c	/^static int torch_Tensor_(nElement)(lua_State *L)$/;"	f	file:
+narrow	torch/generic/Tensor.c	/^static int torch_Tensor_(narrow)(lua_State *L)$/;"	f	file:
+new	torch/generic/Storage.c	/^static int torch_Storage_(new)(lua_State *L)$/;"	f	file:
+new	torch/generic/Tensor.c	/^static int torch_Tensor_(new)(lua_State *L)$/;"	f	file:
+newimage	qtwidget/init.lua	/^function newimage(...)$/;"	f
+newpdf	qtwidget/init.lua	/^function newpdf(w,h,filename)$/;"	f
+newprint	qtwidget/init.lua	/^function newprint(w,h,printername)$/;"	f
+newps	qtwidget/init.lua	/^function newps(w,h,filename)$/;"	f
+newsvg	qtwidget/init.lua	/^function newsvg(w,h,filename)$/;"	f
+newtable	torch-env.lua	/^local function newtable()$/;"	f
+newwindow	qtwidget/init.lua	/^function newwindow(w,h,title)$/;"	f
+nn.Criterion.updateDiagHessianInput	nnx/DiagHessian.lua	/^function nn.Criterion.updateDiagHessianInput(self, input, diagHessianOutput)$/;"	f
+nn.Jacobian.backward 	nn/Jacobian.lua	/^function nn.Jacobian.backward (module, input, param, dparam)$/;"	f
+nn.Jacobian.backwardUpdate 	nn/Jacobian.lua	/^function nn.Jacobian.backwardUpdate (module, input, param)$/;"	f
+nn.Jacobian.forward	nn/Jacobian.lua	/^function nn.Jacobian.forward(module, input, param)$/;"	f
+nn.Jacobian.forwardUpdate	nn/Jacobian.lua	/^function nn.Jacobian.forwardUpdate(module, input, param)$/;"	f
+nn.Jacobian.testAllUpdate	nn/Jacobian.lua	/^function nn.Jacobian.testAllUpdate(module, input, weight, gradWeight)$/;"	f
+nn.Jacobian.testIO	nn/Jacobian.lua	/^function nn.Jacobian.testIO(module,input, minval, maxval)$/;"	f
+nn.Jacobian.testJacobian 	nn/Jacobian.lua	/^function nn.Jacobian.testJacobian (module, input, minval, maxval)$/;"	f
+nn.Jacobian.testJacobianParameters 	nn/Jacobian.lua	/^function nn.Jacobian.testJacobianParameters (module, input, param, dparam, minval, maxval)$/;"	f
+nn.Jacobian.testJacobianUpdateParameters 	nn/Jacobian.lua	/^function nn.Jacobian.testJacobianUpdateParameters (module, input, param, minval, maxval)$/;"	f
+nn.Linear.accDiagHessianParameters	nnx/DiagHessian.lua	/^function nn.Linear.accDiagHessianParameters(self, input, diagHessianOutput, scale)$/;"	f
+nn.Linear.initDiagHessianParameters	nnx/DiagHessian.lua	/^function nn.Linear.initDiagHessianParameters(self)$/;"	f
+nn.Linear.updateDiagHessianInput	nnx/DiagHessian.lua	/^function nn.Linear.updateDiagHessianInput(self, input, diagHessianOutput)$/;"	f
+nn.MSECriterion.updateDiagHessianInput	nnx/DiagHessian.lua	/^function nn.MSECriterion.updateDiagHessianInput(self, input, diagHessianOutput)$/;"	f
+nn.Module.accDiagHessianParameters	nnx/DiagHessian.lua	/^function nn.Module.accDiagHessianParameters(self, input, diagHessianOutput, scale)$/;"	f
+nn.Module.initDiagHessianParameters	nnx/DiagHessian.lua	/^function nn.Module.initDiagHessianParameters(self)$/;"	f
+nn.Module.updateDiagHessianInput	nnx/DiagHessian.lua	/^function nn.Module.updateDiagHessianInput(self, input, diagHessianOutput)$/;"	f
+nn.Sequential.accDiagHessianParameters	nnx/DiagHessian.lua	/^function nn.Sequential.accDiagHessianParameters(self, input, diagHessianOutput, scale)$/;"	f
+nn.Sequential.initDiagHessianParameters	nnx/DiagHessian.lua	/^function nn.Sequential.initDiagHessianParameters(self)$/;"	f
+nn.Sequential.updateDiagHessianInput	nnx/DiagHessian.lua	/^function nn.Sequential.updateDiagHessianInput(self, input, diagHessianOutput)$/;"	f
+nn.Tanh.updateDiagHessianInput	nnx/DiagHessian.lua	/^function nn.Tanh.updateDiagHessianInput(self, input, diagHessianOutput)$/;"	f
+nn.tables.full	nn/SpatialConvolutionMap.lua	/^function nn.tables.full(nin, nout)$/;"	f
+nn.tables.oneToOne	nn/SpatialConvolutionMap.lua	/^function nn.tables.oneToOne(nfeat)$/;"	f
+nn.tables.random	nn/SpatialConvolutionMap.lua	/^function nn.tables.random(nin, nout, nto)$/;"	f
+nn.test	nn/test.lua	/^   function nn.test()$/;"	f
+nntest.Abs	nn/test.lua	/^function nntest.Abs()$/;"	f
+nntest.Add	nn/test.lua	/^function nntest.Add()$/;"	f
+nntest.CMul	nn/test.lua	/^function nntest.CMul()$/;"	f
+nntest.Euclidean	nn/test.lua	/^function nntest.Euclidean()$/;"	f
+nntest.Exp	nn/test.lua	/^function nntest.Exp()$/;"	f
+nntest.HardShrink	nn/test.lua	/^function nntest.HardShrink()$/;"	f
+nntest.HardTanh	nn/test.lua	/^function nntest.HardTanh()$/;"	f
+nntest.Linear	nn/test.lua	/^function nntest.Linear()$/;"	f
+nntest.Log	nn/test.lua	/^function nntest.Log()$/;"	f
+nntest.LogSigmoid	nn/test.lua	/^function nntest.LogSigmoid()$/;"	f
+nntest.LogSoftmax	nn/test.lua	/^function nntest.LogSoftmax()$/;"	f
+nntest.Max	nn/test.lua	/^function nntest.Max()$/;"	f
+nntest.Mean	nn/test.lua	/^function nntest.Mean()$/;"	f
+nntest.Min	nn/test.lua	/^function nntest.Min()$/;"	f
+nntest.Mul	nn/test.lua	/^function nntest.Mul()$/;"	f
+nntest.Power	nn/test.lua	/^function nntest.Power()$/;"	f
+nntest.Sigmoid	nn/test.lua	/^function nntest.Sigmoid()$/;"	f
+nntest.SoftPlus	nn/test.lua	/^function nntest.SoftPlus()$/;"	f
+nntest.SoftShrink	nn/test.lua	/^function nntest.SoftShrink()$/;"	f
+nntest.Softmax	nn/test.lua	/^function nntest.Softmax()$/;"	f
+nntest.Softmin	nn/test.lua	/^function nntest.Softmin()$/;"	f
+nntest.Softsign	nn/test.lua	/^function nntest.Softsign()$/;"	f
+nntest.SpatialConvolution	nn/test.lua	/^function nntest.SpatialConvolution()$/;"	f
+nntest.SpatialConvolutionBatchCompare	nn/test.lua	/^function nntest.SpatialConvolutionBatchCompare()$/;"	f
+nntest.SpatialConvolutionMap	nn/test.lua	/^function nntest.SpatialConvolutionMap()$/;"	f
+nntest.SpatialDivisiveNormalization_1dkernel	nn/test.lua	/^function nntest.SpatialDivisiveNormalization_1dkernel()$/;"	f
+nntest.SpatialDivisiveNormalization_2dkernel	nn/test.lua	/^function nntest.SpatialDivisiveNormalization_2dkernel()$/;"	f
+nntest.SpatialLPPooling	nn/test.lua	/^function nntest.SpatialLPPooling()$/;"	f
+nntest.SpatialMaxPooling	nn/test.lua	/^function nntest.SpatialMaxPooling()$/;"	f
+nntest.SpatialSubSampling	nn/test.lua	/^function nntest.SpatialSubSampling()$/;"	f
+nntest.SpatialSubSamplingBatchCompare	nn/test.lua	/^function nntest.SpatialSubSamplingBatchCompare()$/;"	f
+nntest.SpatialSubtractiveNormalization_1dkernel	nn/test.lua	/^function nntest.SpatialSubtractiveNormalization_1dkernel()$/;"	f
+nntest.SpatialSubtractiveNormalization_2dkernel	nn/test.lua	/^function nntest.SpatialSubtractiveNormalization_2dkernel()$/;"	f
+nntest.Sqrt	nn/test.lua	/^function nntest.Sqrt()$/;"	f
+nntest.Square	nn/test.lua	/^function nntest.Square()$/;"	f
+nntest.Sum	nn/test.lua	/^function nntest.Sum()$/;"	f
+nntest.Tanh	nn/test.lua	/^function nntest.Tanh()$/;"	f
+nntest.TemporalConvolution	nn/test.lua	/^function nntest.TemporalConvolution()$/;"	f
+nntest.TemporalSubSampling	nn/test.lua	/^function nntest.TemporalSubSampling()$/;"	f
+nntest.Threshold	nn/test.lua	/^function nntest.Threshold()$/;"	f
+nntest.VolumetricConvolution	nn/test.lua	/^function nntest.VolumetricConvolution()$/;"	f
+nntest.WeightedEuclidean	nn/test.lua	/^function nntest.WeightedEuclidean()$/;"	f
+nnx.empty	nnx/init.lua	/^function nnx.empty(module)$/;"	f
+nnx.flattenParameters	nnx/init.lua	/^function nnx.flattenParameters(parameters)$/;"	f
+nnx.getDiagHessianParameters	nnx/init.lua	/^function nnx.getDiagHessianParameters(...)$/;"	f
+nnx.getGradParameters	nnx/init.lua	/^function nnx.getGradParameters(...)$/;"	f
+nnx.getParameters	nnx/init.lua	/^function nnx.getParameters(...)$/;"	f
+nnx.test	nnx/test-all.lua	/^function nnx.test()$/;"	f
+nnx.test_omp	nnx/test-omp.lua	/^function nnx.test_omp(nThread)$/;"	f
+nnxtest.Abs	nnx/test-all.lua	/^function nnxtest.Abs()$/;"	f
+nnxtest.HardShrink	nnx/test-all.lua	/^function nnxtest.HardShrink()$/;"	f
+nnxtest.SpatialConvolution	nnx/test-all.lua	/^function nnxtest.SpatialConvolution()$/;"	f
+nnxtest.SpatialDownSampling	nnx/test-all.lua	/^function nnxtest.SpatialDownSampling()$/;"	f
+nnxtest.SpatialFovea_bilinear	nnx/test-all.lua	/^function nnxtest.SpatialFovea_bilinear() template_SpatialFovea(nil,nil,true) end$/;"	f
+nnxtest.SpatialFovea_focused	nnx/test-all.lua	/^function nnxtest.SpatialFovea_focused() template_SpatialFovea(4,7) end$/;"	f
+nnxtest.SpatialFovea_unfocused	nnx/test-all.lua	/^function nnxtest.SpatialFovea_unfocused() template_SpatialFovea() end$/;"	f
+nnxtest.SpatialGraph_1	nnx/test-all.lua	/^function nnxtest.SpatialGraph_1() template_SpatialGraph(3, 16, 16, 'euclid', true) end$/;"	f
+nnxtest.SpatialGraph_2	nnx/test-all.lua	/^function nnxtest.SpatialGraph_2() template_SpatialGraph(16, 4, 4, 'euclid', true) end$/;"	f
+nnxtest.SpatialGraph_3	nnx/test-all.lua	/^function nnxtest.SpatialGraph_3() template_SpatialGraph(256, 2, 2, 'euclid', false) end$/;"	f
+nnxtest.SpatialGraph_4	nnx/test-all.lua	/^function nnxtest.SpatialGraph_4() template_SpatialGraph(2, 16, 16, 'cosine', false) end$/;"	f
+nnxtest.SpatialGraph_5	nnx/test-all.lua	/^function nnxtest.SpatialGraph_5() template_SpatialGraph(64, 3, 3, 'cosine', false) end$/;"	f
+nnxtest.SpatialLinear	nnx/test-all.lua	/^function nnxtest.SpatialLinear()$/;"	f
+nnxtest.SpatialMatching_1	nnx/test-all.lua	/^function nnxtest.SpatialMatching_1() template_SpatialMatching(4, 16, 16, 5, 5, true) end$/;"	f
+nnxtest.SpatialMatching_2	nnx/test-all.lua	/^function nnxtest.SpatialMatching_2() template_SpatialMatching(4, 16, 16, 5, 5, false) end$/;"	f
+nnxtest.SpatialMatching_3	nnx/test-all.lua	/^function nnxtest.SpatialMatching_3() template_SpatialMatching(3, 16, 16, 6, 6, true) end$/;"	f
+nnxtest.SpatialMatching_4	nnx/test-all.lua	/^function nnxtest.SpatialMatching_4() template_SpatialMatching(3, 20, 20, 4, 4, false) end$/;"	f
+nnxtest.SpatialMatching_5	nnx/test-all.lua	/^function nnxtest.SpatialMatching_5() template_SpatialMatching(3, 12, 16, 5, 7, true) end$/;"	f
+nnxtest.SpatialMaxPooling	nnx/test-all.lua	/^function nnxtest.SpatialMaxPooling()$/;"	f
+nnxtest.SpatialNormalization_Gaussian1D	nnx/test-all.lua	/^function nnxtest.SpatialNormalization_Gaussian1D()$/;"	f
+nnxtest.SpatialNormalization_Gaussian2D	nnx/test-all.lua	/^function nnxtest.SpatialNormalization_Gaussian2D()$/;"	f
+nnxtest.SpatialNormalization_io	nnx/test-all.lua	/^function nnxtest.SpatialNormalization_io()$/;"	f
+nnxtest.SpatialPadding	nnx/test-all.lua	/^function nnxtest.SpatialPadding()$/;"	f
+nnxtest.SpatialPyramid_focused	nnx/test-all.lua	/^function nnxtest.SpatialPyramid_focused() template_SpatialPyramid(5,3) end$/;"	f
+nnxtest.SpatialPyramid_unfocused	nnx/test-all.lua	/^function nnxtest.SpatialPyramid_unfocused() template_SpatialPyramid() end$/;"	f
+nnxtest.SpatialReSamplingEx1	nnx/test-all.lua	/^function nnxtest.SpatialReSamplingEx1() template_SpatialReSamplingEx(true , 'simple'  ) end$/;"	f
+nnxtest.SpatialReSamplingEx2	nnx/test-all.lua	/^function nnxtest.SpatialReSamplingEx2() template_SpatialReSamplingEx(false, 'simple'  ) end$/;"	f
+nnxtest.SpatialReSamplingEx3	nnx/test-all.lua	/^function nnxtest.SpatialReSamplingEx3() template_SpatialReSamplingEx(false, 'average' ) end$/;"	f
+nnxtest.SpatialReSamplingEx4	nnx/test-all.lua	/^function nnxtest.SpatialReSamplingEx4() template_SpatialReSamplingEx(true , 'bilinear') end$/;"	f
+nnxtest.SpatialReSamplingEx5	nnx/test-all.lua	/^function nnxtest.SpatialReSamplingEx5() template_SpatialReSamplingEx(false, 'bilinear') end$/;"	f
+nnxtest.SpatialReSampling_1	nnx/test-all.lua	/^function nnxtest.SpatialReSampling_1()$/;"	f
+nnxtest.SpatialReSampling_2	nnx/test-all.lua	/^function nnxtest.SpatialReSampling_2()$/;"	f
+nnxtest.SpatialUpSampling	nnx/test-all.lua	/^function nnxtest.SpatialUpSampling()$/;"	f
+nnxtest.Threshold	nnx/test-all.lua	/^function nnxtest.Threshold()$/;"	f
+optim.FistaLS	optim/fista.lua	/^function optim.FistaLS(f, g, pl, xinit, params)$/;"	f
+optim.asgd	optim/asgd.lua	/^function optim.asgd(opfunc, x, state)$/;"	f
+optim.cg	optim/cg.lua	/^function optim.cg(opfunc, x, params)$/;"	f
+optim.lbfgs	optim/lbfgs.lua	/^function optim.lbfgs(opfunc, x, state)$/;"	f
+optim.lswolfe	optim/lswolfe.lua	/^function optim.lswolfe(opfunc,x,t,d,f,g,gtd,options)$/;"	f
+optim.polyinterp	optim/polyinterp.lua	/^function optim.polyinterp(points,xminBound,xmaxBound)$/;"	f
+optim.sgd	optim/sgd.lua	/^function optim.sgd(opfunc, x, state)$/;"	f
+p:apply(function(pc) pwr 	optim/polyinterp.lua	/^      p:apply(function(pc) pwr = pwr-1; val = val + pc*x^pwr; return pc end)$/;"	f
+p:apply(function(pc) pwr 	optim/polyinterp.lua	/^      p:apply(function(pc) pwr = pwr-1; val:add(pc,torch.pow(x,pwr)); return pc end)$/;"	f
+package.preload.lab 	compat/init.lua	/^package.preload.lab = function()$/;"	f
+package.preload.openmp 	compat/init.lua	/^package.preload.openmp = function()$/;"	f
+package.preload.random 	compat/init.lua	/^package.preload.random = function()$/;"	f
+pad	torch/CmdLine.lua	/^local function pad(str, sz)$/;"	f
+paint	qtuiloader/test.lua	/^   local function paint()$/;"	f
+paintsvg	qtsvg/init.lua	/^function paintsvg(port,svg,...)$/;"	f
+pause	debugger/debugger.lua	/^function pause(x)$/;"	f
+polyval	optim/polyinterp.lua	/^local function polyval(p,x)$/;"	f
+postcall 	wrap/types.lua	/^      postcall = function(arg)$/;"	f
+postcall 	wrap/types.lua	/^   postcall = function(arg)$/;"	f
+preamble 	inline/init.lua	/^function preamble (code_preamble)$/;"	f
+precall 	wrap/types.lua	/^      precall = function(arg)$/;"	f
+precall 	wrap/types.lua	/^   precall = function(arg)$/;"	f
+preferences	qtide/init.lua	/^function preferences()$/;"	f
+print	torch-env.lua	/^function print(obj,...)$/;"	f
+print	torch/CmdLine.lua	/^   function print(...)$/;"	f
+print 	xlua/init.lua	/^print = function(obj,...)$/;"	f
+print_trace	debugger/debugger.lua	/^local function print_trace(level,depth,event,file,line,name)$/;"	f
+printerClass:valid	qtwidget/init.lua	/^function printerClass:valid()$/;"	f
+printsymb	torch-env.lua	/^   local function printsymb(sys)$/;"	f
+printvar	torch-env.lua	/^local function printvar(key,val,m)$/;"	f
+progress	xlua/init.lua	/^function progress(current, goal)$/;"	f
+qt.QImage.fromTensor 	qttorch/init.lua	/^qt.QImage.fromTensor = function(tensor, scale)$/;"	f
+qt.QImage.toTensor 	qttorch/init.lua	/^qt.QImage.toTensor = function(self, tensor, scale)$/;"	f
+qt.QtLuaPainter:currentcolor	qtwidget/init.lua	/^function qt.QtLuaPainter:currentcolor()$/;"	f
+qt.QtLuaPainter:currentdash	qtwidget/init.lua	/^function qt.QtLuaPainter:currentdash()$/;"	f
+qt.QtLuaPainter:currentfontsize	qtwidget/init.lua	/^function qt.QtLuaPainter:currentfontsize()$/;"	f
+qt.QtLuaPainter:currentlinewidth	qtwidget/init.lua	/^function qt.QtLuaPainter:currentlinewidth()$/;"	f
+qt.QtLuaPainter:currentpoint	qtwidget/init.lua	/^function qt.QtLuaPainter:currentpoint()$/;"	f
+qt.QtLuaPainter:currentsize	qtwidget/init.lua	/^function qt.QtLuaPainter:currentsize()$/;"	f
+qt.QtLuaPainter:setcolor	qtwidget/init.lua	/^function qt.QtLuaPainter:setcolor(...)$/;"	f
+qt.QtLuaPainter:setdash	qtwidget/init.lua	/^function qt.QtLuaPainter:setdash(size,offset)$/;"	f
+qt.QtLuaPainter:setfontsize	qtwidget/init.lua	/^function qt.QtLuaPainter:setfontsize(sz)$/;"	f
+qt.QtLuaPainter:setlinewidth	qtwidget/init.lua	/^function qt.QtLuaPainter:setlinewidth(w)$/;"	f
+qt.QtLuaPainter:setpattern	qtwidget/init.lua	/^function qt.QtLuaPainter:setpattern(p,x,y)$/;"	f
+qt.QtLuaPainter:setpoint	qtwidget/init.lua	/^function qt.QtLuaPainter:setpoint(x,y)$/;"	f
+qt.QtLuaPainter:write	qtwidget/init.lua	/^function qt.QtLuaPainter:write(...)$/;"	f
+read	torch/generic/Storage.c	/^static int torch_Storage_(read)(lua_State *L)$/;"	f	file:
+read	torch/generic/Tensor.c	/^static int torch_Tensor_(read)(lua_State *L)$/;"	f	file:
+read 	wrap/types.lua	/^      read = function(arg, idx)$/;"	f
+read 	wrap/types.lua	/^   read = function(arg, idx)$/;"	f
+readSettingsBoolean	qtide/prefs.lua	/^local function readSettingsBoolean(a,k)$/;"	f
+readSettingsNumber	qtide/prefs.lua	/^local function readSettingsNumber(a,k)$/;"	f
+readline 	debugger/debugger.lua	/^    readline = function(prompt)$/;"	f
+real	optim/polyinterp.lua	/^local function real(x)$/;"	f
+realmode	qtide/init.lua	/^local function realmode(mode)$/;"	f
+refreshCurrent	gnuplot/gnuplot.lua	/^local function refreshCurrent()$/;"	f
+refreshPlot	gnuplot/gnuplot.lua	/^local function refreshPlot(gp)$/;"	f
+remove_breakpoint	debugger/debugger.lua	/^local function remove_breakpoint(file, line)$/;"	f
+report	debugger/debugger.lua	/^local function report(ev, vars, file, line, idx_watch)$/;"	f
+require	xlua/init.lua	/^function require(package,luarocks,server) $/;"	f
+resize	torch/generic/Storage.c	/^static int torch_Storage_(resize)(lua_State *L)$/;"	f	file:
+resize	torch/generic/Tensor.c	/^static int torch_Tensor_(resize)(lua_State *L)$/;"	f	file:
+resizeAs	torch/generic/Tensor.c	/^static int torch_Tensor_(resizeAs)(lua_State *L)$/;"	f	file:
+restore_vars	debugger/debugger.lua	/^local function restore_vars(ref,vars)$/;"	f
+return function() i	debugger/debugger.lua	/^  return function() i=i+1 return debug.getinfo(i),i end$/;"	f
+return function() j	debugger/debugger.lua	/^  return function() j=j+1 return debug.getlocal( level, j ) end$/;"	f
+return function() k	debugger/debugger.lua	/^  return function() k=k+1 return debug.getupvalue( func, k ) end$/;"	f
+roots	optim/polyinterp.lua	/^local function roots(c)$/;"	f
+rosenbrock	nnx/rosenbrock.lua	/^function rosenbrock(x,dx)$/;"	f
+rotate	image/init.lua	/^local function rotate(...)$/;"	f
+round	nnx/SpatialReSamplingEx.lua	/^local function round(a)$/;"	f
+save	image/init.lua	/^local function save(filename, tensor)$/;"	f
+saveJPG	image/init.lua	/^local function saveJPG(filename, tensor)$/;"	f
+savePGM	image/init.lua	/^local function savePGM(filename, tensor)$/;"	f
+savePNG	image/init.lua	/^local function savePNG(filename, tensor)$/;"	f
+savePPM	image/init.lua	/^local function savePPM(filename, tensor)$/;"	f
+savePreferences	qtide/prefs.lua	/^function savePreferences(d)$/;"	f
+saveline 	debugger/debugger.lua	/^    saveline = function(s) end$/;"	f
+scale	image/init.lua	/^local function scale(...)$/;"	f
+select	torch/generic/Tensor.c	/^static int torch_Tensor_(select)(lua_State *L)$/;"	f	file:
+self.updateGradInput 	nn/Copy.lua	/^      self.updateGradInput = function(self, input, gradOutput)$/;"	f
+self.updateOutput 	nn/Copy.lua	/^      self.updateOutput = function(self, input)$/;"	f
+set	torch/generic/Tensor.c	/^static int torch_Tensor_(set)(lua_State *L)$/;"	f	file:
+set_breakpoint	debugger/debugger.lua	/^local function set_breakpoint(file, line)$/;"	f
+setup	qtide/init.lua	/^function setup(mode)$/;"	f
+show	debugger/debugger.lua	/^local function show(file,line,before,after)$/;"	f
+size	torch/generic/Tensor.c	/^static int torch_Tensor_(size)(lua_State *L)$/;"	f	file:
+sizestr	torch-env.lua	/^local function sizestr(x)$/;"	f
+sleep	sys/init.lua	/^function sleep(seconds)$/;"	f
+split	sys/init.lua	/^function split(str, pat)$/;"	f
+start	qtide/init.lua	/^function start(mode)$/;"	f
+storage	torch/generic/Tensor.c	/^static int torch_Tensor_(storage)(lua_State *L)$/;"	f	file:
+storageOffset	torch/generic/Tensor.c	/^static int torch_Tensor_(storageOffset)(lua_State *L)$/;"	f	file:
+str 	nnx/DataSetLabelMe.lua	/^      str = str .. '  + label type : generated by user function \\n'$/;"	f
+stride	torch/generic/Tensor.c	/^static int torch_Tensor_(stride)(lua_State *L)$/;"	f	file:
+string	torch/generic/Storage.c	/^static int torch_Storage_(string)(lua_State *L)$/;"	f	file:
+string.strip	dok/init.lua	/^function string.strip(str)$/;"	f
+string2symbol	dok/inline.lua	/^local function string2symbol(str)$/;"	f
+strip	torch/CmdLine.lua	/^local function strip(str)$/;"	f
+styled 	dok/inline.lua	/^   styled = styled:gsub('<a.-id=".-">%s+(.-)<\/a>%s*', function(title) return style.title .. title .. style.none .. '\\n' end)$/;"	f
+styled 	dok/inline.lua	/^   styled = styled:gsub('<ul>(.-)<\/ul>', function(list) $/;"	f
+sub	torch/generic/Tensor.c	/^static int torch_Tensor_(sub)(lua_State *L)$/;"	f	file:
+t	torch/generic/Tensor.c	/^static int torch_Tensor_(t)(lua_State *L)$/;"	f	file:
+table.last	dok/init.lua	/^function table.last(t)$/;"	f
+tableinsertcheck	wrap/init.lua	/^local function tableinsertcheck(tbl, stuff)$/;"	f
+template_SpatialFovea	nnx/test-all.lua	/^local function template_SpatialFovea(fx,fy,bilinear)$/;"	f
+template_SpatialGraph	nnx/test-all.lua	/^local function template_SpatialGraph(channels, iwidth, iheight, dist, norm)$/;"	f
+template_SpatialMatching	nnx/test-all.lua	/^local function template_SpatialMatching(channels, iwidth, iheight, maxw, maxh, full_output)$/;"	f
+template_SpatialPyramid	nnx/test-all.lua	/^local function template_SpatialPyramid(fx,fy)$/;"	f
+template_SpatialReSamplingEx	nnx/test-all.lua	/^local function template_SpatialReSamplingEx(up, mode)$/;"	f
+test_SpatialMaxPooling	nnx/test-omp.lua	/^   function test_SpatialMaxPooling()$/;"	f
+testme 	inline/init.lua	/^function testme ()$/;"	f
+thisfile	paths/init.lua	/^function thisfile(arg, depth)$/;"	f
+thread 	debugger/debugger.lua	/^    thread = cocreate(function(...)$/;"	f
+thread 	debugger/debugger.lua	/^    thread = cowrap(function(...)$/;"	f
+thread_hook	debugger/debugger.lua	/^    local function thread_hook(event,line)$/;"	f
+tic 	sys/init.lua	/^tic = function()$/;"	f
+tinsert	nn/Concat.lua	/^   local function tinsert(to, from)$/;"	f
+tinsert	nn/ConcatTable.lua	/^   local function tinsert(to, from)$/;"	f
+tinsert	nn/Parallel.lua	/^   local function tinsert(to, from)$/;"	f
+tinsert	nn/ParallelTable.lua	/^   local function tinsert(to, from)$/;"	f
+tinsert	nn/Sequential.lua	/^   local function tinsert(to, from)$/;"	f
+tinsert	nnx/SpatialFovea.lua	/^   local function tinsert(to, from)$/;"	f
+toDisplayTensor	image/init.lua	/^local function toDisplayTensor(...)$/;"	f
+toc 	sys/init.lua	/^toc = function(verbose)$/;"	f
+torch.class	torch/init.lua	/^function torch.class(tname, parenttname)$/;"	f
+torch.include	torch/init.lua	/^function torch.include(package, file)$/;"	f
+torch.load	torch/File.lua	/^function torch.load(filename, mode)$/;"	f
+torch.packageLuaPath	torch/init.lua	/^function torch.packageLuaPath(name)$/;"	f
+torch.save	torch/File.lua	/^function torch.save(filename, object, mode)$/;"	f
+torch.setdefaulttensortype	torch/init.lua	/^function torch.setdefaulttensortype(typename)$/;"	f
+torch.test	torch/test.lua	/^function torch.test()$/;"	f
+torchtest.cat	torch/test.lua	/^function torchtest.cat()$/;"	f
+torchtest.conv2	torch/test.lua	/^function torchtest.conv2()$/;"	f
+torchtest.conv3	torch/test.lua	/^function torchtest.conv3()$/;"	f
+torchtest.cross	torch/test.lua	/^function torchtest.cross()$/;"	f
+torchtest.cumprod	torch/test.lua	/^function torchtest.cumprod()$/;"	f
+torchtest.cumsum	torch/test.lua	/^function torchtest.cumsum()$/;"	f
+torchtest.diag	torch/test.lua	/^function torchtest.diag()$/;"	f
+torchtest.eig	torch/test.lua	/^function torchtest.eig()$/;"	f
+torchtest.eye	torch/test.lua	/^function torchtest.eye()$/;"	f
+torchtest.gels	torch/test.lua	/^function torchtest.gels()$/;"	f
+torchtest.gesv	torch/test.lua	/^function torchtest.gesv()$/;"	f
+torchtest.linspace	torch/test.lua	/^function torchtest.linspace()$/;"	f
+torchtest.logical	torch/test.lua	/^function torchtest.logical()$/;"	f
+torchtest.logspace	torch/test.lua	/^function torchtest.logspace()$/;"	f
+torchtest.max	torch/test.lua	/^function torchtest.max()$/;"	f
+torchtest.min	torch/test.lua	/^function torchtest.min()$/;"	f
+torchtest.ones	torch/test.lua	/^function torchtest.ones()$/;"	f
+torchtest.prod	torch/test.lua	/^function torchtest.prod()$/;"	f
+torchtest.rand	torch/test.lua	/^function torchtest.rand()$/;"	f
+torchtest.randn	torch/test.lua	/^function torchtest.randn()$/;"	f
+torchtest.randperm	torch/test.lua	/^function torchtest.randperm()$/;"	f
+torchtest.range	torch/test.lua	/^function torchtest.range()$/;"	f
+torchtest.reshape	torch/test.lua	/^function torchtest.reshape()$/;"	f
+torchtest.sin	torch/test.lua	/^function torchtest.sin()$/;"	f
+torchtest.sort	torch/test.lua	/^function torchtest.sort()$/;"	f
+torchtest.sum	torch/test.lua	/^function torchtest.sum()$/;"	f
+torchtest.svd	torch/test.lua	/^function torchtest.svd()$/;"	f
+torchtest.tril	torch/test.lua	/^function torchtest.tril()$/;"	f
+torchtest.triu	torch/test.lua	/^function torchtest.triu()$/;"	f
+torchtest.zeros	torch/test.lua	/^function torchtest.zeros()$/;"	f
+totable	torch/generic/Storage.c	/^static int torch_Storage_(totable)(lua_State *L)$/;"	f	file:
+trace	debugger/debugger.lua	/^local function trace(set)$/;"	f
+trace_event	debugger/debugger.lua	/^local function trace_event(event, line, level)$/;"	f
+tracestack	debugger/debugger.lua	/^local function tracestack(l)$/;"	f
+translate	image/init.lua	/^local function translate(...)$/;"	f
+transpose	torch/generic/Tensor.c	/^static int torch_Tensor_(transpose)(lua_State *L)$/;"	f	file:
+trycatch	xlua/init.lua	/^function trycatch(try,catch)$/;"	f
+txt 	dok/init.lua	/^   txt = txt:gsub('%(%((.-)%)%)', function(str)$/;"	f
+txt 	dok/init.lua	/^   txt = txt:gsub('%[%[(.-)%]%]', function(str)$/;"	f
+txt 	dok/init.lua	/^   txt = txt:gsub('%{%{(.-)%}%}', function(str)$/;"	f
+txt 	dok/init.lua	/^   txt = txt:gsub('%{%{anchor%:(.-)%}%}', function(str)$/;"	f
+txt 	dok/init.lua	/^   txt = txt:gsub('.-\\n', function(line)$/;"	f
+txt 	dok/init.lua	/^   txt = txt:gsub('<code>(.-)<\/code>', function(str)$/;"	f
+txt 	dok/init.lua	/^   txt = txt:gsub('<file%s-(%w-)%s->(.-)<\/file>', function(langstr,str)$/;"	f
+txt 	dok/init.lua	/^   txt = txt:gsub('\\017(%d+)\\017', function(id)$/;"	f
+txt 	dok/init.lua	/^   txt = txt:gsub('\\018(%d+)\\018', function(id)$/;"	f
+txt 	dok/init.lua	/^   txt = txt:gsub('\\019(%d+)\\019', function(id)$/;"	f
+txt 	dok/init.lua	/^   txt = txt:gsub('\\020(%d+)\\020', function(id)$/;"	f
+txt 	dok/init.lua	/^   txt = txt:gsub('\\021(%d+)\\021', function(id)$/;"	f
+txt 	dok/init.lua	/^   txt = txt:gsub('https?:\/\/%S+', function(str)$/;"	f
+txt 	dok/init.lua	/^   txt = txt:gsub('www%.%S+%.[%w#]+', function(str)$/;"	f
+uname 	sys/init.lua	/^uname = function()$/;"	f
+uncleanText	dok/inline.lua	/^local function uncleanText(txt)$/;"	f
+unfold	torch/generic/Tensor.c	/^static int torch_Tensor_(unfold)(lua_State *L)$/;"	f	file:
+unpack	xlua/init.lua	/^function unpack(args, funcname, description, ...)$/;"	f
+unpack_class	xlua/init.lua	/^function unpack_class(object, args, funcname, description, ...)$/;"	f
+usage	xlua/init.lua	/^function usage(funcname, description, example, ...)$/;"	f
+usage_module	xlua/init.lua	/^function usage_module(module, name, description)$/;"	f
+verbose	optim/lbfgs.lua	/^   local function verbose(...)$/;"	f
+verbose	optim/lswolfe.lua	/^   local function verbose(...)$/;"	f
+vflip	image/init.lua	/^local function vflip(...)$/;"	f
+warp	image/init.lua	/^local function warp(...)$/;"	f
+who	torch-env.lua	/^function who()$/;"	f
+who 	xlua/init.lua	/^who = function()$/;"	f
+will not be usable 	qtwidget/init.lua	/^   print('qlua: qtwidget window functions will not be usable (running with -nographics)')$/;"	f
+window	image/init.lua	/^local function window(hook_resize, hook_mousepress, hook_mousedoublepress)$/;"	f
+windowClass:close	qtwidget/init.lua	/^function windowClass:close()$/;"	f
+windowClass:onResize	qtwidget/init.lua	/^function windowClass:onResize(f)$/;"	f
+windowClass:resize	qtwidget/init.lua	/^function windowClass:resize(w,h)$/;"	f
+windowClass:valid	qtwidget/init.lua	/^function windowClass:valid()$/;"	f
+write	torch/generic/Storage.c	/^static int torch_Storage_(write)(lua_State *L)$/;"	f	file:
+write	torch/generic/Tensor.c	/^static int torch_Tensor_(write)(lua_State *L)$/;"	f	file:
+writeToCurrent	gnuplot/gnuplot.lua	/^local function writeToCurrent(str)$/;"	f
+writeToPlot	gnuplot/gnuplot.lua	/^local function writeToPlot(gp,str)$/;"	f
+xlua.OptionParser	xlua/OptionParser.lua	/^function xlua.OptionParser(usage)$/;"	f
+xlua.Profiler	xlua/Profiler.lua	/^function xlua.Profiler(mode,verbose)$/;"	f
+z	paths/init.lua	/^      local function z(s) return g.qt[s].fileName:tostring() end $/;"	f
+{arg	nnx/BatchOptimization.lua	/^                     {arg='precode', type='function',$/;"	f
+{arg	nnx/DataSetLabelMe.lua	/^      {arg='labelGenerator', type='function', help='a function to generate sample+target (bypasses labelType)'},$/;"	f
