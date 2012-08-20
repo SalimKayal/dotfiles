@@ -33,7 +33,7 @@ au BufWritePost $MYVIMRC :source $MYVIMRC
 filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
-set rtp+=~/.vim/bundle/pyclewn
+"set rtp+=~/.vim/bundle/pyclewn
 call vundle#rc()
 
 " let Vundle manage Vundle
