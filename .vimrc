@@ -2,10 +2,12 @@ set nocompatible
 set bs=2
 let $PAGER=''
 
+set ofu=syntaxcomplete#Complete
 syntax on
 set number
 set hidden
 set hlsearch
+set incsearch
 "set mouse=a
 set scrolloff=5
 set smartindent
@@ -25,7 +27,7 @@ set guioptions-=m
 set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %a%=\ %8l,%c%V/%L\ (%P)\ [%08O:%02B]
 
 "autosource vimrc on leave
-au BufWrite $MYVIMRC :source $MYVIMRC
+au BufWritePost $MYVIMRC :source $MYVIMRC
 
 "______________vundle options______________"
 filetype off                   " required!
@@ -48,13 +50,19 @@ Bundle 'Rip-Rip/clang_complete'
 Bundle 'msanders/snipmate.vim'
 Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/TaskList.vim'
-Bundle 'mjbrownie/pythoncomplete.vim'
 Bundle 'vim-scripts/luarefvim'
 
 " repos on vim.org
 Bundle 'matchit.zip'
+Bundle 'PreciseJump'
+Bundle 'pythoncomplete'
+
+"to avoid cleaning
+Bundle 'pyclewn'
+Bundle 'pyclewn-bin'
 
 filetype plugin indent on     " required!
+
 "_____________c,c++,java,objc______________"
 
 autocmd Filetype c,cpp,cs,java,objc set cindent
@@ -79,7 +87,7 @@ autocmd FileType python map <F5> :!python %<CR>
 "___________________lua____________________"
 autocmd FileType lua set foldmethod=indent
 autocmd FileType lua let g:lua_compiler_name = '/idiap/home/skayal/bin/luac'
-autocmd FileType lua let g:lua_complete_omni = 1
+autocmd FileType lua let g:lua_complete_omni = 0
 autocmd FileType lua let g:lua_path = './?.lua;/remote/filer.gx/home.active/skayal/share/torch/lua/?.lua;/remote/filer.gx/home.active/skayal/share/torch/lua/?/init.lua;/remote/filer.gx/home.active/skayal/lib/torch/?.lua;/remote/filer.gx/home.active/skayal/lib/torch/?/init.lua'
 autocmd FileType lua let g:lua_complete_keywords = 1
 autocmd FileType lua let g:lua_complete_globals = 1
@@ -89,7 +97,7 @@ autocmd FileType lua map <F5> :!torch %<CR>
 "___________toggle auto-escape_____________"
 let s:on = 0
 
-function ToggleAutoEsc()
+function! ToggleAutoEsc()
    let &updatetime = 5000
    let s:on = !s:on
    exec "au".((s:on)?"":"!") "CursorHoldI *" ((s:on)?"stopinsert":"")
@@ -106,8 +114,48 @@ map <C-l> :bn<CR>
 map tb :e [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
 map vtb :vs [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
 
+"________windows navigation mappings_______"
+map <Left> <C-w>h
+map <Down> <C-w>j
+map <Up> <C-w>k
+map <Right> <C-w>l
+map <C-Left> <C-w>H
+map <C-Down> <C-w>J
+map <C-Up> <C-w>K
+map <C-Right> <C-w>L
+
+"_______navigation mapping for dvorak______"
+nnoremap q h
+nnoremap Q H
+nnoremap h x
+nnoremap H X
+nnoremap x l
+nnoremap X L
+nnoremap l q
+nnoremap L Q
+vnoremap q h
+vnoremap Q H
+vnoremap h x
+vnoremap H X
+vnoremap x l
+vnoremap X L
+vnoremap l q
+vnoremap L Q
+
+"_____________custom mappings______________"
+nnoremap ; :
+nnoremap ;; ;
+vnoremap ; :
+vnoremap ;; ;
+"_________________colorschemes_____________"
 colorscheme murphy
 hi Folded guibg=#151515
+
+if !has("gui_running")
+  colorscheme zellner
+  set background=dark
+  set t_Co=256
+endif
 
 set tags+=tags;
 map <C-F12> :!ctags -R --sort=yes --c++-kinds=+pl --fields=+iaS --extra=+q .<CR>
@@ -121,12 +169,6 @@ let g:SuperTabDefaultCompletionType = "context"
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview
 
-if !has("gui_running")
-  colorscheme zellner
-  set background=dark
-  set t_Co=256
-endif
-
 function! ToggleNumbers()
   if &nu == 1
     set rnu
@@ -138,3 +180,5 @@ function! ToggleNumbers()
 endfunction
 
 map <leader>n :call ToggleNumbers()<cr>
+
+map vrc :tabnew $MYVIMRC<CR>
