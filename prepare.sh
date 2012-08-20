@@ -14,3 +14,6 @@ cd pyclewn-1.9.py2
 vimdir=$f/.vim/bundle/pyclewn python setup.py install --force --home=$f/.vim/bundle/pyclewn-bin
 cd ..
 vim +BundleInstall +qall
+pushd .vim/bundle/snipmate.vim
+patch -p1 -i ../../../snipmate.patch
+popd
