@@ -26,6 +26,9 @@ set guioptions-=m
 "               buffer   file                      position     rel   HEX   ASCII
 set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %a%=\ %8l,%c%V/%L\ (%P)\ [%08O:%02B]
 
+"if muttator, map html new line
+"au BufEnter mutt-ator-mail :imap ^M <br>^[o
+
 "autosource vimrc on leave
 au BufWritePost $MYVIMRC :source $MYVIMRC
 
@@ -44,18 +47,21 @@ Bundle 'gmarik/vundle'
 "
 " original repos on github
 Bundle 'tpope/vim-fugitive'
-Bundle 'xolox/vim-lua-ftplugin'
-Bundle 'xolox/vim-lua-inspect.git'
+Bundle 'tpope/vim-surround'
+"Bundle 'xolox/vim-lua-ftplugin'
+"Bundle 'xolox/vim-lua-inspect.git'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'msanders/snipmate.vim'
 Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/TaskList.vim'
 Bundle 'vim-scripts/luarefvim'
+Bundle 'artemave/slowdown.vim'
 
 " repos on vim.org
 Bundle 'matchit.zip'
 Bundle 'PreciseJump'
 Bundle 'pythoncomplete'
+Bundle 'Syntastic'
 
 "to avoid cleaning
 Bundle 'pyclewn'
@@ -77,7 +83,11 @@ autocmd FileType c,cpp,cs,java,objc let g:clang_complete_copen = 1
 autocmd FileType c,cpp,cs,java,objc let g:clang_complete_snippets = 1
 autocmd FileType c,cpp,cs,java,objc let g:clang_complete_snippets_engine = 'snipmate'
 "let g:clang_complete_patterns = 1
-"let g:clang_periodic_quickfix = 1
+autocmd FileType c,cpp,cs,java,objc let g:clang_periodic_quickfix = 1
+autocmd FileType c,cpp,cs,java,objc nnoremap <leader>q :call g:ClangUpdateQuickFix()<cr>
+autocmd FileType c,cpp,cs,java,objc let g:clang_exec = '/idiap/home/skayal/bin/clang'
+autocmd FileType c,cpp,cs,java,objc let g:clang_use_library = 1
+autocmd FileType c,cpp,cs,java,objc let g:clang_library_path = '/idiap/home/skayal/lib'
 
 "__________________python__________________"
 
@@ -103,26 +113,27 @@ function! ToggleAutoEsc()
    exec "au".((s:on)?"":"!") "CursorHoldI *" ((s:on)?"stopinsert":"")
 endfunction
 
-nmap <leader>e :call ToggleAutoEsc()<cr>
+nnoremap <leader>e :call ToggleAutoEsc()<cr>
 call ToggleAutoEsc()
 "__________________________________________"
 
-map à :buffers<CR>:b 
-map ô :buffers<CR>:vertical sb 
-map <C-h> :bp<CR>
-map <C-l> :bn<CR>
-map tb :e [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
-map vtb :vs [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
+noremap à :buffers<CR>:b 
+noremap ô :buffers<CR>:vertical sb 
+noremap <C-n> :bp<CR>:buffers<CR>
+noremap <C-p> :bn<CR>:buffers<CR>
+noremap tb :e [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
+noremap vtb :vs [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
+noremap <leader>h :set hlsearch!<CR>
 
 "________windows navigation mappings_______"
-map <Left> <C-w>h
-map <Down> <C-w>j
-map <Up> <C-w>k
-map <Right> <C-w>l
-map <C-Left> <C-w>H
-map <C-Down> <C-w>J
-map <C-Up> <C-w>K
-map <C-Right> <C-w>L
+noremap <Left> <C-w>h
+noremap <Down> <C-w>j
+noremap <Up> <C-w>k
+noremap <Right> <C-w>l
+noremap <C-Left> <C-w>H
+noremap <C-Down> <C-w>J
+noremap <C-Up> <C-w>K
+noremap <C-Right> <C-w>L
 
 "_______navigation mapping for dvorak______"
 nnoremap q h
@@ -157,8 +168,12 @@ if !has("gui_running")
   set t_Co=256
 endif
 
+"_________________slowdown vim_____________"
+let g:slow_down_max_delay_ms = 300 " default is 200
+
+
 set tags+=tags;
-map <C-F12> :!ctags -R --sort=yes --c++-kinds=+pl --fields=+iaS --extra=+q .<CR>
+noremap <C-F12> :!ctags -R --sort=yes --c++-kinds=+pl --fields=+iaS --extra=+q .<CR>
 
 au BufNewFile,BufRead *.plt,.gnuplot setf gnuplot
 
@@ -179,6 +194,6 @@ function! ToggleNumbers()
   endif
 endfunction
 
-map <leader>n :call ToggleNumbers()<cr>
+noremap <leader>n :call ToggleNumbers()<cr>
 
-map vrc :tabnew $MYVIMRC<CR>
+noremap vrc :tabnew $MYVIMRC<CR>
