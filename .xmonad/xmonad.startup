@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+xrdb -merge ~/.Xresources
+setxkbmap -layout us -variant dvorak-alt-intl
+xmodmap ~/.Xmodmaprc
+
+if [ ! -d ~/.xmonad/started ];then
+  skype &
+  firefox &
+  thunderbird &
+  xclock &
+  mkdir -p ~/.xmonad/started
+fi
