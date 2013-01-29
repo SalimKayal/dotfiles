@@ -77,7 +77,7 @@ autocmd Filetype c,cpp,cs,java,objc set cinkeys=0{,0},:,0#,!^F
 autocmd FileType c,cpp,cs,java,objc set foldmethod=syntax
 autocmd FileType c,cpp,cs,java,objc set tags=~/.vim/Tags/stl.tags
 " Disable auto popup, use <Tab> to autocomplete
-autocmd FileType c,cpp,cs,java,objc let g:clang_complete_auto = 1
+"autocmd FileType c,cpp,cs,java,objc let g:clang_complete_auto = 1
 " Show clang errors in the quickfix window
 autocmd FileType c,cpp,cs,java,objc let g:clang_complete_copen = 1
 autocmd FileType c,cpp,cs,java,objc let g:clang_complete_snippets = 1
@@ -161,6 +161,9 @@ vnoremap ;; ;
 "_________________colorschemes_____________"
 colorscheme murphy
 hi Folded guibg=#151515
+
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
 
 if !has("gui_running")
   colorscheme zellner
