@@ -1,13 +1,22 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 xrdb -merge ~/.Xresources
 setxkbmap -layout us -variant dvorak-alt-intl
 xmodmap ~/.Xmodmaprc
 
 if [ ! -d ~/.xmonad/started ];then
+  xcompmgr -d :0 -c -f -n &
+  xhost +localhost
+  urxvt -e byobu &
+  xfce4-terminal -x top &
   skype &
   firefox &
   thunderbird &
-  xclock &
   mkdir -p ~/.xmonad/started
 fi
+export LD_LIBRARY_PATH=$HOME/lib:$LD_LIBRARY_PATH && $HOME/bin/feh --bg-scale $HOME/.wallpaper
+xautolock -exit
+pkill xclock
+sleep 5
+xautolock -time 5 -locker "xflock4" -notify 10 -notifier "notify-send -t 5000 -i gtk-dialog-info 'locking in 10 seconds'" &
+xclock -xrm '*overrideRedirect: True' -geometry 200X200+2980+805 &
