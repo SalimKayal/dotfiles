@@ -48,6 +48,7 @@ Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
 "Bundle 'xolox/vim-lua-ftplugin'
 "Bundle 'xolox/vim-lua-inspect.git'
 Bundle 'Rip-Rip/clang_complete'
@@ -57,6 +58,7 @@ Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/TaskList.vim'
 Bundle 'vim-scripts/luarefvim'
 Bundle 'kien/ctrlp.vim'
+"Bundle 'ivanov/vim-ipython'
 "Bundle 'artemave/slowdown.vim'
 
 " repos on vim.org
@@ -97,6 +99,8 @@ autocmd FileType c,cpp,cs,java,objc let g:clang_use_library = 1
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType python set foldmethod=indent
 autocmd FileType python map <F5> :!python %<CR>
+autocmd FileType python setlocal tabstop=4
+autocmd FileType python setlocal shiftwidth=4
 "___________________lua____________________"
 autocmd FileType lua set foldmethod=indent
 autocmd FileType lua let g:lua_compiler_name = '/idiap/home/skayal/bin/luac'
