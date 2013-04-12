@@ -53,9 +53,11 @@ Bundle 'tpope/vim-surround'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'msanders/snipmate.vim'
 Bundle 'ervandew/supertab'
+"Bundle 'Valloric/YouCompleteMe'
 Bundle 'vim-scripts/TaskList.vim'
 Bundle 'vim-scripts/luarefvim'
-Bundle 'artemave/slowdown.vim'
+Bundle 'kien/ctrlp.vim'
+"Bundle 'artemave/slowdown.vim'
 
 " repos on vim.org
 Bundle 'matchit.zip'
@@ -77,7 +79,7 @@ autocmd Filetype c,cpp,cs,java,objc set cinkeys=0{,0},:,0#,!^F
 autocmd FileType c,cpp,cs,java,objc set foldmethod=syntax
 autocmd FileType c,cpp,cs,java,objc set tags=~/.vim/Tags/stl.tags
 " Disable auto popup, use <Tab> to autocomplete
-"autocmd FileType c,cpp,cs,java,objc let g:clang_complete_auto = 1
+autocmd FileType c,cpp,cs,java,objc let g:clang_complete_auto = 1
 " Show clang errors in the quickfix window
 autocmd FileType c,cpp,cs,java,objc let g:clang_complete_copen = 1
 autocmd FileType c,cpp,cs,java,objc let g:clang_complete_snippets = 1
@@ -85,9 +87,10 @@ autocmd FileType c,cpp,cs,java,objc let g:clang_complete_snippets_engine = 'snip
 "let g:clang_complete_patterns = 1
 autocmd FileType c,cpp,cs,java,objc let g:clang_periodic_quickfix = 1
 autocmd FileType c,cpp,cs,java,objc nnoremap <leader>q :call g:ClangUpdateQuickFix()<cr>
-autocmd FileType c,cpp,cs,java,objc let g:clang_exec = '/idiap/home/skayal/bin/clang'
+"autocmd FileType c,cpp,cs,java,objc let g:clang_exec = '/idiap/home/skayal/.vim/bundle/clang_complete/bin/clang'
 autocmd FileType c,cpp,cs,java,objc let g:clang_use_library = 1
-autocmd FileType c,cpp,cs,java,objc let g:clang_library_path = '/idiap/home/skayal/lib'
+"autocmd FileType c,cpp,cs,java,objc let g:clang_library_path = '/idiap/home/skayal/.vim/bundle/clang_complete/bin'
+"autocmd FileType c,cpp,cs,java,objc let g:clang_library_path = '/idiap/home/skayal/lib'
 
 "__________________python__________________"
 
@@ -155,9 +158,12 @@ vnoremap L Q
 
 "_____________custom mappings______________"
 nnoremap ; :
-nnoremap ;; ;
+nnoremap . ;
+nnoremap <space> .
+nnoremap <enter> ciw
 vnoremap ; :
-vnoremap ;; ;
+vnoremap <space> .
+vnoremap . ;
 "_________________colorschemes_____________"
 colorscheme murphy
 hi Folded guibg=#151515
