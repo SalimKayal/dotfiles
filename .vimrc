@@ -60,6 +60,7 @@ Bundle 'vim-scripts/luarefvim'
 Bundle 'kien/ctrlp.vim'
 "Bundle 'ivanov/vim-ipython'
 "Bundle 'artemave/slowdown.vim'
+Bundle 'ervandew/screen'
 
 " repos on vim.org
 Bundle 'matchit.zip'
