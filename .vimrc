@@ -15,6 +15,7 @@ set autoindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set textwidth=79
 set linebreak
 set showcmd
 set guioptions+=lrb
@@ -163,18 +164,15 @@ vnoremap L Q
 
 "_____________custom mappings______________"
 nnoremap ; :
-nnoremap . ;
-nnoremap <space> .
-nnoremap <enter> ciw
+nnoremap <space> ;
 vnoremap ; :
-vnoremap <space> .
-vnoremap . ;
+vnoremap <space> ;
 "_________________colorschemes_____________"
 colorscheme murphy
 hi Folded guibg=#151515
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+hi ColorColumn ctermbg=darkgray guibg=darkgray
+set cc=+1
 
 if !has("gui_running")
   colorscheme zellner
