@@ -133,6 +133,7 @@ noremap <C-p> :bn<CR>:buffers<CR>
 noremap tb :e [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
 noremap vtb :vs [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
 noremap <leader>h :set hlsearch!<CR>
+nnoremap / :set hlsearch<CR>/
 
 "________windows navigation mappings_______"
 noremap <Left> <C-w>h
