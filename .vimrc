@@ -47,26 +47,27 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " original repos on github
-Bundle 'tpope/vim-fugitive'
+"Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 "Bundle 'xolox/vim-lua-ftplugin'
 "Bundle 'xolox/vim-lua-inspect.git'
-Bundle 'Rip-Rip/clang_complete'
-Bundle 'msanders/snipmate.vim'
-Bundle 'ervandew/supertab'
-"Bundle 'Valloric/YouCompleteMe'
-Bundle 'vim-scripts/TaskList.vim'
+"Bundle 'Rip-Rip/clang_complete'
+"Bundle 'msanders/snipmate.vim'
+"Bundle 'ervandew/supertab'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'SirVer/ultisnips'
+"Bundle 'vim-scripts/TaskList.vim'
 Bundle 'vim-scripts/luarefvim'
 Bundle 'kien/ctrlp.vim'
 "Bundle 'ivanov/vim-ipython'
 "Bundle 'artemave/slowdown.vim'
-Bundle 'ervandew/screen'
+"Bundle 'ervandew/screen'
 
 " repos on vim.org
 Bundle 'matchit.zip'
 Bundle 'PreciseJump'
-Bundle 'pythoncomplete'
+"Bundle 'pythoncomplete'
 Bundle 'Syntastic'
 
 "to avoid cleaning
@@ -82,23 +83,9 @@ autocmd Filetype c,cpp,cs,java,objc set cst csto=0
 autocmd Filetype c,cpp,cs,java,objc set cinkeys=0{,0},:,0#,!^F
 autocmd FileType c,cpp,cs,java,objc set foldmethod=syntax
 autocmd FileType c,cpp,cs,java,objc set tags=~/.vim/Tags/stl.tags
-" Disable auto popup, use <Tab> to autocomplete
-autocmd FileType c,cpp,cs,java,objc let g:clang_complete_auto = 1
-" Show clang errors in the quickfix window
-autocmd FileType c,cpp,cs,java,objc let g:clang_complete_copen = 1
-autocmd FileType c,cpp,cs,java,objc let g:clang_complete_snippets = 1
-autocmd FileType c,cpp,cs,java,objc let g:clang_complete_snippets_engine = 'snipmate'
-"let g:clang_complete_patterns = 1
-autocmd FileType c,cpp,cs,java,objc let g:clang_periodic_quickfix = 1
-autocmd FileType c,cpp,cs,java,objc nnoremap <leader>q :call g:ClangUpdateQuickFix()<cr>
-"autocmd FileType c,cpp,cs,java,objc let g:clang_exec = '/idiap/home/skayal/.vim/bundle/clang_complete/bin/clang'
-autocmd FileType c,cpp,cs,java,objc let g:clang_use_library = 1
-"autocmd FileType c,cpp,cs,java,objc let g:clang_library_path = '/idiap/home/skayal/.vim/bundle/clang_complete/bin'
-"autocmd FileType c,cpp,cs,java,objc let g:clang_library_path = '/idiap/home/skayal/lib'
 
 "__________________python__________________"
 
-autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType python set foldmethod=indent
 autocmd FileType python map <F5> :!python %<CR>
 autocmd FileType python setlocal tabstop=4
@@ -125,11 +112,12 @@ endfunction
 nnoremap <leader>e :call ToggleAutoEsc()<cr>
 call ToggleAutoEsc()
 "__________________________________________"
-
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+"__________________________________________"
 noremap à :buffers<CR>:b 
 noremap ô :buffers<CR>:vertical sb 
-noremap <C-n> :bp<CR>:buffers<CR>
-noremap <C-p> :bn<CR>:buffers<CR>
 noremap tb :e [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
 noremap vtb :vs [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
 noremap <leader>h :set hlsearch!<CR>
