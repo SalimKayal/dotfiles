@@ -9,6 +9,7 @@ set hidden
 set hlsearch
 set incsearch
 "set mouse=a
+set nowrap
 set scrolloff=5
 set smartindent
 set autoindent
@@ -47,28 +48,18 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " original repos on github
-"Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
-"Bundle 'xolox/vim-lua-ftplugin'
-"Bundle 'xolox/vim-lua-inspect.git'
-"Bundle 'Rip-Rip/clang_complete'
-"Bundle 'msanders/snipmate.vim'
-"Bundle 'ervandew/supertab'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'SirVer/ultisnips'
-"Bundle 'vim-scripts/TaskList.vim'
 Bundle 'vim-scripts/luarefvim'
-Bundle 'kien/ctrlp.vim'
-"Bundle 'ivanov/vim-ipython'
-"Bundle 'artemave/slowdown.vim'
-"Bundle 'ervandew/screen'
+Bundle 'Shougo/unite.vim'
+Bundle 'Shougo/vimproc.vim'
+Bundle 'scrooloose/syntastic'
 
 " repos on vim.org
 Bundle 'matchit.zip'
 Bundle 'PreciseJump'
-"Bundle 'pythoncomplete'
-Bundle 'Syntastic'
 
 "to avoid cleaning
 Bundle 'pyclewn'
@@ -83,6 +74,7 @@ autocmd Filetype c,cpp,cs,java,objc set cst csto=0
 autocmd Filetype c,cpp,cs,java,objc set cinkeys=0{,0},:,0#,!^F
 autocmd FileType c,cpp,cs,java,objc set foldmethod=syntax
 autocmd FileType c,cpp,cs,java,objc set tags=~/.vim/Tags/stl.tags
+autocmd FileType c,cpp,cs,java,objc nnoremap <F5> :wa<CR>:!mkdir -p build<CR>:cd build<CR>:!cmake ..<CR>:make<CR>:cd ..<CR>:redraw!<CR>:cwindow<CR>
 
 "__________________python__________________"
 
@@ -90,6 +82,7 @@ autocmd FileType python set foldmethod=indent
 autocmd FileType python map <F5> :!python %<CR>
 autocmd FileType python setlocal tabstop=4
 autocmd FileType python setlocal shiftwidth=4
+autocmd FileType python nnoremap <F4> :execute "silent !pep8 % > .pep8_error_file" \|cfile .pep8_error_file \|cwindow \|execute "silent !rm .pep8_error_file" \|redraw!<cr>
 "___________________lua____________________"
 autocmd FileType lua set foldmethod=indent
 autocmd FileType lua let g:lua_compiler_name = '/idiap/home/skayal/bin/luac'
@@ -100,6 +93,11 @@ autocmd FileType lua let g:lua_complete_globals = 1
 autocmd FileType lua let g:lua_complete_library = 1
 autocmd FileType lua set tags=lua.tags
 autocmd FileType lua map <F5> :!torch %<CR>
+
+"__________________LaTeX___________________"
+autocmd FileType tex setlocal spell
+autocmd FileType tex setlocal spelllang=en_us
+
 "___________toggle auto-escape_____________"
 let s:on = 0
 
@@ -110,28 +108,35 @@ function! ToggleAutoEsc()
 endfunction
 
 nnoremap <leader>e :call ToggleAutoEsc()<cr>
-call ToggleAutoEsc()
+"call ToggleAutoEsc()
+"___________YouCompleteMe Goto_____________"
+autocmd Filetype c,cpp,objc,objcpp,python nnoremap <c-]> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+autocmd BufWinEnter * call UnfoldPreview()
+
+function! UnfoldPreview()
+  if &pvw
+    setlocal nofoldenable
+  endif
+endfunction
 "__________________________________________"
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 "__________________________________________"
-noremap à :buffers<CR>:b 
-noremap ô :buffers<CR>:vertical sb 
 noremap tb :e [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
 noremap vtb :vs [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
 noremap <leader>h :set hlsearch!<CR>
 nnoremap / :set hlsearch<CR>/
 
 "________windows navigation mappings_______"
-noremap <Left> <C-w>h
-noremap <Down> <C-w>j
-noremap <Up> <C-w>k
-noremap <Right> <C-w>l
-noremap <C-Left> <C-w>H
-noremap <C-Down> <C-w>J
-noremap <C-Up> <C-w>K
-noremap <C-Right> <C-w>L
+nnoremap OD <c-w>h
+nnoremap OB <c-w>j
+nnoremap OA <c-w>k
+nnoremap OC <c-w>l
+nnoremap Od <c-w>H
+nnoremap Ob <c-w>J
+nnoremap Oa <c-w>K
+nnoremap Oc <c-w>L
 
 "_______navigation mapping for dvorak______"
 nnoremap q h
@@ -151,6 +156,14 @@ vnoremap X L
 vnoremap l q
 vnoremap L Q
 
+"_______________unite.vim__________________"
+nnoremap <leader>f :Unite -start-insert file_rec/async<CR>
+nnoremap <leader>v :Unite -start-insert -default-action=vsplit file_rec/async<CR>
+nnoremap à :Unite -start-insert buffer<CR>
+nnoremap ô :Unite -start-insert -default-action=vsplit buffer<CR>
+nnoremap <leader>c :UniteClose default<CR>
+inoremap <leader>c <esc>:UniteClose default<CR>
+
 "_____________custom mappings______________"
 nnoremap ; :
 nnoremap <space> ;
@@ -168,9 +181,6 @@ if !has("gui_running")
   set background=dark
   set t_Co=256
 endif
-
-"_________________slowdown vim_____________"
-let g:slow_down_max_delay_ms = 300 " default is 200
 
 
 set tags+=tags;

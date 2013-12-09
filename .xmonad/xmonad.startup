@@ -9,12 +9,12 @@ if [ ! -d ~/.xmonad/started ];then
   xhost +localhost
   urxvt -e byobu &
   xfce4-terminal -x top &
-  skype &
   firefox &
   thunderbird &
+  redshift -l 46.2167:7.33333 &
   mkdir -p ~/.xmonad/started
 fi
-export LD_LIBRARY_PATH=$HOME/lib:$LD_LIBRARY_PATH && $HOME/bin/feh --bg-scale $HOME/.wallpaper
+export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH && $HOME/.local/bin/feh --bg-scale $HOME/.wallpaper
 xautolock -exit
 pkill xclock
 sleep 5
