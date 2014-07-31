@@ -52,10 +52,12 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets.git'
 Bundle 'vim-scripts/luarefvim'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'scrooloose/syntastic'
+Bundle 'amix/vim-2048'
 
 " repos on vim.org
 Bundle 'matchit.zip'
@@ -75,6 +77,9 @@ autocmd Filetype c,cpp,cs,java,objc set cinkeys=0{,0},:,0#,!^F
 autocmd FileType c,cpp,cs,java,objc set foldmethod=syntax
 autocmd FileType c,cpp,cs,java,objc set tags=~/.vim/Tags/stl.tags
 autocmd FileType c,cpp,cs,java,objc nnoremap <F5> :wa<CR>:!mkdir -p build<CR>:cd build<CR>:!cmake ..<CR>:make<CR>:cd ..<CR>:redraw!<CR>:cwindow<CR>
+
+"_________________android__________________"
+let g:EclimCompletionMethod = 'omnifunc'
 
 "__________________python__________________"
 
@@ -97,6 +102,7 @@ autocmd FileType lua map <F5> :!torch %<CR>
 "__________________LaTeX___________________"
 autocmd FileType tex setlocal spell
 autocmd FileType tex setlocal spelllang=en_us
+autocmd FileType tex nnoremap <F4> :w\|execute "silent !pdflatex -interaction nonstopmode % >out.txt 2>err.txt"\|execute "silent  !gnome-open %<.pdf >>out.txt 2>>err.txt"<CR>
 
 "___________toggle auto-escape_____________"
 let s:on = 0
@@ -119,6 +125,7 @@ function! UnfoldPreview()
   endif
 endfunction
 "__________________________________________"
+let g:ycm_use_ultisnips_completer = 1
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
