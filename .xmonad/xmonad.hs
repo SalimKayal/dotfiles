@@ -29,7 +29,7 @@ myKeys conf = M.fromList $
     -- launch a terminal
     ((myModMask .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
     -- launch dmenu
-  , ((myModMask,               xK_l     ), spawn "exe=`dmenu_path | dmenu` && eval \"exec $exe\"")
+  , ((myModMask,               xK_l     ), spawn "exe=`dmenu_run | dmenu -i` && eval 'exec $exe'")
     -- lock screen
   , ((myModMask,               xK_z     ), spawn "xflock4")
     -- close focused window 
@@ -98,8 +98,8 @@ myManageHook :: ManageHook
 myManageHook = composeAll
     [  className =? "URxvt"           --> doShift "1:term"  
     ,  className =? "Xfce4-terminal"  --> doShift "2:utilities"   
-    ,  className =? "Firefox"         --> doShift "3:web"   
-    ,  className =? "Thunderbird"     --> doShift "4:mail"  
+    ,  className =? "Iceweasel"       --> doShift "3:web"   
+    ,  className =? "Icedove"         --> doShift "4:mail"  
     ,  className =? "Skype"           --> doShift "5:skype" 
     ,  className =? "VirtualBox"      --> doShift "6:vm" 
     ,  className =? "Xfce4-notifyd"   --> doF W.focusDown
