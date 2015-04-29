@@ -38,7 +38,6 @@ au BufWritePost $MYVIMRC :source $MYVIMRC
 filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
-"set rtp+=~/.vim/bundle/pyclewn
 call vundle#rc()
 
 " let Vundle manage Vundle
@@ -56,18 +55,19 @@ Bundle 'honza/vim-snippets.git'
 Bundle 'vim-scripts/luarefvim'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimproc.vim'
+Bundle 'idanarye/vim-vebugger'
 Bundle 'scrooloose/syntastic'
 Bundle 'amix/vim-2048'
+Bundle 'mileszs/ack.vim'
 
 " repos on vim.org
 Bundle 'matchit.zip'
 Bundle 'PreciseJump'
 
-"to avoid cleaning
-Bundle 'pyclewn'
-Bundle 'pyclewn-bin'
-
 filetype plugin indent on     " required!
+
+"___________________ag_____________________"
+let g:ackprg = 'ag --vimgrep'
 
 "_____________c,c++,java,objc______________"
 
@@ -163,6 +163,8 @@ vnoremap X L
 vnoremap l q
 vnoremap L Q
 
+"________________vebugger__________________"
+let g:vebugger_leader='vd'
 "_______________unite.vim__________________"
 nnoremap <leader>f :Unite -start-insert file_rec/async<CR>
 nnoremap <leader>v :Unite -start-insert -default-action=vsplit file_rec/async<CR>
@@ -194,8 +196,6 @@ set tags+=tags;
 noremap <C-F12> :!ctags -R --sort=yes --c++-kinds=+pl --fields=+iaS --extra=+q .<CR>
 
 au BufNewFile,BufRead *.plt,.gnuplot setf gnuplot
-
-let g:pyclewn_args="-w bottom"
 
 let g:SuperTabDefaultCompletionType = "context"
 

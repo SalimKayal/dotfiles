@@ -1,22 +1,16 @@
 #!/usr/bin/env zsh
-
-xrdb -merge ~/.Xresources
-setxkbmap -layout us -variant dvorak-alt-intl
-xmodmap ~/.Xmodmaprc
-
+#xhost +localhost
 if [ ! -d ~/.xmonad/started ];then
-  xcompmgr -d :0 -c -f -n &
-  xhost +localhost
+  #xcompmgr -d :0 -c -f -n 
   urxvt -e byobu &
   xfce4-terminal -x top &
-  firefox &
-  thunderbird &
-  redshift -l 46.2167:7.33333 &
+  iceweasel &
+  icedove &
   mkdir -p ~/.xmonad/started
 fi
 export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH && $HOME/.local/bin/feh --bg-scale $HOME/.wallpaper
-xautolock -exit
+pkill redshift-gtk
 pkill xclock
 sleep 5
-xautolock -time 5 -locker "xflock4" -notify 10 -notifier "notify-send -t 5000 -i gtk-dialog-info 'locking in 10 seconds'" &
+redshift-gtk -l 46.2167:7.33333 &
 xclock -xrm '*overrideRedirect: True' -geometry 200X200+2980+805 &
