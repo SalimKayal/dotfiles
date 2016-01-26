@@ -60,6 +60,7 @@ Bundle 'idanarye/vim-vebugger'
 Bundle 'scrooloose/syntastic'
 Bundle 'amix/vim-2048'
 Bundle 'mileszs/ack.vim'
+Bundle 'jmcantrell/vim-virtualenv'
 
 " repos on vim.org
 Bundle 'matchit.zip'
@@ -91,9 +92,7 @@ autocmd FileType python setlocal shiftwidth=4
 autocmd FileType python nnoremap <F4> :execute "silent !pep8 % > .pep8_error_file" \|cfile .pep8_error_file \|cwindow \|execute "silent !rm .pep8_error_file" \|redraw!<cr>
 "___________________lua____________________"
 autocmd FileType lua set foldmethod=indent
-autocmd FileType lua let g:lua_compiler_name = '/idiap/home/skayal/bin/luac'
 autocmd FileType lua let g:lua_complete_omni = 0
-autocmd FileType lua let g:lua_path = './?.lua;/remote/filer.gx/home.active/skayal/share/torch/lua/?.lua;/remote/filer.gx/home.active/skayal/share/torch/lua/?/init.lua;/remote/filer.gx/home.active/skayal/lib/torch/?.lua;/remote/filer.gx/home.active/skayal/lib/torch/?/init.lua'
 autocmd FileType lua let g:lua_complete_keywords = 1
 autocmd FileType lua let g:lua_complete_globals = 1
 autocmd FileType lua let g:lua_complete_library = 1
@@ -169,8 +168,8 @@ let g:vebugger_leader='vd'
 "_______________unite.vim__________________"
 nnoremap <leader>f :Unite -start-insert file_rec/async<CR>
 nnoremap <leader>v :Unite -start-insert -default-action=vsplit file_rec/async<CR>
-nnoremap à :Unite -start-insert buffer<CR>
-nnoremap ô :Unite -start-insert -default-action=vsplit buffer<CR>
+nnoremap á :Unite -start-insert buffer<CR>
+nnoremap ó :Unite -start-insert -default-action=vsplit buffer<CR>
 nnoremap <leader>c :UniteClose default<CR>
 inoremap <leader>c <esc>:UniteClose default<CR>
 
