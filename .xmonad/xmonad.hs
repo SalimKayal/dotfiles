@@ -96,19 +96,20 @@ myWorkspaces = [ "1:term"
 
 myManageHook :: ManageHook
 myManageHook = composeAll
-    [  className =? "URxvt"           --> doShift "1:term"  
-    ,  className =? "Xfce4-terminal"  --> doShift "2:utilities"   
-    ,  className =? "Iceweasel"       --> doShift "3:web"   
-    ,  className =? "Icedove"         --> doShift "4:mail"  
-    ,  className =? "Skype"           --> doShift "5:skype" 
-    ,  className =? "VirtualBox"      --> doShift "6:vm" 
-    ,  className =? "Xfce4-notifyd"   --> doF W.focusDown
-    ,  isFullscreen                   --> doFullFloat
+    [  className =? "URxvt" <&&> title =? "htop"    --> doShift "2:utilities"  
+    ,  className =? "URxvt"                         --> doShift "1:term"  
+    --,  className =? "Xfce4-terminal"              --> doShift "2:utilities"   
+    ,  className =? "Iceweasel"                     --> doShift "3:web"   
+    ,  className =? "Icedove"                       --> doShift "4:mail"  
+    ,  className =? "Skype"                         --> doShift "5:skype" 
+    ,  className =? "VirtualBox"                    --> doShift "6:vm" 
+    ,  className =? "Xfce4-notifyd"                 --> doF W.focusDown
+    ,  isFullscreen                                 --> doFullFloat
     ]
 
 customLayout  =   Mirror tiled ||| Full
  where
-     tiled   = ResizableTall 1 (1/100) (3/4) []
+     tiled   = ResizableTall 1 (1/100) (1/5) []
 
 myLayoutHook  =   onWorkspace "2:utilities" customLayout $ 
                   layoutHook defaultConfig

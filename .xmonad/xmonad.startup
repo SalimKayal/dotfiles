@@ -3,14 +3,12 @@
 if [ ! -d ~/.xmonad/started ];then
   #xcompmgr -d :0 -c -f -n 
   urxvt -e byobu &
-  xfce4-terminal -x top &
+  urxvt -e htop &
   iceweasel &
   icedove &
   mkdir -p ~/.xmonad/started
 fi
-export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH && $HOME/.local/bin/feh --bg-scale $HOME/.wallpaper
-pkill redshift-gtk
+export LD_LIBRARY_PATH=${HOME}/.local/lib:$LD_LIBRARY_PATH && ${HOME}/.local/bin/feh --bg-scale ${HOME}/.wallpaper
 pkill xclock
-sleep 5
-redshift-gtk -l 46.2167:7.33333 &
-xclock -xrm '*overrideRedirect: True' -geometry 200X200+2980+805 &
+sleep 0.05
+xclock -xrm '*overrideRedirect: True' -geometry 200X200+2745+1450 &
