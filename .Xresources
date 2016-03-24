@@ -1,0 +1,20 @@
+WinCenter*keymapFile: us_int.kbd
+
+*basicLocale:   C
+*displayLang:   C
+*inputLang:     C
+*numeric:       C
+*timeFormat:    C
+ 
+xTerm*EightBitInput:    True
+xterm*font:     -b&h-lucidatypewriter-medium-r-normal-sans-*-m-*
+xterm*scrollBar: true
+
+URxvt.font:xft:Source Code Pro:pixelsize=15:antialias=true
+URxvt.boldFont:xft:Source Code Pro:bold:pixelsize=15:antialias=true
+URxvt.background:rgba:0600/1a00/2400/5555
+URxvt.foreground:rgba:fa00/fa00/fa00/dddd 
+URxvt.cursorColor:rgba:1000/4000/8000/dddd
+urxvt*transparent: true
+urxvt*shading: 10
+URxvt.scrollBar:false
