@@ -28,6 +28,13 @@ set guioptions-=m
 "               buffer   file                      position     rel   HEX   ASCII
 set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %a%=\ %8l,%c%V/%L\ (%P)\ [%08O:%02B]
 
+if has('persistent_undo')
+  set undofile
+  set undodir=${HOME}/.vim/undodir
+  set undolevels=1000
+  set undoreload=10000
+endif
+
 "if muttator, map html new line
 "au BufEnter mutt-ator-mail :imap ^M <br>^[o
 

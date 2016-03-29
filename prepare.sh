@@ -10,6 +10,10 @@ ln -s $f/.vimrc
 ln -s $f/.vim
 
 #setup zsh
+ln -s $f/.vimrc
+ln -s $f/.vim
+
+#setup zsh
 rm -f $HOME/.zshrc
 ln -s $f/.zshrc
 
