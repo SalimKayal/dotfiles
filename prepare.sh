@@ -35,7 +35,7 @@ rm -rf $HOME/.vimperator
 rm -rf $HOME/.vimperatorrc
 ln -s $f/.vimperatorrc
 mkdir -p .vimperator/plugin
-mkdir -p .vimperator/color
+mkdir -p .vimperator/colors
 pushd .vimperator/plugin
 ln -s $f/noscript.js
 popd
