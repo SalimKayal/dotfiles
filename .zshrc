@@ -63,9 +63,6 @@ export MANPATH=${HOME}/.local/share/man:${HOME}/.local/usr/local/share/man:${MAN
 alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'
 
-#selector
-#source zsh-selector.sh --hist --cd
-
 #using vcprompt
 PS1='${debian_chroot:+($debian_chroot)}%{$fg[yellow]%}%D_%*%{$fg_no_bold[red]%}|%{$fg_no_bold[magenta]%}%n@%m%{$fg_no_bold[red]%}|%{$fg_no_bold[cyan]%}%/$ %{$reset_color%}'
 RPS1='${vcs_info_msg_0_}'
