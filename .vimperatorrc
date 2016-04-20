@@ -1,4 +1,4 @@
-colorscheme molokai
+colorscheme solarized_dark
 set gui=none
 nnoremap ; :
 nnoremap : ;
