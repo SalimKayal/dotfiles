@@ -16,7 +16,7 @@ set autoindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
-set textwidth=79
+set textwidth=100
 set linebreak
 set showcmd
 set guioptions+=lrb
@@ -67,7 +67,8 @@ Bundle 'idanarye/vim-vebugger'
 Bundle 'scrooloose/syntastic'
 Bundle 'amix/vim-2048'
 Bundle 'mileszs/ack.vim'
-Bundle 'jmcantrell/vim-virtualenv'
+"Bundle 'jmcantrell/vim-virtualenv'
+Bundle 'altercation/vim-colors-solarized'
 
 " repos on vim.org
 Bundle 'matchit.zip'
@@ -97,6 +98,7 @@ autocmd FileType python map <F5> :!python %<CR>
 autocmd FileType python setlocal tabstop=4
 autocmd FileType python setlocal shiftwidth=4
 autocmd FileType python nnoremap <F4> :execute "silent !pep8 % > .pep8_error_file" \|cfile .pep8_error_file \|cwindow \|execute "silent !rm .pep8_error_file" \|redraw!<cr>
+autocmd FileType python nnoremap K :YcmCompleter GetDoc<CR>
 "___________________lua____________________"
 autocmd FileType lua set foldmethod=indent
 autocmd FileType lua let g:lua_complete_omni = 0
@@ -186,17 +188,16 @@ nnoremap <space> ;
 vnoremap ; :
 vnoremap <space> ;
 "_________________colorschemes_____________"
-colorscheme murphy
+set t_Co=256
+let g:solarized_termtrans = 1
+let g:solarized_termcolors = 256
+colorscheme solarized
+set background=dark
 hi Folded guibg=#151515
 
 hi ColorColumn ctermbg=darkgray guibg=darkgray
 set cc=+1
 
-if !has("gui_running")
-  colorscheme zellner
-  set background=dark
-  set t_Co=256
-endif
 
 
 set tags+=tags;
