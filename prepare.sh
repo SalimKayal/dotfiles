@@ -3,9 +3,9 @@
 f="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 #setup vim
-cd $HOME
-rm -rf $HOME/.vim
-rm -f $HOME/.vimrc
+pushd ${HOME}
+rm -rf .vim
+rm -f .vimrc
 ln -s $f/.vimrc
 ln -s $f/.vim
 
@@ -14,44 +14,45 @@ ln -s $f/.vimrc
 ln -s $f/.vim
 
 #setup zsh
-rm -f $HOME/.zshrc
+rm -f .zshrc
 ln -s $f/.zshrc
 
 #setup xresources for urxvt
-rm -f $HOME/.Xresources
+rm -f .Xresources
 ln -s $f/.Xresources
 
 #setup remapping for caps-lock
-rm -f $HOME/.Xmodmaprc
+rm -f .Xmodmaprc
 ln -s $f/.Xmodmaprc
 
 #setup xmonad
-rm -rf $HOME/.xmonad
-mkdir -p $HOME/.xmonad
-pushd $HOME/.xmonad
+rm -rf .xmonad
+mkdir -p .xmonad
+pushd .xmonad
 ln -s $f/.xmonad/xmonad.hs
 ln -s $f/.xmonad/xmonad.startup
 popd
 xmonad --recompile
 
 #setup vimperator
-rm -rf $HOME/.vimperator
-rm -rf $HOME/.vimperatorrc
+rm -rf .vimperator
+rm -rf .vimperatorrc
 ln -s $f/.vimperatorrc
 mkdir -p .vimperator/plugin
 mkdir -p .vimperator/colors
 pushd .vimperator/plugin
 ln -s $f/noscript.js
 popd
-pushd .vimperator/color
+pushd .vimperator/colors
 ln -s $f/molokai.vimp
+ln -s $f/solarized_dark.vimp
 popd
 
 actions='#urxvt\nxrdb -merge ~/.Xresources\n#us intl kb\nsetxkbmap -layout us -variant altgr-intl\n#caps_lock remap\nxmodmap ~/.Xmodmaprc' 
-echo -e $actions >> $HOME/.xprofile
-echo -e $actions >> $HOME/.xinitrc
+echo -e $actions >> .xprofile
+echo -e $actions >> .xinitrc
 
-cd $f
+popd
 
 #setup vim plugins
 vim +BundleInstall +qall
