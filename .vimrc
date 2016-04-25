@@ -190,7 +190,6 @@ vnoremap <space> ;
 "_________________colorschemes_____________"
 set t_Co=256
 let g:solarized_termtrans = 1
-let g:solarized_termcolors = 256
 colorscheme solarized
 set background=dark
 hi Folded guibg=#151515
