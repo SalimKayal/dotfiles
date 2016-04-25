@@ -27,46 +27,52 @@ quitWithWarning = do
 myKeys conf = M.fromList $
   [ --rebindings
     -- launch a terminal
-    ((myModMask .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
+    ((myModMask .|. shiftMask, xK_Return ), spawn $ XMonad.terminal conf)
     -- launch dmenu
-  , ((myModMask,               xK_l     ), spawn "exe=`dmenu_run | dmenu -i` && eval 'exec $exe'")
+  , ((myModMask,               xK_l      ), spawn "exe=`dmenu_run | dmenu -i` && eval 'exec $exe'")
     -- lock screen
-  , ((myModMask,               xK_z     ), spawn "xflock4")
+  , ((myModMask,               xK_z      ), spawn "slock")
     -- close focused window 
-  , ((myModMask,               xK_c     ), kill)
+  , ((myModMask,               xK_c      ), kill)
     -- Rotate through the available layout algorithms
-  , ((myModMask,               xK_space ), sendMessage NextLayout)
+  , ((myModMask,               xK_space  ), sendMessage NextLayout)
     --  Reset the layouts on the current workspace to default
-  , ((myModMask .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)
+  , ((myModMask .|. shiftMask, xK_space  ), setLayout $ XMonad.layoutHook conf)
     -- Resize viewed windows to the correct size
-  , ((myModMask,               xK_b     ), refresh)
+  , ((myModMask,               xK_b      ), refresh)
     -- Move focus to the next window
-  , ((myModMask,               xK_Tab   ), windows W.focusDown)
+  , ((myModMask,               xK_Tab    ), windows W.focusDown)
     -- Move focus to the previous window
-  , ((myModMask .|. shiftMask, xK_Tab   ), windows W.focusUp)
+  , ((myModMask .|. shiftMask, xK_Tab    ), windows W.focusUp)
     -- Move focus to the masterh window
-  , ((myModMask,               xK_m     ), windows W.focusMaster  )
+  , ((myModMask,               xK_m      ), windows W.focusMaster  )
     -- Swap the focused window and the master window
-  , ((myModMask .|. shiftMask, xK_m     ), windows W.swapMaster)
+  , ((myModMask .|. shiftMask, xK_m      ), windows W.swapMaster)
     -- Swap the focused window with the next window
-  , ((myModMask              , xK_j     ), windows W.swapDown  )
+  , ((myModMask              , xK_j      ), windows W.swapDown  )
     -- Swap the focused window with the previous window
-  , ((myModMask              , xK_k     ), windows W.swapUp    )
+  , ((myModMask              , xK_k      ), windows W.swapUp    )
     -- Shrink the master area
-  , ((myModMask,               xK_h     ), sendMessage Shrink)
+  , ((myModMask,               xK_h      ), sendMessage Shrink)
     -- Expand the master area
-  , ((myModMask,               xK_t     ), sendMessage Expand)
+  , ((myModMask,               xK_t      ), sendMessage Expand)
     -- Push window back into tiling
-  , ((myModMask,               xK_y     ), withFocused $ windows . W.sink)
+  , ((myModMask,               xK_y      ), withFocused $ windows . W.sink)
     -- Increment the number of windows in the master area
-  , ((myModMask              , xK_w     ), sendMessage (IncMasterN 1))
+  , ((myModMask              , xK_w      ), sendMessage (IncMasterN 1))
     -- Deincrement the number of windows in the master area
-  , ((myModMask              , xK_v     ), sendMessage (IncMasterN (-1)))
+  , ((myModMask              , xK_v      ), sendMessage (IncMasterN (-1)))
     -- Quit xmonad
-  , ((myModMask .|. shiftMask, xK_q     ), quitWithWarning)
+  , ((myModMask .|. shiftMask, xK_q      ), quitWithWarning)
     -- Restart xmonad
-  , ((myModMask,               xK_q     ),
-      broadcastMessage ReleaseResources >> restart "xmonad" True) ]
+  , ((myModMask,               xK_q      ),
+      broadcastMessage ReleaseResources >> restart "xmonad" True)
+    -- Lower audio volume
+  , ((0,                       0x1008ff11), spawn "amixer sset Master 1%-")
+    -- Higher audio volume
+  , ((0,                       0x1008ff13), spawn "amixer sset Master 1%+")
+    -- Mute/unmute
+  , ((0,                       0x1008ff12), spawn "amixer sset Master toggle") ]
     ++
     -- mod-[1..9], Switch to workspace N
     -- mod-shift-[1..9], Move client to workspace N
