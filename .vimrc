@@ -28,6 +28,9 @@ set guioptions-=m
 "               buffer   file                      position     rel   HEX   ASCII
 set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %a%=\ %8l,%c%V/%L\ (%P)\ [%08O:%02B]
 
+"because seriously....
+nnoremap Y y$
+
 if has('persistent_undo')
   set undofile
   set undodir=${HOME}/.vim/undodir
