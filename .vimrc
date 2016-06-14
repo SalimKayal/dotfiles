@@ -197,7 +197,7 @@ colorscheme solarized
 set background=dark
 hi Folded guibg=#151515
 
-hi ColorColumn ctermbg=darkgray guibg=darkgray
+hi ColorColumn ctermbg=red guibg=red
 set cc=+1
 
 
