@@ -105,7 +105,7 @@ myManageHook = composeAll
     [  className =? "URxvt" <&&> title =? "htop"    --> doShift "2:utilities"  
     ,  className =? "URxvt"                         --> doShift "1:term"  
     --,  className =? "Xfce4-terminal"              --> doShift "2:utilities"   
-    ,  className =? "Iceweasel"                     --> doShift "3:web"   
+    ,  className =? "Firefox"                         --> doShift "3:web"   
     ,  className =? "Icedove"                       --> doShift "4:mail"  
     ,  className =? "Skype"                         --> doShift "5:skype" 
     ,  className =? "VirtualBox"                    --> doShift "6:vm" 
