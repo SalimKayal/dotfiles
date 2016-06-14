@@ -1,6 +1,7 @@
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' expand prefix suffix
 zstyle ':completion:*' file-sort access
 zstyle ':completion:*' list-colors ''
