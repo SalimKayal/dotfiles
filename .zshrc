@@ -49,11 +49,6 @@ unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
-export PYTHONPATH=${HOME}/lib/python2.7/site-packages:${PYTHONPATH}
-export PYTHONPATH=${HOME}/.local/usr/local/lib/python2.7/dist-packages:${PYTHONPATH}
-export PYTHONPATH=${HOME}/.local/lib/python:${PYTHONPATH}
-export PYTHONPATH=${HOME}/.local/lib/python2.7/site-packages:${PYTHONPATH}
-
 # Private binaries path
 [ -d ~/.local/bin ] && PATH=${HOME}/.local/bin:${HOME}/.local/usr/local/bin:"${PATH}"
 export LD_LIBRARY_PATH=${HOME}/.local/lib:${HOME}/.local/usr/lib:${LD_LIBRARY_PATH}
