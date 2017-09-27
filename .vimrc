@@ -1,32 +1,30 @@
+"shortcut for vimrc
+noremap vrc :tabnew $MYVIMRC<CR>
+
 set nocompatible
 set bs=2
-let $PAGER=''
-
-set ofu=syntaxcomplete#Complete
 syntax on
 set number
 set hidden
-set hlsearch
-set incsearch
-"set mouse=a
 set nowrap
 set scrolloff=5
+"indentation
 set smartindent
 set autoindent
+"tabs
 set expandtab
 set tabstop=2
 set shiftwidth=2
+"code width
 set textwidth=100
 set linebreak
-set showcmd
-set guioptions+=lrb
-set guioptions-=lrb
-set guioptions+=LRB
-set guioptions-=LRB
-set guioptions-=T
-set guioptions-=m
+"gui
+set guioptions-=lrbLRTm
+"status line
 "               buffer   file                      position     rel   HEX   ASCII
 set statusline=%<[%02n]\ %F%(\ %m%h%w%y%r%)\ %a%=\ %8l,%c%V/%L\ (%P)\ [%08O:%02B]
+set laststatus=2
+set showcmd
 
 "because seriously....
 nnoremap Y y$
@@ -38,112 +36,19 @@ if has('persistent_undo')
   set undoreload=10000
 endif
 
-"if muttator, map html new line
-"au BufEnter mutt-ator-mail :imap ^M <br>^[o
-
-"autosource vimrc on leave
-au BufWritePost $MYVIMRC :source $MYVIMRC
-
-"______________vundle options______________"
-filetype off                   " required!
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-
-" My Bundles here:
-"
-" original repos on github
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'rdnetto/YCM-Generator'
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets.git'
-Bundle 'vim-scripts/luarefvim'
-Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/vimproc.vim'
-Bundle 'idanarye/vim-vebugger'
-Bundle 'scrooloose/syntastic'
-Bundle 'amix/vim-2048'
-Bundle 'mileszs/ack.vim'
-"Bundle 'jmcantrell/vim-virtualenv'
-Bundle 'altercation/vim-colors-solarized'
-
-" repos on vim.org
-Bundle 'matchit.zip'
-Bundle 'PreciseJump'
-
-filetype plugin indent on     " required!
-
-"___________________ag_____________________"
-let g:ackprg = 'ag --vimgrep'
-
-"_____________c,c++,java,objc______________"
-
-autocmd Filetype c,cpp,cs,java,objc set cindent
-autocmd Filetype c,cpp,cs,java,objc set cst csto=0
-autocmd Filetype c,cpp,cs,java,objc set cinkeys=0{,0},:,0#,!^F
-autocmd FileType c,cpp,cs,java,objc set foldmethod=syntax
-autocmd FileType c,cpp,cs,java,objc set tags=~/.vim/Tags/stl.tags
-autocmd FileType c,cpp,cs,java,objc nnoremap <F5> :wa<CR>:!mkdir -p build<CR>:cd build<CR>:!cmake ..<CR>:make<CR>:cd ..<CR>:redraw!<CR>:cwindow<CR>
-
-"_________________android__________________"
-let g:EclimCompletionMethod = 'omnifunc'
-
-"__________________python__________________"
-
-autocmd FileType python set foldmethod=indent
-autocmd FileType python map <F5> :!python %<CR>
-autocmd FileType python setlocal tabstop=4
-autocmd FileType python setlocal shiftwidth=4
-autocmd FileType python nnoremap <F4> :execute "silent !pep8 % > .pep8_error_file" \|cfile .pep8_error_file \|cwindow \|execute "silent !rm .pep8_error_file" \|redraw!<cr>
-autocmd FileType python nnoremap K :YcmCompleter GetDoc<CR>
-"___________________lua____________________"
-autocmd FileType lua set foldmethod=indent
-autocmd FileType lua let g:lua_complete_omni = 0
-autocmd FileType lua let g:lua_complete_keywords = 1
-autocmd FileType lua let g:lua_complete_globals = 1
-autocmd FileType lua let g:lua_complete_library = 1
-autocmd FileType lua set tags=lua.tags
-autocmd FileType lua map <F5> :!torch %<CR>
-
-"__________________LaTeX___________________"
-autocmd FileType tex setlocal spell
-autocmd FileType tex setlocal spelllang=en_us
-autocmd FileType tex nnoremap <F4> :w\|execute "silent !pdflatex -interaction nonstopmode % >out.txt 2>err.txt"\|execute "silent  !gnome-open %<.pdf >>out.txt 2>>err.txt"<CR>
-
-"___________toggle auto-escape_____________"
-let s:on = 0
-
-function! ToggleAutoEsc()
-   let &updatetime = 5000
-   let s:on = !s:on
-   exec "au".((s:on)?"":"!") "CursorHoldI *" ((s:on)?"stopinsert":"")
+function! ToggleNumbers()
+  set relativenumber!
 endfunction
 
-nnoremap <leader>e :call ToggleAutoEsc()<cr>
-"call ToggleAutoEsc()
-"___________YouCompleteMe Goto_____________"
-autocmd Filetype c,cpp,objc,objcpp,python nnoremap <c-]> :YcmCompleter GoToDefinitionElseDeclaration<CR>
-autocmd BufWinEnter * call UnfoldPreview()
+noremap <leader>n :call ToggleNumbers()<cr>
 
-function! UnfoldPreview()
-  if &pvw
-    setlocal nofoldenable
-  endif
-endfunction
 "__________________________________________"
-let g:ycm_use_ultisnips_completer = 1
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+noremap <leader>tb :e [Temporary buffer]<CR>:setlocal buftype=nofile bufhidden=hide noswapfile<CR>
+noremap <leader>vtb :vs [Temporary buffer]<CR>:setlocal buftype=nofile bufhidden=hide noswapfile<CR>
+
 "__________________________________________"
-noremap <leader>tb :e [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
-noremap <leader>vtb :vs [Temporary buffer]<CR>:set buftype=nofile<CR>:set bufhidden=hide<CR>:setlocal noswapfile<CR>
+set hlsearch
+set incsearch
 noremap <leader>h :set hlsearch!<CR>
 nnoremap / :set hlsearch<CR>/
 
@@ -175,21 +80,39 @@ vnoremap X L
 vnoremap l q
 vnoremap L Q
 
-"________________vebugger__________________"
-let g:vebugger_leader='vd'
-"_______________unite.vim__________________"
-nnoremap <leader>f :Unite -start-insert file_rec/async<CR>
-nnoremap <leader>v :Unite -start-insert -default-action=vsplit file_rec/async<CR>
-nnoremap á :Unite -start-insert buffer<CR>
-nnoremap ó :Unite -start-insert -default-action=vsplit buffer<CR>
-nnoremap <leader>c :UniteClose default<CR>
-inoremap <leader>c <esc>:UniteClose default<CR>
-
 "_____________custom mappings______________"
 nnoremap ; :
 nnoremap <space> ;
 vnoremap ; :
 vnoremap <space> ;
+
+"autosource vimrc on leave
+au BufWritePost $MYVIMRC :source $MYVIMRC
+
+"_______________plug options_______________"
+call plug#begin('~/.vim/bundle')
+" My Plugs here:
+"
+" original repos on github
+Plug 'tpope/vim-surround' | Plug 'tpope/vim-repeat'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/async.vim', {'for':['python', 'c', 'cpp', 'objc', 'objcpp']}
+Plug 'prabirshrestha/asyncomplete-lsp.vim', {'for':['python', 'c', 'cpp', 'objc', 'objcpp']}
+Plug 'prabirshrestha/vim-lsp', {'for':['python', 'c', 'cpp', 'objc', 'objcpp']}
+Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'Shougo/denite.nvim'
+Plug 'idanarye/vim-vebugger', {'for':['python', 'c', 'cpp', 'objc', 'objcpp']}
+Plug 'amix/vim-2048'
+Plug 'mileszs/ack.vim'
+Plug 'altercation/vim-colors-solarized'
+
+call plug#end()
+
+if !exists('g:loaded_matchit')
+  runtime! /macros/matchit.vim
+endif
+
 "_________________colorschemes_____________"
 set t_Co=256
 let g:solarized_termtrans = 1
@@ -200,28 +123,91 @@ hi Folded guibg=#151515
 hi ColorColumn ctermbg=red guibg=red
 set cc=+1
 
-
-
-set tags+=tags;
-noremap <C-F12> :!ctags -R --sort=yes --c++-kinds=+pl --fields=+iaS --extra=+q .<CR>
-
+"________________gnuplot___________________"
 au BufNewFile,BufRead *.plt,.gnuplot setf gnuplot
 
-let g:SuperTabDefaultCompletionType = "context"
+"_____________c,c++,java,objc______________"
+autocmd Filetype c,cpp,cs,java,objc set cindent
+autocmd Filetype c,cpp,cs,java,objc set cst csto=0
+autocmd Filetype c,cpp,cs,java,objc set cinkeys=0{,0},:,0#,!^F
+autocmd FileType c,cpp,cs,java,objc set foldmethod=syntax
 
+"_________________android__________________"
+let g:EclimCompletionMethod = 'omnifunc'
+
+"__________________python__________________"
+autocmd FileType python set foldmethod=indent
+autocmd FileType python map <F5> :!python %<CR>
+autocmd FileType python setlocal tabstop=4
+autocmd FileType python setlocal shiftwidth=4
+
+"___________________lua____________________"
+autocmd FileType lua set foldmethod=indent
+autocmd FileType lua let g:lua_interpreter_path = "/idiap/temp/skayal/torch/install/bin/th"
+autocmd FileType lua let g:lua_complete_omni = 1
+autocmd FileType lua let g:lua_complete_keywords = 1
+autocmd FileType lua let g:lua_complete_globals = 1
+autocmd FileType lua let g:lua_complete_library = 1
+autocmd FileType lua set tags=lua.tags
+
+"__________________LaTeX___________________"
+autocmd FileType tex setlocal spell
+autocmd FileType tex setlocal spelllang=en_us
+autocmd FileType tex nnoremap <F4> :w\|execute "silent !xelatex -interaction nonstopmode % >out.txt 2>err.txt"\|execute "silent  !gnome-open %<.pdf >>out.txt 2>>err.txt"<CR>
+
+"___________________ag_____________________"
+let g:ackprg = 'ag --vimgrep'
+
+"________________lsp bindings______________"
+autocmd FileType python,c,cpp,objc,objcpp nnoremap K :LspHover<CR>
+autocmd Filetype python,c,cpp,objc,objcpp nnoremap <c-]> :LspDefinition<CR>
+
+"_________asyncomplete tab expension_______"
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 
-function! ToggleNumbers()
-  if &nu == 1
-    set rnu
-  elseif &rnu == 1
-    set nu
-  else
-    set nu
-  endif
-endfunction
+"___________asyncomplete C family__________"
+if executable('clangd')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'clangd',
+        \ 'cmd': {server_info->['clangd']},
+        \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+        \ })
+endif
 
-noremap <leader>n :call ToggleNumbers()<cr>
+"____________asyncomplete python___________"
+if executable('pyls')
+  au User lsp_setup call lsp#register_server({
+      \ 'name': 'pyls',
+      \ 'cmd': {server_info->['pyls']},
+      \ 'whitelist': ['python'],
+      \ })
+endif
 
-noremap vrc :tabnew $MYVIMRC<CR>
+"_________asyncomplete snippets___________"
+call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
+    \ 'name': 'ultisnips',
+    \ 'whitelist': ['*'],
+    \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
+    \ }))
+
+"_______________Ultisnips__________________"
+let g:ycm_use_ultisnips_completer = 1
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+"________________vebugger__________________"
+let g:vebugger_leader='<Leader>d'
+
+"_______________Denite.vim__________________"
+nnoremap <leader>f :Denite file_rec<CR>
+nnoremap <leader>v :Denite -default-action=vsplit file_rec<CR>
+nnoremap á :Denite buffer<CR>
+nnoremap ó :Denite -default-action=vsplit buffer<CR>
+nnoremap <leader>c :Denite quit<CR>
+inoremap <leader>c <esc>:Denite quit<CR>
+
