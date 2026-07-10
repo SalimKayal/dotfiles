@@ -1,6 +1,22 @@
-pyclewn-1.9.py2
-pyclewn-1.9.py2.tar.gz
+# Lazy.nvim generated
+plugin/
+
+# Compiled spell files
+spell/*.spl
+spell/*.sug
+
+# Local overrides (if you ever create one)
+init.local.lua
+
+# Neovim logs
+.luarc.json
+
+# Legacy vim stuff
 .vim/bundle/*
 !.vim/bundle/vundle
 .vim/undodir
 .vim/.netrwhist
+
+# vim runtime cache/state (stored elsewhere but just in case)
+*.swp
+*.swo
