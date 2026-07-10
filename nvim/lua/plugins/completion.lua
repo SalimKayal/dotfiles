@@ -34,7 +34,6 @@ return {
                     ["<C-Space>"] = cmp.mapping.complete(),
                     ["<C-e>"] = cmp.mapping.abort(),
                     ["<CR>"] = cmp.mapping.confirm({ select = true }),
-
                     ["<Tab>"] = cmp.mapping(function(fallback)
                         if cmp.visible() then
                             cmp.select_next_item()
@@ -100,6 +99,36 @@ return {
                 },
             })
 
+            -- Command line completion (`:` commands)
+            cmp.setup.cmdline(":", {
+                completion = {
+                    completeopt = "menu,menuone,noselect",
+                },
+                mapping = vim.tbl_extend("force", cmp.mapping.preset.cmdline(), {
+                    ["<C-Space>"] = { c = cmp.mapping.complete() },
+                    ["<C-@>"]     = { c = cmp.mapping.complete() },
+                }),
+                sources = cmp.config.sources({
+                    { name = "path" },
+                }, {
+                    { name = "cmdline" },
+                }),
+            })
+
+            -- Search completion (`/` and `?`)
+            cmp.setup.cmdline({ "/", "?" }, {
+                completion = {
+                    completeopt = "menu,menuone,noselect",
+                },
+                mapping = vim.tbl_extend("force", cmp.mapping.preset.cmdline(), {
+                    ["<C-Space>"] = { c = cmp.mapping.complete() },
+                    ["<C-@>"]     = { c = cmp.mapping.complete() },
+                    ["<CR>"]      = cmp.mapping.confirm({ select = false }), -- only confirm explicit selection
+                }),
+                sources = cmp.config.sources({
+                    { name = "buffer" },
+                }),
+            })
         end,
     },
 }
