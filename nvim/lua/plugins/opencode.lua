@@ -9,7 +9,7 @@ return {
       vim.g.opencode_opts = {
         provider = {
           enabled = "terminal",
-          terminal = {
+          tmux = {
             -- Default settings work well, customize if needed
             direction = "right",  -- or "bottom"
             size = 30,            -- percentage
