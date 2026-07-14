@@ -1,0 +1,23 @@
+[ColorScheme]
+Name=Solarized Dark
+
+[Colors:Window]
+BackgroundNormal=0,43,54
+ForegroundNormal=131,148,150
+
+[Colors:View]
+BackgroundNormal=7,54,66
+ForegroundNormal=131,148,150
+
+[Colors:Button]
+BackgroundNormal=7,54,66
+ForegroundNormal=131,148,150
+
+[Colors:Selection]
+BackgroundNormal=42,161,152
+ForegroundNormal=0,43,54
+
+[Colors:Tooltip]
+BackgroundNormal=7,54,66
+ForegroundNormal=131,148,150
+
