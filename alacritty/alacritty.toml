@@ -1,0 +1,19 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/solarized_dark.toml"
+    ]
+
+[window]
+opacity = 0.8
+decorations = "None"
+
+[ window.padding ]
+  x = 6
+  y = 6
+
+[font]
+size = 11.0
+normal = { family = "Monaspice Ne Nerdfont Mono", style = "Regular" }
+italic = { family = "Monaspice Ne Nerdfont Mono", style = "Italic" }
+bold = { family = "Monaspice Ne Nerdfont Mono", style = "Bold" }
+bold_italic = { family = "Monaspice Ne Nerdfont Mono", style = "Bold Italic" }
