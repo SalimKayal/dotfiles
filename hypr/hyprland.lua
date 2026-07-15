@@ -32,8 +32,10 @@ hl.workspace_rule({ workspace = 3, monitor = "eDP-1", default = true })
 
 
 ----------------- ENV -----------------
-hl.env("XCURSOR_SIZE", "14")
-hl.env("HYPRCURSOR_SIZE", "14")
+hl.env("XCURSOR_THEME", "Nordzy-cursors-solarized-dark")
+hl.env("XCURSOR_SIZE", "24")
+hl.env("HYPRCURSOR_THEME", "Nordzy-hyprcursors-solarized-dark")
+hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("SSH_AUTH_SOCK", os.getenv("XDG_RUNTIME_DIR").."/ssh-agent.socket")
 -- hl.env("QT_QPA_PLATFORMTHEME", "hyprqt6engine")
 
@@ -199,9 +201,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd(term)
     hl.exec_cmd("alacritty -T htop -e htop")
     hl.exec_cmd("firefox")
-    hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
-    hl.exec_cmd("systemctl --user start hyprpolkitagent")
-    hl.exec_cmd("systemctl --user start hyprland-session.target")
+    hl.exec_cmd("/usr/libexec/polkit-gnome-authentication-agent-1")
     hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
     hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme 'NumixSolarizedDarkBlue'")
 end)
