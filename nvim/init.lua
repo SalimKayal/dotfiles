@@ -124,10 +124,13 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = { "c", "cpp", "cs", "java", "objc" },
   callback = function()
     vim.opt_local.cindent = true
-    vim.opt_local.cscopetag = true
-    vim.opt_local.cscopetagorder = 0
     vim.opt_local.cinkeys = "0{,0},:,0#,!^F"
     vim.opt_local.foldmethod = "syntax"
+    -- cscopetag / cscopetagorder were removed in Neovim 0.12
+    pcall(function()
+      vim.opt_local.cscopetag = true
+      vim.opt_local.cscopetagorder = 0
+    end)
   end,
 })
 
