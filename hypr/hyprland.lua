@@ -104,7 +104,7 @@ hl.window_rule({
 })
 
 ----------------- PROGRAMS -----------------
-local term = "alacritty -T main -e byobu"
+local term = "foot -T main -e byobu"
 local menu = "wofi --show run"
 
 ----------------- KEYBINDINGS -----------------
@@ -112,7 +112,7 @@ local M = "SUPER"
 
 -- Launch / core
 hl.bind(M .. " + SHIFT + Return", hl.dsp.exec_cmd(term))
-hl.bind(M .. " + Return",         hl.dsp.exec_cmd("alacritty"))
+hl.bind(M .. " + Return",         hl.dsp.exec_cmd("foot"))
 hl.bind(M .. " + L",              hl.dsp.exec_cmd(menu))
 hl.bind(M .. " + Z",              hl.dsp.exec_cmd("hyprlock"))
 hl.bind(M .. " + C",              hl.dsp.window.close())
@@ -171,11 +171,11 @@ hl.bind(M .. " + SHIFT + P",      hl.dsp.window.move({ monitor = 1 }))
 
 -- hidden waybar + keyboard-driven hardware control
 hl.bind(M .. " + SHIFT + B",           hl.dsp.exec_cmd("killall -SIGUSR1 waybar"))
-hl.bind(M .. " + N",           hl.dsp.exec_cmd("alacritty -T nmtui -e nmtui"))
-hl.bind(M .. " + B",   hl.dsp.exec_cmd("alacritty -T bt -e bluetui"))
-hl.bind(M .. " + A",           hl.dsp.exec_cmd("alacritty -T audio -e wiremix"))
+hl.bind(M .. " + N",           hl.dsp.exec_cmd("foot -T nmtui -e nmtui"))
+hl.bind(M .. " + B",           hl.dsp.exec_cmd("foot -T bt -e bluetui"))
+hl.bind(M .. " + A",           hl.dsp.exec_cmd("foot -T audio -e wiremix"))
 hl.bind(M .. " + S",           hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | wl-copy"))
-hl.bind(M .. " + R",           hl.dsp.exec_cmd("alacritty -T btop -e btop"))
+hl.bind(M .. " + R",           hl.dsp.exec_cmd("foot -T btop -e btop"))
 
 -- Media / brightness keys
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
