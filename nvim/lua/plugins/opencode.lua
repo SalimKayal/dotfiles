@@ -6,16 +6,7 @@ return {
     },
     config = function()
       ---@type opencode.Opts
-      vim.g.opencode_opts = {
-        provider = {
-          enabled = "terminal",
-          tmux = {
-            -- Default settings work well, customize if needed
-            direction = "right",  -- or "bottom"
-            size = 30,            -- percentage
-          },
-        },
-      }
+      vim.g.opencode_opts = {}
 
       -- Required for automatic file reloading
       vim.o.autoread = true
@@ -26,8 +17,18 @@ return {
       -- Leader-based keymaps (your preference)
       -- ═══════════════════════════════════════════════════
 
-      -- Toggle opencode
-      vim.keymap.set({ "n", "t" }, "<leader>oo", oc.toggle, { desc = "Toggle opencode" })
+      -- Toggle OpenCode terminal
+      local opencode_cmd = "opencode --port"
+      local snacks_terminal_opts = {
+        win = {
+          position = "right",
+          size = 30,
+          enter = false,
+        },
+      }
+      vim.keymap.set({ "n", "t" }, "<leader>oo", function()
+        require("snacks.terminal").toggle(opencode_cmd, snacks_terminal_opts)
+      end, { desc = "Toggle opencode" })
       -- Ask with context
       vim.keymap.set({ "n", "x" }, "<leader>oa", function()
         oc.ask("@this: ", { submit = true })
