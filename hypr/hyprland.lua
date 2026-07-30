@@ -191,14 +191,15 @@ hl.bind(M .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 --------------------------- WINDOW RULES --------------------------
 hl.window_rule({ name = "term-ws1", match = { class = "Alacritty", title = "main" }, workspace = "1 silent" })
 hl.window_rule({ name = "web-ws2",  match = { class = "firefox", title = "negative:.*(Settings|Preferences|Page Setup|Print|Save File|Open File|Library).*" },   workspace = "2 silent" })
+hl.window_rule({ name = "keepass-ws10",  match = { class = "org.keepassxc.KeePassXC", title = "negative:.*(Access Request|Unlock Database).*" },   workspace = "10 silent" })
 
 ----------------------------- AUTOSTART ---------------------------
 hl.on("hyprland.start", function()
-    hl.exec_cmd("hyprpaper")
     hl.exec_cmd("mako")
     hl.exec_cmd("hypridle")
     hl.exec_cmd("waybar")
     hl.exec_cmd(term)
+    hl.exec_cmd("hyprpaper")
     hl.exec_cmd("firefox")
     hl.exec_cmd("/usr/libexec/polkit-gnome-authentication-agent-1")
     hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
