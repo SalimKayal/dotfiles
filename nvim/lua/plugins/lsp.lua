@@ -1,6 +1,11 @@
 return {
   -- ══════════════════════════════════════════════════════════
-  -- Mason: LSP Server Installation
+  -- Schema catalogue for jsonls / yamlls
+  -- ══════════════════════════════════════════════════════════
+  { "b0o/schemastore.nvim", lazy = true },
+
+  -- ══════════════════════════════════════════════════════════
+  -- Mason: package manager for LSP servers/tools
   -- ══════════════════════════════════════════════════════════
   {
     "williamboman/mason.nvim",
@@ -8,38 +13,51 @@ return {
     config = true,
   },
 
-  {
-    "williamboman/mason-lspconfig.nvim",
-    dependencies = { "mason.nvim" },
-    opts = {
-      ensure_installed = {
-        "basedpyright", "ruff", "bashls",
-        "gopls", "clangd", "lua_ls",
-        "texlab", "marksman",
-        "yamlls", "taplo", "jsonls",
-      },
-      automatic_installation = true,
-    },
-  },
-
-  { "b0o/schemastore.nvim", lazy = true },
-
   -- ══════════════════════════════════════════════════════════
-  -- LSP Configuration
+  -- Automatic installation / upgrade of Mason packages.
+  -- Replaces mason-lspconfig: we no longer need nvim-lspconfig
+  -- at all because every server is configured natively under
+  -- nvim/lsp/*.lua and enabled via vim.lsp.enable().
   -- ══════════════════════════════════════════════════════════
   {
-    "neovim/nvim-lspconfig",
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
-      "williamboman/mason-lspconfig.nvim",
+      "williamboman/mason.nvim",
       "hrsh7th/cmp-nvim-lsp",
+      "b0o/schemastore.nvim",
       "folke/snacks.nvim",
     },
-    config = function()
+    opts = {
+      ensure_installed = {
+        "basedpyright",
+        "ruff",
+        "bash-language-server",
+        "gopls",
+        "clangd",
+        "lua-language-server",
+        "texlab",
+        "marksman",
+        "yaml-language-server",
+        "taplo",
+        "json-lsp",
+      },
+      -- Do not pull in the legacy lspconfig bridge just for name
+      -- translation.  The names above are Mason package names.
+      integrations = {
+        ["mason-lspconfig"] = false,
+        ["mason-null-ls"] = false,
+        ["mason-nvim-dap"] = false,
+      },
+    },
+    config = function(_, opts)
+      require("mason-tool-installer").setup(opts)
+
       -- ────────────────────────────────────────────────────
       -- Server Setup (Neovim 0.11+)
       -- ────────────────────────────────────────────────────
       vim.lsp.config("*", {
+        root_markers = { ".git" },
         capabilities = require("cmp_nvim_lsp").default_capabilities(),
       })
 
@@ -100,4 +118,3 @@ return {
     end,
   },
 }
-
