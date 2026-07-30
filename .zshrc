@@ -69,8 +69,7 @@ alias decfile='openssl enc -aes-256-cbc -pbkdf2 -pass pass:$(read -s pass; echo 
 PS1='${debian_chroot:+($debian_chroot)}%{$fg[yellow]%}%D_%*%{$fg_no_bold[red]%}|%{$fg_no_bold[magenta]%}%n@%m%{$fg_no_bold[red]%}|%{$fg_no_bold[cyan]%}%/$ %{$reset_color%}'
 RPS1='${vcs_info_msg_0_}'
 
-#crontab editor
-export EDITOR=vim
+export EDITOR=nvim
 
 precmd()
 {
