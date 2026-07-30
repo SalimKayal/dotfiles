@@ -20,6 +20,14 @@ window#waybar > box {
 #workspaces button.urgent { color: #dc322f; }
 #clock      { color: #93a1a1; } /* base1 */
 #network, #bluetooth, #pulseaudio, #battery { padding: 0 8px; color: #839496; }
+/* CPU usage ramps green → orange → red */
+#cpu                { color: #859900; } /* yellow  — normal    */
+#cpu.warning        { color: #cb4b16; } /* orange  — ~60–80%   */
+#cpu.critical       { color: #dc322f; } /* red     — >80%      */
+/* Memory ramps green → orange → red */
+#memory             { color: #859900; } /* cyan    — normal    */
+#memory.warning     { color: #cb4b16; } /* orange  — ~70–85%   */
+#memory.critical    { color: #dc322f; } /* red     — >85%      */
 #network    { color: #2aa198; } /* cyan  */
 #bluetooth  { color: #268bd2; } /* blue  */
 #pulseaudio { color: #b58900; } /* yellow */

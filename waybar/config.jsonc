@@ -7,7 +7,7 @@
     "margin": "4 4 0 4",
     "modules-left":   ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right":  ["network", "bluetooth", "pulseaudio", "battery"],
+    "modules-right":  ["network", "bluetooth", "pulseaudio", "memory", "cpu", "battery"],
 
     "clock":   { "format": "{:%a %d %b  %H:%M}" },
     "network": {
@@ -35,6 +35,28 @@
         "format-muted": "󰝟",
         "format-icons": ["󰕿", "󰖀", "󰕾"],
         "on-click": "alacritty -T audio -e wiremix"
+    },
+    "memory": {
+        "interval": 30,
+        "format": "{icon} {percentage}%",
+        "tooltip-format": "Used: {used} GiB / {total} GiB\nSwap: {swapPercentage}%",
+        "format-icons": ["▁","▂","▃","▄","▅","▆","▇","█"],
+        "on-click": "alacritty -T btop -e btop",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+    "cpu": {
+        "interval": 2,
+        "format": "  {usage}%",
+        "tooltip": true,
+        "tooltip-format": "Load: {load}\nAvg freq: {avg_frequency} GHz\n{usage0}%  {usage1}%  {usage2}%  {usage3}%",
+        "on-click": "alacritty -T btop -e btop",
+        "states": {
+            "warning": 60,
+            "critical": 80
+        }
     },
     "battery": {
         "interval": 30,

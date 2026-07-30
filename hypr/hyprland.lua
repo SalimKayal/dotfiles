@@ -175,6 +175,7 @@ hl.bind(M .. " + N",           hl.dsp.exec_cmd("alacritty -T nmtui -e nmtui"))
 hl.bind(M .. " + B",   hl.dsp.exec_cmd("alacritty -T bt -e bluetui"))
 hl.bind(M .. " + A",           hl.dsp.exec_cmd("alacritty -T audio -e wiremix"))
 hl.bind(M .. " + S",           hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | wl-copy"))
+hl.bind(M .. " + R",           hl.dsp.exec_cmd("alacritty -T btop -e btop"))
 
 -- Media / brightness keys
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
@@ -189,8 +190,7 @@ hl.bind(M .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 --------------------------- WINDOW RULES --------------------------
 hl.window_rule({ name = "term-ws1", match = { class = "Alacritty", title = "main" }, workspace = "1 silent" })
-hl.window_rule({ name = "web-ws3",  match = { class = "firefox" },   workspace = "3 silent" })
-hl.window_rule({ name = "htop-float", match = { title = "htop" },    workspace = "2 silent" })
+hl.window_rule({ name = "web-ws2",  match = { class = "firefox", title = "negative:.*(Settings|Preferences|Page Setup|Print|Save File|Open File|Library).*" },   workspace = "2 silent" })
 
 ----------------------------- AUTOSTART ---------------------------
 hl.on("hyprland.start", function()
@@ -199,7 +199,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("hypridle")
     hl.exec_cmd("waybar")
     hl.exec_cmd(term)
-    hl.exec_cmd("alacritty -T htop -e htop")
     hl.exec_cmd("firefox")
     hl.exec_cmd("/usr/libexec/polkit-gnome-authentication-agent-1")
     hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
