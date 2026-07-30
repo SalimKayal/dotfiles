@@ -204,6 +204,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("/usr/libexec/polkit-gnome-authentication-agent-1")
     hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
     hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme 'NumixSolarizedDarkBlue'")
+    hl.exec_cmd("keepassxc")
 end)
 
 hl.on("hyprland.shutdown", function()
