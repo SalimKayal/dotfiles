@@ -19,6 +19,7 @@ return {
       quickfile = { enabled = true },
       notifier = { enabled = true, style = "minimal" },
       terminal = { enabled = true },
+      lazygit = { enabled = true },
     },
   },
 }
