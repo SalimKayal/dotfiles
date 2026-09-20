@@ -1,34 +1,61 @@
 -- ~/.config/hypr/hyprland.lua
 
+------------------ DEBUG ------------------
+--hl.config({
+--    debug = {
+--        enable_stdout_logs = true,
+--        disable_logs = false,
+--    },
+--})
+
 ----------------- MONITORS -----------------
+local M27 = "desc:Philips Consumer Electronics Company 27B2U4601 UK02603041919"
+local M24 = "desc:Philips Consumer Electronics Company 24B2U3301 UK02536017045"
+
+local function is_connected(target)
+    for _, m in ipairs(hl.get_monitors()) do
+        if m.name == target or "desc:" .. m.description == target then
+            return true
+        end
+    end
+    return false
+end
+
 -- Laptop internal panel auto; add externals as needed.
 hl.monitor({ output = "", mode = "preferred", position = "auto", scale = "auto", mirror = "eDP-1"})
 hl.monitor({ output = "eDP-1", mode = "preferred", position = "0x0",  scale = "1" })
 hl.monitor({
-    output = "desc:Philips Consumer Electronics Company PHL 241B4 AU11525001762",
+    output = M27,
     mode = "preferred",
     position = "1920x0",
     scale = "1"
 })
 hl.monitor({
-    output = "desc:Synaptics Inc Non-PnP 0x00BC614E",
-    mode = "1920x1080@60.00Hz",
-    position = "3840x0",
+    output = M24,
+    mode = "preferred",
+    position = "4480x0",
     scale = "1",
     transform = 1
 })
 ----------------- WORKSPACE -> MONITOR BINDING -----------------
-hl.workspace_rule({
-    workspace = 1,
-    monitor = "desc:Philips Consumer Electronics Company PHL 241B4 AU11525001762",
-    default = true
-})
-hl.workspace_rule({
-    workspace = 2,
-    monitor = "desc:Synaptics Inc Non-PnP 0x00BC614E",
-    default = true
-})
-hl.workspace_rule({ workspace = 3, monitor = "eDP-1", default = true })
+local wsn = 1
+if is_connected(M27) then
+    hl.workspace_rule({
+        workspace = wsn,
+        monitor = M27,
+        default = true
+    })
+    wsn = wsn + 1
+end
+if is_connected(M24) then
+    hl.workspace_rule({
+        workspace = wsn,
+        monitor = M24,
+        default = true
+    })
+    wsn = wsn + 1
+end
+hl.workspace_rule({ workspace = wsn, monitor = "eDP-1", default = true })
 
 
 ----------------- ENV -----------------
@@ -109,6 +136,22 @@ local menu = "wofi --show run"
 
 ----------------- KEYBINDINGS -----------------
 local M = "SUPER"
+--
+-- Generate focus + move binds for one logical monitor slot.
+-- Target wins if connected; otherwise fall back to the Nth connected monitor.
+local function slot(key, target, idx)
+    local function dsp(fn, arg) hl.dispatch(fn({ monitor = arg })) end
+    hl.bind(M .. " + " .. key, function()
+        if is_connected(target) then dsp(hl.dsp.focus, target) else dsp(hl.dsp.focus, idx) end
+    end)
+    hl.bind(M .. " + SHIFT + " .. key, function()
+        if is_connected(target) then dsp(hl.dsp.window.move, target) else dsp(hl.dsp.window.move, idx) end
+    end)
+end
+
+slot("apostrophe", "eDP-1", 0)
+slot("comma",      M27,     1)
+slot("period",     M24,     2)
 
 -- Launch / core
 hl.bind(M .. " + SHIFT + Return", hl.dsp.exec_cmd(term))
@@ -140,15 +183,6 @@ hl.bind(M .. " + T",         hl.dsp.layout("mfact +0.05"))  -- Dvorak t, expand
 -- Float / sink
 hl.bind(M .. " + Y",         hl.dsp.window.float({ action = "toggle" }))
 
--- Monitors
-hl.bind(M .. " + comma",          hl.dsp.focus({ monitor = 0 }))
-hl.bind(M .. " + period",         hl.dsp.focus({ monitor = 1 }))
-hl.bind(M .. " + P",              hl.dsp.focus({ monitor = 2 }))
-hl.bind(M .. " + SHIFT + comma",  hl.dsp.window.move({ monitor = 0 }))
-hl.bind(M .. " + SHIFT + period", hl.dsp.window.move({ monitor = 1 }))
-hl.bind(M .. " + SHIFT + P",      hl.dsp.window.move({ monitor = 2 }))
-
-
 -- Session
 hl.bind(M .. " + Q",           hl.dsp.exec_cmd("hyprctl reload"))
 hl.bind(M .. " + SHIFT + Q",   hl.dsp.exit())
@@ -160,14 +194,6 @@ for i = 1, 10 do
     hl.bind(M .. " + " .. key,          hl.dsp.focus({ workspace = i, on_current_monitor = true }))
     hl.bind(M .. " + SHIFT + " .. key,  hl.dsp.window.move({ workspace = i, follow = false }))
 end
-
--- Monitors: comma / period / p  (your screen keys) -- NATIVE best guess
-hl.bind(M .. " + comma",          hl.dsp.focus({ monitor = 0 }))
-hl.bind(M .. " + period",         hl.dsp.focus({ monitor = 2 }))
-hl.bind(M .. " + P",              hl.dsp.focus({ monitor = 1 }))
-hl.bind(M .. " + SHIFT + comma",  hl.dsp.window.move({ monitor = 0 }))
-hl.bind(M .. " + SHIFT + period", hl.dsp.window.move({ monitor = 2 }))
-hl.bind(M .. " + SHIFT + P",      hl.dsp.window.move({ monitor = 1 }))
 
 -- hidden waybar + keyboard-driven hardware control
 hl.bind(M .. " + SHIFT + B",           hl.dsp.exec_cmd("killall -SIGUSR1 waybar"))
@@ -189,12 +215,13 @@ hl.bind(M .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 hl.bind(M .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 --------------------------- WINDOW RULES --------------------------
-hl.window_rule({ name = "term-ws1", match = { class = "Alacritty", title = "main" }, workspace = "1 silent" })
+hl.window_rule({ name = "term-ws1", match = { class = "foot", title = "main" }, workspace = "1 silent" })
 hl.window_rule({ name = "web-ws2",  match = { class = "firefox", title = "negative:.*(Settings|Preferences|Page Setup|Print|Save File|Open File|Library).*" },   workspace = "2 silent" })
 hl.window_rule({ name = "keepass-ws10",  match = { class = "org.keepassxc.KeePassXC", title = "negative:.*(Access Request|Unlock Database).*" },   workspace = "10 silent" })
 
 ----------------------------- AUTOSTART ---------------------------
 hl.on("hyprland.start", function()
+    hl.exec_cmd("systemctl --user start hyprland-session.target")
     hl.exec_cmd("mako")
     hl.exec_cmd("hypridle")
     hl.exec_cmd("waybar")
