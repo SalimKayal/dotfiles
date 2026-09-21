@@ -10,6 +10,9 @@ pushd "${CONFIG}"
     #setup alacritty
     rm -rf alacritty
     ln -s "$f/alacritty"
+    #setup foot
+    rm -rf foot
+    ln -s "$f/foot"
     #setup hyprstuff
     rm -rf hypr
     ln -s "$f/hypr"
